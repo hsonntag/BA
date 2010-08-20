@@ -44,6 +44,103 @@ kopf_1233x = load('kopf_1233_1025_cran_x.dat');
 kopf_1233y = load('kopf_1233_1025_cran_y.dat');
 kopf_1233z = load('kopf_1233_1025_cran_z.dat');
 
+ccf1233_D2x=zeros(1025,1);
+ccf1233_D2y=zeros(1025,1);
+ccf1233_D2z=zeros(1025,1);
+
+ccf1233_D3x=zeros(1025,1);
+ccf1233_D3y=zeros(1025,1);
+ccf1233_D3z=zeros(1025,1);
+
+ccf1655x=zeros(1025,1);
+ccf1655y=zeros(1025,1);
+ccf1655z=zeros(1025,1);
+
+ccf2077x=zeros(1025,1);
+ccf2077y=zeros(1025,1);
+ccf2077z=zeros(1025,1);
+
+ccf2099x=zeros(1025,1);
+ccf2099y=zeros(1025,1);
+ccf2099z=zeros(1025,1);
+
+cck1233x=zeros(1025,1);
+cck1233y=zeros(1025,1);
+cck1233z=zeros(1025,1);
+
+cck1655x=zeros(1025,1);
+cck1655y=zeros(1025,1);
+cck1655z=zeros(1025,1);
+
+cck2077x=zeros(1025,1);
+cck2077y=zeros(1025,1);
+cck2077z=zeros(1025,1);
+
+cck2099x=zeros(1025,1);
+cck2099y=zeros(1025,1);
+cck2099z=zeros(1025,1);
+
+cckk1655x=zeros(1025,1);
+cckk1655y=zeros(1025,1);
+cckk1655z=zeros(1025,1);
+
+cckk2077x=zeros(1025,1);
+cckk2077y=zeros(1025,1);
+cckk2077z=zeros(1025,1);
+
+cckk2099x=zeros(1025,1);
+cckk2099y=zeros(1025,1);
+cckk2099z=zeros(1025,1);
+
+ampf1233_D2x=zeros(1025,1);
+ampf1233_D2y=zeros(1025,1);
+ampf1233_D2z=zeros(1025,1);
+
+ampf1233_D3x=zeros(1025,1);
+ampf1233_D3y=zeros(1025,1);
+ampf1233_D3z=zeros(1025,1);
+
+ampf1655x=zeros(1025,1);
+ampf1655y=zeros(1025,1);
+ampf1655z=zeros(1025,1);
+
+ampf2077x=zeros(1025,1);
+ampf2077y=zeros(1025,1);
+ampf2077z=zeros(1025,1);
+
+ampf2099x=zeros(1025,1);
+ampf2099y=zeros(1025,1);
+ampf2099z=zeros(1025,1);
+
+ampk1233x=zeros(1025,1);
+ampk1233y=zeros(1025,1);
+ampk1233z=zeros(1025,1);
+
+ampk1655x=zeros(1025,1);
+ampk1655y=zeros(1025,1);
+ampk1655z=zeros(1025,1);
+
+ampk2077x=zeros(1025,1);
+ampk2077y=zeros(1025,1);
+ampk2077z=zeros(1025,1);
+
+ampk2099x=zeros(1025,1);
+ampk2099y=zeros(1025,1);
+ampk2099z=zeros(1025,1);
+
+ampkk1655x=zeros(1025,1);
+ampkk1655y=zeros(1025,1);
+ampkk1655z=zeros(1025,1);
+
+ampkk2077x=zeros(1025,1);
+ampkk2077y=zeros(1025,1);
+ampkk2077z=zeros(1025,1);
+
+ampkk2099x=zeros(1025,1);
+ampkk2099y=zeros(1025,1);
+ampkk2099z=zeros(1025,1);
+
+
 format long
 
 for i=1:1025
@@ -924,9 +1021,12 @@ fetus_1233x = load('fetus_1233_1025_sinis_x.dat');
 fetus_1233y = load('fetus_1233_1025_sinis_y.dat');
 fetus_1233z = load('fetus_1233_1025_sinis_z.dat');
 
-fetus_1233_D2x = load('fetus_1233_1025_D2_sinis_x.dat');
-fetus_1233_D2y = load('fetus_1233_1025_D2_sinis_y.dat');
-fetus_1233_D2z = load('fetus_1233_1025_D2_sinis_z.dat');
+% fetus_1233_D2x = load('fetus_1233_1025_D2_sinis_x.dat');
+% fetus_1233_D2y = load('fetus_1233_1025_D2_sinis_y.dat');
+% fetus_1233_D2z = load('fetus_1233_1025_D2_sinis_z.dat');
+fetus_1233_D2x = load('test_x.dat');
+fetus_1233_D2y = load('test_y.dat');
+fetus_1233_D2z = load('test_z.dat');
 
 fetus_1233_D3x = load('fetus_1233_1025_D3_sinis_x.dat');
 fetus_1233_D3y = load('fetus_1233_1025_D3_sinis_y.dat');
@@ -1236,7 +1336,7 @@ set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('RDM(Referenz: BEM-Modell 7)','interpreter','latex');
 
-%title('RDM-Werte für verschiedene BEM-Modelle und Dipolrichtungen mit
+%title('RDM-Werte fï¿½r verschiedene BEM-Modelle und Dipolrichtungen mit
 %Referenzmodell 7');
 figure;
 subplot(3,3,1);
@@ -1667,7 +1767,7 @@ set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('MAG(Referenz: BEM-Modell 7)','interpreter','latex');
 
-%title('MAG-Werte für verschiedene BEM-Modelle und Dipolrichtungen mit
+%title('MAG-Werte fï¿½r verschiedene BEM-Modelle und Dipolrichtungen mit
 %Referenzmodell 7');
 figure;
 subplot(3,3,1);
@@ -1822,7 +1922,7 @@ set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('MAG(Referenz: BEM-Modell 1)','interpreter','latex');
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_cran.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_cran.dip',1025);
 
 n_f_fetus_1233_1025_cran = mag1{1};
 
@@ -1836,7 +1936,7 @@ for i=1:1025
     phi_f_fetus_1233_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D3_cran.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D3_cran.dip',1025);
 
 n_f_fetus_1233_1025_D3_cran = mag1{1};
 
@@ -1850,7 +1950,7 @@ for i=1:1025
     phi_f_fetus_1233_1025_D3_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D2_cran.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D2_cran.dip',1025);
 
 n_f_fetus_1233_1025_D2_cran = mag1{1};
 
@@ -1864,7 +1964,7 @@ for i=1:1025
     phi_f_fetus_1233_1025_D2_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_1655_1025_cran.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_1655_1025_cran.dip',1025);
 
 n_f_fetus_1655_1025_cran = mag1{1};
 
@@ -1879,7 +1979,7 @@ for i=1:1025
     phi_f_fetus_1655_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_2077_1025_cran.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_2077_1025_cran.dip',1025);
 
 n_f_fetus_2077_1025_cran = mag1{1};
 
@@ -1894,7 +1994,7 @@ for i=1:1025
     phi_f_fetus_2077_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_2099_1025_cran.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_2099_1025_cran.dip',1025);
 
 n_f_fetus_2099_1025_cran = mag1{1};
 
@@ -1909,7 +2009,7 @@ for i=1:1025
     phi_f_fetus_2099_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_kopf_1233_1025_cran.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_kopf_1233_1025_cran.dip',1025);
 
 n_f_kopf_1233_1025_cran = mag1{1};
 
@@ -1924,7 +2024,7 @@ for i=1:1025
     phi_f_kopf_1233_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_kopf_1655_1025_cran.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_kopf_1655_1025_cran.dip',1025);
 
 n_f_kopf_1655_1025_cran = mag1{1};
 
@@ -1939,7 +2039,7 @@ for i=1:1025
     phi_f_kopf_1655_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_kopf_2077_1025_cran.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_kopf_2077_1025_cran.dip',1025);
 
 n_f_kopf_2077_1025_cran = mag1{1};
 
@@ -1954,7 +2054,7 @@ for i=1:1025
     phi_f_kopf_2077_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_kopf_2099_1025_cran.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_kopf_2099_1025_cran.dip',1025);
 
 n_f_kopf_2099_1025_cran = mag1{1};
 
@@ -1969,7 +2069,7 @@ for i=1:1025
     phi_f_kopf_2099_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_dors.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_dors.dip',1025);
 
 n_f_fetus_1233_1025_dors = mag1{1};
 
@@ -1983,7 +2083,7 @@ for i=1:1025
     phi_f_fetus_1233_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D3_dors.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D3_dors.dip',1025);
 
 n_f_fetus_1233_1025_D3_dors = mag1{1};
 
@@ -1997,7 +2097,7 @@ for i=1:1025
     phi_f_fetus_1233_1025_D3_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D2_dors.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D2_dors.dip',1025);
 
 n_f_fetus_1233_1025_D2_dors = mag1{1};
 
@@ -2011,7 +2111,7 @@ for i=1:1025
     phi_f_fetus_1233_1025_D2_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_1655_1025_dors.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_1655_1025_dors.dip',1025);
 
 n_f_fetus_1655_1025_dors = mag1{1};
 
@@ -2026,7 +2126,7 @@ for i=1:1025
     phi_f_fetus_1655_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_2077_1025_dors.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_2077_1025_dors.dip',1025);
 
 n_f_fetus_2077_1025_dors = mag1{1};
 
@@ -2041,7 +2141,7 @@ for i=1:1025
     phi_f_fetus_2077_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_2099_1025_dors.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_2099_1025_dors.dip',1025);
 
 n_f_fetus_2099_1025_dors = mag1{1};
 
@@ -2056,7 +2156,7 @@ for i=1:1025
     phi_f_fetus_2099_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_kopf_1233_1025_dors.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_kopf_1233_1025_dors.dip',1025);
 
 n_f_kopf_1233_1025_dors = mag1{1};
 
@@ -2071,7 +2171,7 @@ for i=1:1025
     phi_f_kopf_1233_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_kopf_1655_1025_dors.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_kopf_1655_1025_dors.dip',1025);
 
 n_f_kopf_1655_1025_dors = mag1{1};
 
@@ -2086,7 +2186,7 @@ for i=1:1025
     phi_f_kopf_1655_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_kopf_2077_1025_dors.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_kopf_2077_1025_dors.dip',1025);
 
 n_f_kopf_2077_1025_dors = mag1{1};
 
@@ -2101,7 +2201,7 @@ for i=1:1025
     phi_f_kopf_2077_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_kopf_2099_1025_dors.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_kopf_2099_1025_dors.dip',1025);
 
 n_f_kopf_2099_1025_dors = mag1{1};
 
@@ -2116,7 +2216,7 @@ for i=1:1025
     phi_f_kopf_2099_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_sinis.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_sinis.dip',1025);
 
 n_f_fetus_1233_1025_sinis = mag1{1};
 
@@ -2130,7 +2230,7 @@ for i=1:1025
     phi_f_fetus_1233_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D3_sinis.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D3_sinis.dip',1025);
 
 n_f_fetus_1233_1025_D3_sinis = mag1{1};
 
@@ -2144,7 +2244,7 @@ for i=1:1025
     phi_f_fetus_1233_1025_D3_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D2_sinis.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D2_sinis.dip',1025);
 
 n_f_fetus_1233_1025_D2_sinis = mag1{1};
 
@@ -2158,7 +2258,7 @@ for i=1:1025
     phi_f_fetus_1233_1025_D2_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_1655_1025_sinis.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_1655_1025_sinis.dip',1025);
 
 n_f_fetus_1655_1025_sinis = mag1{1};
 
@@ -2173,7 +2273,7 @@ for i=1:1025
     phi_f_fetus_1655_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_2077_1025_sinis.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_2077_1025_sinis.dip',1025);
 
 n_f_fetus_2077_1025_sinis = mag1{1};
 
@@ -2188,7 +2288,7 @@ for i=1:1025
     phi_f_fetus_2077_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_fetus_2099_1025_sinis.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_fetus_2099_1025_sinis.dip',1025);
 
 n_f_fetus_2099_1025_sinis = mag1{1};
 
@@ -2203,7 +2303,7 @@ for i=1:1025
     phi_f_fetus_2099_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_kopf_1233_1025_sinis.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_kopf_1233_1025_sinis.dip',1025);
 
 n_f_kopf_1233_1025_sinis = mag1{1};
 
@@ -2218,7 +2318,7 @@ for i=1:1025
     phi_f_kopf_1233_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_kopf_1655_1025_sinis.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_kopf_1655_1025_sinis.dip',1025);
 
 n_f_kopf_1655_1025_sinis = mag1{1};
 
@@ -2233,7 +2333,7 @@ for i=1:1025
     phi_f_kopf_1655_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-[loc1,norm1,mag1] = curry_dip_read('result_f_kopf_2077_1025_sinis.dip',1025);
+[~,norm1,mag1] = curry_dip_read('result_f_kopf_2077_1025_sinis.dip',1025);
 
 n_f_kopf_2077_1025_sinis = mag1{1};
 
