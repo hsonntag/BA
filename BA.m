@@ -1315,7 +1315,7 @@ subplot(3,3,7);
 errorbar([8 9 10],rdm_kopf_sinis_x,rdm_kopf_sinis_x_std, 'Color', [0 0 0]);
 set(gca,'XTick',8:1:10); set(gca,'XTickLabel',8:1:10);
 set(gca,'fontsize',14, 'FontName','arial');
-title('RDM-Werte($\vec{e_{x}}$), Dipolrichtung sinistra','interpreter','latex');
+title('RDM-Werte($\vec{e_{x}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('RDM(Referenz: BEM-Modell 7)','interpreter','latex');
@@ -1323,7 +1323,7 @@ subplot(3,3,8);
 errorbar([8 9 10],rdm_kopf_sinis_y,rdm_kopf_sinis_y_std, 'Color', [0 0 0]);
 set(gca,'XTick',8:1:10); set(gca,'XTickLabel',8:1:10);
 set(gca,'fontsize',14, 'FontName','arial');
-title('RDM-Werte($\vec{e_{y}}$), Dipolrichtung sinistra','interpreter','latex');
+title('RDM-Werte($\vec{e_{y}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('RDM(Referenz: BEM-Modell 7)','interpreter','latex');
@@ -1331,7 +1331,7 @@ subplot(3,3,9);
 errorbar([8 9 10],rdm_kopf_sinis_z,rdm_kopf_sinis_z_std, 'Color', [0 0 0]);
 set(gca,'XTick',8:1:10); set(gca,'XTickLabel',8:1:10);
 set(gca,'fontsize',14, 'FontName','arial');
-title('RDM-Werte($\vec{e_{z}}$), Dipolrichtung sinistra','interpreter','latex');
+title('RDM-Werte($\vec{e_{z}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('RDM(Referenz: BEM-Modell 7)','interpreter','latex');
@@ -1393,7 +1393,7 @@ subplot(3,3,7);
 errorbar([2 3],rdm_fetus_vernix_sinis_x,rdm_fetus_vernix_sinis_x_std, 'Color', [0 0 0]);
 set(gca,'XTick',2:1:3); set(gca,'XTickLabel',2:1:3);
 set(gca,'fontsize',14, 'FontName','arial');
-title('RDM-Werte($\vec{e_{x}}$), Dipolrichtung sinistra','interpreter','latex');
+title('RDM-Werte($\vec{e_{x}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
@@ -1402,7 +1402,7 @@ subplot(3,3,8);
 errorbar([2 3],rdm_fetus_vernix_sinis_y,rdm_fetus_vernix_sinis_y_std, 'Color', [0 0 0]);
 set(gca,'XTick',2:1:3); set(gca,'XTickLabel',2:1:3);
 set(gca,'fontsize',14, 'FontName','arial');
-title('RDM-Werte($\vec{e_{y}}$), Dipolrichtung sinistra','interpreter','latex');
+title('RDM-Werte($\vec{e_{y}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('RDM(Referenz: BEM-Modell 1)','interpreter','latex');
@@ -1410,7 +1410,7 @@ subplot(3,3,9);
 errorbar([2 3],rdm_fetus_vernix_sinis_z,rdm_fetus_vernix_sinis_z_std, 'Color', [0 0 0]);
 set(gca,'XTick',2:1:3); set(gca,'XTickLabel',2:1:3);
 set(gca,'fontsize',14, 'FontName','arial');
-title('RDM-Werte($\vec{e_{z}}$), Dipolrichtung sinistra','interpreter','latex');
+title('RDM-Werte($\vec{e_{z}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('RDM(Referenz: BEM-Modell 1)','interpreter','latex');
@@ -1470,7 +1470,7 @@ subplot(3,3,7);
 errorbar([4 5 6 7 8 9 10],rdm_fetus_sinis_x,rdm_fetus_sinis_x_std, 'Color', [0 0 0]);
 set(gca,'XTick',4:1:10); set(gca,'XTickLabel',4:1:10);
 set(gca,'fontsize',14, 'FontName','arial');
-title('RDM-Werte($\vec{e_{x}}$), Dipolrichtung sinistra','interpreter','latex');
+title('RDM-Werte($\vec{e_{x}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('RDM(Referenz: BEM-Modell 1)','interpreter','latex');
@@ -1478,7 +1478,7 @@ subplot(3,3,8);
 errorbar([4 5 6 7 8 9 10],rdm_fetus_sinis_y,rdm_fetus_sinis_y_std, 'Color', [0 0 0]);
 set(gca,'XTick',4:1:10); set(gca,'XTickLabel',4:1:10);
 set(gca,'fontsize',14, 'FontName','arial');
-title('RDM-Werte($\vec{e_{y}}$), Dipolrichtung sinistra','interpreter','latex');
+title('RDM-Werte($\vec{e_{y}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('RDM(Referenz: BEM-Modell 1)','interpreter','latex');
@@ -1486,7 +1486,7 @@ subplot(3,3,9);
 errorbar([4 5 6 7 8 9 10],rdm_fetus_sinis_z,rdm_fetus_sinis_z_std, 'Color', [0 0 0]);
 set(gca,'XTick',4:1:10); set(gca,'XTickLabel',4:1:10);
 set(gca,'fontsize',14, 'FontName','arial');
-title('RDM-Werte($\vec{e_{z}}$), Dipolrichtung sinistra','interpreter','latex');
+title('RDM-Werte($\vec{e_{z}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('RDM(Referenz: BEM-Modell 1)','interpreter','latex');
@@ -1746,7 +1746,7 @@ subplot(3,3,7);
 errorbar([8 9 10],mag_kopf_sinis_x,mag_kopf_sinis_x_std, 'Color', [0 0 0]);
 set(gca,'XTick',8:1:10); set(gca,'XTickLabel',8:1:10);
 set(gca,'fontsize',14, 'FontName','arial');
-title('MAG-Werte($\vec{e_{x}}$), Dipolrichtung sinistra','interpreter','latex');
+title('MAG-Werte($\vec{e_{x}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('MAG(Referenz: BEM-Modell 7)','interpreter','latex');
@@ -1754,7 +1754,7 @@ subplot(3,3,8);
 errorbar([8 9 10],mag_kopf_sinis_y,mag_kopf_sinis_y_std, 'Color', [0 0 0]);
 set(gca,'XTick',8:1:10); set(gca,'XTickLabel',8:1:10);
 set(gca,'fontsize',14, 'FontName','arial');
-title('MAG-Werte($\vec{e_{y}}$), Dipolrichtung sinistra','interpreter','latex');
+title('MAG-Werte($\vec{e_{y}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('MAG(Referenz: BEM-Modell 7)','interpreter','latex');
@@ -1762,7 +1762,7 @@ subplot(3,3,9);
 errorbar([8 9 10],mag_kopf_sinis_z,mag_kopf_sinis_z_std, 'Color', [0 0 0]);
 set(gca,'XTick',8:1:10); set(gca,'XTickLabel',8:1:10);
 set(gca,'fontsize',14, 'FontName','arial');
-title('MAG-Werte($\vec{e_{z}}$), Dipolrichtung sinistra','interpreter','latex');
+title('MAG-Werte($\vec{e_{z}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('MAG(Referenz: BEM-Modell 7)','interpreter','latex');
@@ -1824,7 +1824,7 @@ subplot(3,3,7);
 errorbar([2 3],mag_fetus_vernix_sinis_x,mag_fetus_vernix_sinis_x_std, 'Color', [0 0 0]);
 set(gca,'XTick',2:1:3); set(gca,'XTickLabel',2:1:3);
 set(gca,'fontsize',14, 'FontName','arial');
-title('MAG-Werte($\vec{e_{x}}$), Dipolrichtung sinistra','interpreter','latex');
+title('MAG-Werte($\vec{e_{x}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
@@ -1833,7 +1833,7 @@ subplot(3,3,8);
 errorbar([2 3],mag_fetus_vernix_sinis_y,mag_fetus_vernix_sinis_y_std, 'Color', [0 0 0]);
 set(gca,'XTick',2:1:3); set(gca,'XTickLabel',2:1:3);
 set(gca,'fontsize',14, 'FontName','arial');
-title('MAG-Werte($\vec{e_{y}}$), Dipolrichtung sinistra','interpreter','latex');
+title('MAG-Werte($\vec{e_{y}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('MAG(Referenz: BEM-Modell 1)','interpreter','latex');
@@ -1841,7 +1841,7 @@ subplot(3,3,9);
 errorbar([2 3],mag_fetus_vernix_sinis_z,mag_fetus_vernix_sinis_z_std, 'Color', [0 0 0]);
 set(gca,'XTick',2:1:3); set(gca,'XTickLabel',2:1:3);
 set(gca,'fontsize',14, 'FontName','arial');
-title('MAG-Werte($\vec{e_{z}}$), Dipolrichtung sinistra','interpreter','latex');
+title('MAG-Werte($\vec{e_{z}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('MAG(Referenz: BEM-Modell 1)','interpreter','latex');
@@ -1901,7 +1901,7 @@ subplot(3,3,7);
 errorbar([4 5 6 7 8 9 10],mag_fetus_sinis_x,mag_fetus_sinis_x_std, 'Color', [0 0 0]);
 set(gca,'XTick',4:1:10); set(gca,'XTickLabel',4:1:10);
 set(gca,'fontsize',14, 'FontName','arial');
-title('MAG-Werte($\vec{e_{x}}$), Dipolrichtung sinistra','interpreter','latex');
+title('MAG-Werte($\vec{e_{x}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('MAG(Referenz: BEM-Modell 1)','interpreter','latex');
@@ -1909,7 +1909,7 @@ subplot(3,3,8);
 errorbar([4 5 6 7 8 9 10],mag_fetus_sinis_y,mag_fetus_sinis_y_std, 'Color', [0 0 0]);
 set(gca,'XTick',4:1:10); set(gca,'XTickLabel',4:1:10);
 set(gca,'fontsize',14, 'FontName','arial');
-title('MAG-Werte($\vec{e_{y}}$), Dipolrichtung sinistra','interpreter','latex');
+title('MAG-Werte($\vec{e_{y}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('MAG(Referenz: BEM-Modell 1)','interpreter','latex');
@@ -1917,7 +1917,7 @@ subplot(3,3,9);
 errorbar([4 5 6 7 8 9 10],mag_fetus_sinis_z,mag_fetus_sinis_z_std, 'Color', [0 0 0]);
 set(gca,'XTick',4:1:10); set(gca,'XTickLabel',4:1:10);
 set(gca,'fontsize',14, 'FontName','arial');
-title('MAG-Werte($\vec{e_{z}}$), Dipolrichtung sinistra','interpreter','latex');
+title('MAG-Werte($\vec{e_{z}}$), Dipolrichtung sinistral','interpreter','latex');
 set(gca,'fontsize',10, 'FontName','arial');
 xlabel('BEM-Modell','interpreter','latex');
 ylabel('MAG(Referenz: BEM-Modell 1)','interpreter','latex');
@@ -2374,7 +2374,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(phi_f_fetus_1233_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 
 figure;
@@ -2388,7 +2388,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(phi_f_fetus_1233_1025_D3_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 
 figure;
@@ -2402,7 +2402,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(phi_f_fetus_1233_1025_D2_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 
 figure;
@@ -2416,7 +2416,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(phi_f_fetus_1655_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 
 figure;
@@ -2430,7 +2430,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(phi_f_fetus_2077_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 
 figure;
@@ -2444,7 +2444,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(phi_f_fetus_2099_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 
 figure;
@@ -2458,7 +2458,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(phi_f_kopf_1233_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 
 figure;
@@ -2472,7 +2472,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(phi_f_kopf_1655_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 
 figure;
@@ -2486,7 +2486,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(phi_f_kopf_2077_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 
 figure;
@@ -2500,7 +2500,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(phi_f_kopf_2099_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 
 figure;
@@ -2514,7 +2514,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(n_f_fetus_1233_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 
 figure;
@@ -2528,7 +2528,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(n_f_fetus_1233_1025_D3_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 
 figure;
@@ -2542,7 +2542,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(n_f_fetus_1233_1025_D2_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 
 figure;
@@ -2556,7 +2556,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(n_f_fetus_1655_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 
 figure;
@@ -2570,7 +2570,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(n_f_fetus_2077_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 
 figure;
@@ -2584,7 +2584,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(n_f_fetus_2099_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 
 figure;
@@ -2598,7 +2598,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(n_f_kopf_1233_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 
 figure;
@@ -2612,7 +2612,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(n_f_kopf_1655_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 
 figure;
@@ -2626,7 +2626,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(n_f_kopf_2077_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 
 figure;
@@ -2640,7 +2640,7 @@ h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); tit
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 subplot(1,3,3);
 hist(n_f_kopf_2099_1025_sinis);
-h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistra', 'interpreter', 'latex');
+h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 
 % ohne obere Sensoren
