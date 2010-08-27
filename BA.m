@@ -1021,12 +1021,9 @@ fetus_1233x = load('fetus_1233_1025_sinis_x.dat');
 fetus_1233y = load('fetus_1233_1025_sinis_y.dat');
 fetus_1233z = load('fetus_1233_1025_sinis_z.dat');
 
-% fetus_1233_D2x = load('fetus_1233_1025_D2_sinis_x.dat');
-% fetus_1233_D2y = load('fetus_1233_1025_D2_sinis_y.dat');
-% fetus_1233_D2z = load('fetus_1233_1025_D2_sinis_z.dat');
-fetus_1233_D2x = load('test_x.dat');
-fetus_1233_D2y = load('test_y.dat');
-fetus_1233_D2z = load('test_z.dat');
+fetus_1233_D2x = load('fetus_1233_1025_D2_sinis_x.dat');
+fetus_1233_D2y = load('fetus_1233_1025_D2_sinis_y.dat');
+fetus_1233_D2z = load('fetus_1233_1025_D2_sinis_z.dat');
 
 fetus_1233_D3x = load('fetus_1233_1025_D3_sinis_x.dat');
 fetus_1233_D3y = load('fetus_1233_1025_D3_sinis_y.dat');
