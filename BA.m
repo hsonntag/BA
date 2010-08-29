@@ -1276,12 +1276,13 @@ rdm_kopf_sinis_z_std = [
 
 figure
 hold on;
-errorbar([2 3],[ccf1233_D3_cran_m ccf1233_D2_cran_m],[ccf1233_D3_cran_s ccf1233_D2_cran_s], 'Color', [0 0 0]);
-errorbar([2 3],[ccf1233_D3_sinis_m ccf1233_D2_sinis_m],[ccf1233_D3_sinis_s ccf1233_D2_sinis_s], 'Color', [0 0 0]);
-errorbar([2 3],[ccf1233_D3_dors_m ccf1233_D2_dors_m],[ccf1233_D3_dors_s ccf1233_D2_dors_s], 'Color', [0 0 0]);
-set(gcf, 'PaperPosition', [0 0 6 3]);
-print -deps pic2.eps
-%exportfig(gcf,'pic3.eps', 'width',6, 'fontmode','fixed', 'fontsize',8);
+errorbar([2 3],[ccf1233_D3_cran_m ccf1233_D2_cran_m],[ccf1233_D3_cran_s ccf1233_D2_cran_s], 'Color', 'black');
+errorbar([2 3],[ccf1233_D3_sinis_m ccf1233_D2_sinis_m],[ccf1233_D3_sinis_s ccf1233_D2_sinis_s], 'Color', 'red');
+errorbar([2 3],[ccf1233_D3_dors_m ccf1233_D2_dors_m],[ccf1233_D3_dors_s ccf1233_D2_dors_s], 'Color', 'blue');
+set(gcf, 'PaperPositionMode', 'auto');
+print -depsc rdm_1233_vernix.eps
+hold off;
+
 % figure;
 % subplot(3,3,1);
 % errorbar([8 9 10],rdm_kopf_cran_x,rdm_kopf_cran_x_std, 'Color', [0 0 0]);
