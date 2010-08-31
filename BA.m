@@ -1483,6 +1483,9 @@ errorbar([0 4],[0 rdm_k1233_cran_m],[0 rdm_k1233_cran_s], 'Color', 'black');
 errorbar([0 4],[0 rdm_k1233_sinis_m],[0 rdm_k1233_sinis_s], 'Color', 'red');
 errorbar([0 4],[0 rdm_k1233_dors_m],[0 rdm_k1233_dors_s], 'Color', 'blue');
 set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
 print -depsc graphics/rdm_fetus_kopf_1233.eps
 
 figure
@@ -1491,6 +1494,9 @@ errorbar([1 5],[rdm_f1655_cran_m rdm_k1655_cran_m],[rdm_f1655_cran_s rdm_k1655_c
 errorbar([1 5],[rdm_f1655_sinis_m rdm_k1655_sinis_m],[rdm_f1655_sinis_s rdm_k1655_sinis_s], 'Color', 'red');
 errorbar([1 5],[rdm_f1655_dors_m rdm_k1655_dors_m],[rdm_f1655_dors_s rdm_k1655_dors_s], 'Color', 'blue');
 set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
 print -depsc graphics/rdm_fetus_kopf_1655.eps
 
 figure
@@ -1499,6 +1505,9 @@ errorbar([2 6],[rdm_f2077_cran_m rdm_k2077_cran_m],[rdm_f2077_cran_s rdm_k2077_c
 errorbar([2 6],[rdm_f2077_sinis_m rdm_k2077_sinis_m],[rdm_f2077_sinis_s rdm_k2077_sinis_s], 'Color', 'red');
 errorbar([2 6],[rdm_f2077_dors_m rdm_k2077_dors_m],[rdm_f2077_dors_s rdm_k2077_dors_s], 'Color', 'blue');
 set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
 print -depsc graphics/rdm_fetus_kopf_2077.eps
 
 figure
@@ -1507,6 +1516,9 @@ errorbar([3 7],[rdm_f2099_cran_m rdm_k2099_cran_m],[rdm_f2099_cran_s rdm_k2099_c
 errorbar([3 7],[rdm_f2099_sinis_m rdm_k2099_sinis_m],[rdm_f2099_sinis_s rdm_k2099_sinis_s], 'Color', 'red');
 errorbar([3 7],[rdm_f2099_dors_m rdm_k2099_dors_m],[rdm_f2099_dors_s rdm_k2099_dors_s], 'Color', 'blue');
 set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
 print -depsc graphics/rdm_fetus_kopf_2099.eps
 
 
@@ -2011,7 +2023,12 @@ hold on;
 errorbar([0 4],[1 mag_k1233_cran_m],[0 mag_k1233_cran_s], 'Color', 'black');
 errorbar([0 4],[1 mag_k1233_sinis_m],[0 mag_k1233_sinis_s], 'Color', 'red');
 errorbar([0 4],[1 mag_k1233_dors_m],[0 mag_k1233_dors_s], 'Color', 'blue');
+set(gca,'XTick',0:4:4); set(gca,'XTickLabel',0:4:4);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
 set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
 print -depsc graphics/mag_fetus_kopf_1233.eps
 
 figure
@@ -2019,7 +2036,12 @@ hold on;
 errorbar([1 5],[mag_f1655_cran_m mag_k1655_cran_m],[mag_f1655_cran_s mag_k1655_cran_s], 'Color', 'black');
 errorbar([1 5],[mag_f1655_sinis_m mag_k1655_sinis_m],[mag_f1655_sinis_s mag_k1655_sinis_s], 'Color', 'red');
 errorbar([1 5],[mag_f1655_dors_m mag_k1655_dors_m],[mag_f1655_dors_s mag_k1655_dors_s], 'Color', 'blue');
+set(gca,'XTick',1:4:5); set(gca,'XTickLabel',1:4:5);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
 set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
 print -depsc graphics/mag_fetus_kopf_1655.eps
 
 figure
@@ -2027,7 +2049,12 @@ hold on;
 errorbar([2 6],[mag_f2077_cran_m mag_k2077_cran_m],[mag_f2077_cran_s mag_k2077_cran_s], 'Color', 'black');
 errorbar([2 6],[mag_f2077_sinis_m mag_k2077_sinis_m],[mag_f2077_sinis_s mag_k2077_sinis_s], 'Color', 'red');
 errorbar([2 6],[mag_f2077_dors_m mag_k2077_dors_m],[mag_f2077_dors_s mag_k2077_dors_s], 'Color', 'blue');
+set(gca,'XTick',2:4:6); set(gca,'XTickLabel',2:4:6);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
 set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
 print -depsc graphics/mag_fetus_kopf_2077.eps
 
 figure
@@ -2035,7 +2062,12 @@ hold on;
 errorbar([3 7],[mag_f2099_cran_m mag_k2099_cran_m],[mag_f2099_cran_s mag_k2099_cran_s], 'Color', 'black');
 errorbar([3 7],[mag_f2099_sinis_m mag_k2099_sinis_m],[mag_f2099_sinis_s mag_k2099_sinis_s], 'Color', 'red');
 errorbar([3 7],[mag_f2099_dors_m mag_k2099_dors_m],[mag_f2099_dors_s mag_k2099_dors_s], 'Color', 'blue');
+set(gca,'XTick',3:4:7); set(gca,'XTickLabel',3:4:7);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
 set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
 print -depsc graphics/mag_fetus_kopf_2099.eps
 
 % figure;
