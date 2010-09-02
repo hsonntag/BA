@@ -1456,32 +1456,35 @@ rdm_kk2099_sinis_s = std(mean([rdm_kk2099x,rdm_kk2099y,rdm_kk2099z],2));
 figure
 hold on;
 errorbar([8 9],[rdm_f1233_D3_cran_m rdm_f1233_D2_cran_m],[rdm_f1233_D3_cran_s rdm_f1233_D2_cran_s], 'Color', 'black');
-errorbar([8 9],[rdm_f1233_D3_sinis_m rdm_f1233_D2_sinis_m],[rdm_f1233_D3_sinis_s rdm_f1233_D2_sinis_s], 'Color', 'red');
-errorbar([8 9],[rdm_f1233_D3_dors_m rdm_f1233_D2_dors_m],[rdm_f1233_D3_dors_s rdm_f1233_D2_dors_s], 'Color', 'blue');
+errorbar([8 9],[rdm_f1233_D3_sinis_m rdm_f1233_D2_sinis_m],[rdm_f1233_D3_sinis_s rdm_f1233_D2_sinis_s], '--*r');
+errorbar([8 9],[rdm_f1233_D3_dors_m rdm_f1233_D2_dors_m],[rdm_f1233_D3_dors_s rdm_f1233_D2_dors_s], ':ob');
 set(gcf, 'PaperPositionMode', 'auto');
 print -depsc graphics/rdm_1233_vernix.eps
 
 figure
 hold on;
 errorbar([1 2 3],[rdm_f1655_cran_m rdm_f2077_cran_m rdm_f2099_cran_m],[rdm_f1655_cran_s rdm_f2077_cran_s rdm_f2099_cran_s], 'Color', 'black');
-errorbar([1 2 3],[rdm_f1655_sinis_m rdm_f2077_sinis_m rdm_f2099_sinis_m],[rdm_f1655_sinis_s rdm_f2077_sinis_s rdm_f2099_sinis_s], 'Color', 'red');
-errorbar([1 2 3],[rdm_f1655_dors_m rdm_f2077_dors_m rdm_f2099_dors_m],[rdm_f1655_dors_s rdm_f2077_dors_s rdm_f2099_dors_s], 'Color', 'blue');
+errorbar([1 2 3],[rdm_f1655_sinis_m rdm_f2077_sinis_m rdm_f2099_sinis_m],[rdm_f1655_sinis_s rdm_f2077_sinis_s rdm_f2099_sinis_s], '--*r');
+errorbar([1 2 3],[rdm_f1655_dors_m rdm_f2077_dors_m rdm_f2099_dors_m],[rdm_f1655_dors_s rdm_f2077_dors_s rdm_f2099_dors_s], ':ob');
 set(gcf, 'PaperPositionMode', 'auto');
 print -depsc graphics/rdm_fetus.eps
 
 figure
 hold on;
 errorbar([5 6 7],[rdm_kk1655_cran_m rdm_kk2077_cran_m rdm_kk2099_cran_m],[rdm_kk1655_cran_s rdm_kk2077_cran_s rdm_kk2099_cran_s], 'Color', 'black');
-errorbar([5 6 7],[rdm_kk1655_sinis_m rdm_kk2077_sinis_m rdm_kk2099_sinis_m],[rdm_kk1655_sinis_s rdm_kk2077_sinis_s rdm_kk2099_sinis_s], 'Color', 'red');
-errorbar([5 6 7],[rdm_kk1655_dors_m rdm_kk2077_dors_m rdm_kk2099_dors_m],[rdm_kk1655_dors_s rdm_kk2077_dors_s rdm_kk2099_dors_s], 'Color', 'blue');
+errorbar([5 6 7],[rdm_kk1655_sinis_m rdm_kk2077_sinis_m rdm_kk2099_sinis_m],[rdm_kk1655_sinis_s rdm_kk2077_sinis_s rdm_kk2099_sinis_s], '--*r');
+errorbar([5 6 7],[rdm_kk1655_dors_m rdm_kk2077_dors_m rdm_kk2099_dors_m],[rdm_kk1655_dors_s rdm_kk2077_dors_s rdm_kk2099_dors_s], ':ob');
 set(gcf, 'PaperPositionMode', 'auto');
-print -depsc graphics/rdm_kketus.eps
+print -depsc graphics/rdm_kopf.eps
 
 figure
 hold on;
 errorbar([0 4],[0 rdm_k1233_cran_m],[0 rdm_k1233_cran_s], 'Color', 'black');
-errorbar([0 4],[0 rdm_k1233_sinis_m],[0 rdm_k1233_sinis_s], 'Color', 'red');
-errorbar([0 4],[0 rdm_k1233_dors_m],[0 rdm_k1233_dors_s], 'Color', 'blue');
+errorbar([0 4],[0 rdm_k1233_sinis_m],[0 rdm_k1233_sinis_s], '--*r');
+errorbar([0 4],[0 rdm_k1233_dors_m],[0 rdm_k1233_dors_s], ':ob');
+set(gca,'XTick',0:4:4); set(gca,'XTickLabel',0:4:4);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 1.5]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -1491,8 +1494,11 @@ print -depsc graphics/rdm_fetus_kopf_1233.eps
 figure
 hold on;
 errorbar([1 5],[rdm_f1655_cran_m rdm_k1655_cran_m],[rdm_f1655_cran_s rdm_k1655_cran_s], 'Color', 'black');
-errorbar([1 5],[rdm_f1655_sinis_m rdm_k1655_sinis_m],[rdm_f1655_sinis_s rdm_k1655_sinis_s], 'Color', 'red');
-errorbar([1 5],[rdm_f1655_dors_m rdm_k1655_dors_m],[rdm_f1655_dors_s rdm_k1655_dors_s], 'Color', 'blue');
+errorbar([1 5],[rdm_f1655_sinis_m rdm_k1655_sinis_m],[rdm_f1655_sinis_s rdm_k1655_sinis_s], '--*r');
+errorbar([1 5],[rdm_f1655_dors_m rdm_k1655_dors_m],[rdm_f1655_dors_s rdm_k1655_dors_s], ':ob');
+set(gca,'XTick',1:4:5); set(gca,'XTickLabel',1:4:5);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 1.5]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -1502,8 +1508,11 @@ print -depsc graphics/rdm_fetus_kopf_1655.eps
 figure
 hold on;
 errorbar([2 6],[rdm_f2077_cran_m rdm_k2077_cran_m],[rdm_f2077_cran_s rdm_k2077_cran_s], 'Color', 'black');
-errorbar([2 6],[rdm_f2077_sinis_m rdm_k2077_sinis_m],[rdm_f2077_sinis_s rdm_k2077_sinis_s], 'Color', 'red');
-errorbar([2 6],[rdm_f2077_dors_m rdm_k2077_dors_m],[rdm_f2077_dors_s rdm_k2077_dors_s], 'Color', 'blue');
+errorbar([2 6],[rdm_f2077_sinis_m rdm_k2077_sinis_m],[rdm_f2077_sinis_s rdm_k2077_sinis_s], '--*r');
+errorbar([2 6],[rdm_f2077_dors_m rdm_k2077_dors_m],[rdm_f2077_dors_s rdm_k2077_dors_s], ':ob');
+set(gca,'XTick',2:4:6); set(gca,'XTickLabel',2:4:6);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 1.5]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -1513,8 +1522,11 @@ print -depsc graphics/rdm_fetus_kopf_2077.eps
 figure
 hold on;
 errorbar([3 7],[rdm_f2099_cran_m rdm_k2099_cran_m],[rdm_f2099_cran_s rdm_k2099_cran_s], 'Color', 'black');
-errorbar([3 7],[rdm_f2099_sinis_m rdm_k2099_sinis_m],[rdm_f2099_sinis_s rdm_k2099_sinis_s], 'Color', 'red');
-errorbar([3 7],[rdm_f2099_dors_m rdm_k2099_dors_m],[rdm_f2099_dors_s rdm_k2099_dors_s], 'Color', 'blue');
+errorbar([3 7],[rdm_f2099_sinis_m rdm_k2099_sinis_m],[rdm_f2099_sinis_s rdm_k2099_sinis_s], '--*r');
+errorbar([3 7],[rdm_f2099_dors_m rdm_k2099_dors_m],[rdm_f2099_dors_s rdm_k2099_dors_s], ':ob');
+set(gca,'XTick',3:4:7); set(gca,'XTickLabel',3:4:7);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 1.5]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -1997,32 +2009,32 @@ mag_kk2099_sinis_s = std(mean([mag_kk2099x,mag_kk2099y,mag_kk2099z],2));
 figure
 hold on;
 errorbar([8 9],[mag_f1233_D3_cran_m mag_f1233_D2_cran_m],[mag_f1233_D3_cran_s mag_f1233_D2_cran_s], 'Color', 'black');
-errorbar([8 9],[mag_f1233_D3_sinis_m mag_f1233_D2_sinis_m],[mag_f1233_D3_sinis_s mag_f1233_D2_sinis_s], 'Color', 'red');
-errorbar([8 9],[mag_f1233_D3_dors_m mag_f1233_D2_dors_m],[mag_f1233_D3_dors_s mag_f1233_D2_dors_s], 'Color', 'blue');
+errorbar([8 9],[mag_f1233_D3_sinis_m mag_f1233_D2_sinis_m],[mag_f1233_D3_sinis_s mag_f1233_D2_sinis_s], '--*r');
+errorbar([8 9],[mag_f1233_D3_dors_m mag_f1233_D2_dors_m],[mag_f1233_D3_dors_s mag_f1233_D2_dors_s], ':ob');
 set(gcf, 'PaperPositionMode', 'auto');
 print -depsc graphics/mag_1233_vernix.eps
 
 figure
 hold on;
 errorbar([1 2 3],[mag_f1655_cran_m mag_f2077_cran_m mag_f2099_cran_m],[mag_f1655_cran_s mag_f2077_cran_s mag_f2099_cran_s], 'Color', 'black');
-errorbar([1 2 3],[mag_f1655_sinis_m mag_f2077_sinis_m mag_f2099_sinis_m],[mag_f1655_sinis_s mag_f2077_sinis_s mag_f2099_sinis_s], 'Color', 'red');
-errorbar([1 2 3],[mag_f1655_dors_m mag_f2077_dors_m mag_f2099_dors_m],[mag_f1655_dors_s mag_f2077_dors_s mag_f2099_dors_s], 'Color', 'blue');
+errorbar([1 2 3],[mag_f1655_sinis_m mag_f2077_sinis_m mag_f2099_sinis_m],[mag_f1655_sinis_s mag_f2077_sinis_s mag_f2099_sinis_s], '--*r');
+errorbar([1 2 3],[mag_f1655_dors_m mag_f2077_dors_m mag_f2099_dors_m],[mag_f1655_dors_s mag_f2077_dors_s mag_f2099_dors_s], ':ob');
 set(gcf, 'PaperPositionMode', 'auto');
 print -depsc graphics/mag_fetus.eps
 
 figure
 hold on;
 errorbar([5 6 7],[mag_kk1655_cran_m mag_kk2077_cran_m mag_kk2099_cran_m],[mag_kk1655_cran_s mag_kk2077_cran_s mag_kk2099_cran_s], 'Color', 'black');
-errorbar([5 6 7],[mag_kk1655_sinis_m mag_kk2077_sinis_m mag_kk2099_sinis_m],[mag_kk1655_sinis_s mag_kk2077_sinis_s mag_kk2099_sinis_s], 'Color', 'red');
-errorbar([5 6 7],[mag_kk1655_dors_m mag_kk2077_dors_m mag_kk2099_dors_m],[mag_kk1655_dors_s mag_kk2077_dors_s mag_kk2099_dors_s], 'Color', 'blue');
+errorbar([5 6 7],[mag_kk1655_sinis_m mag_kk2077_sinis_m mag_kk2099_sinis_m],[mag_kk1655_sinis_s mag_kk2077_sinis_s mag_kk2099_sinis_s], '--*r');
+errorbar([5 6 7],[mag_kk1655_dors_m mag_kk2077_dors_m mag_kk2099_dors_m],[mag_kk1655_dors_s mag_kk2077_dors_s mag_kk2099_dors_s], ':ob');
 set(gcf, 'PaperPositionMode', 'auto');
-print -depsc graphics/mag_kketus.eps
+print -depsc graphics/mag_kopf.eps
 
 figure
 hold on;
 errorbar([0 4],[1 mag_k1233_cran_m],[0 mag_k1233_cran_s], 'Color', 'black');
-errorbar([0 4],[1 mag_k1233_sinis_m],[0 mag_k1233_sinis_s], 'Color', 'red');
-errorbar([0 4],[1 mag_k1233_dors_m],[0 mag_k1233_dors_s], 'Color', 'blue');
+errorbar([0 4],[1 mag_k1233_sinis_m],[0 mag_k1233_sinis_s], '--*r');
+errorbar([0 4],[1 mag_k1233_dors_m],[0 mag_k1233_dors_s], ':ob');
 set(gca,'XTick',0:4:4); set(gca,'XTickLabel',0:4:4);
 set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
 set(gcf, 'PaperPositionMode', 'auto');
@@ -2034,8 +2046,8 @@ print -depsc graphics/mag_fetus_kopf_1233.eps
 figure
 hold on;
 errorbar([1 5],[mag_f1655_cran_m mag_k1655_cran_m],[mag_f1655_cran_s mag_k1655_cran_s], 'Color', 'black');
-errorbar([1 5],[mag_f1655_sinis_m mag_k1655_sinis_m],[mag_f1655_sinis_s mag_k1655_sinis_s], 'Color', 'red');
-errorbar([1 5],[mag_f1655_dors_m mag_k1655_dors_m],[mag_f1655_dors_s mag_k1655_dors_s], 'Color', 'blue');
+errorbar([1 5],[mag_f1655_sinis_m mag_k1655_sinis_m],[mag_f1655_sinis_s mag_k1655_sinis_s], '--*r');
+errorbar([1 5],[mag_f1655_dors_m mag_k1655_dors_m],[mag_f1655_dors_s mag_k1655_dors_s], ':ob');
 set(gca,'XTick',1:4:5); set(gca,'XTickLabel',1:4:5);
 set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
 set(gcf, 'PaperPositionMode', 'auto');
@@ -2047,8 +2059,8 @@ print -depsc graphics/mag_fetus_kopf_1655.eps
 figure
 hold on;
 errorbar([2 6],[mag_f2077_cran_m mag_k2077_cran_m],[mag_f2077_cran_s mag_k2077_cran_s], 'Color', 'black');
-errorbar([2 6],[mag_f2077_sinis_m mag_k2077_sinis_m],[mag_f2077_sinis_s mag_k2077_sinis_s], 'Color', 'red');
-errorbar([2 6],[mag_f2077_dors_m mag_k2077_dors_m],[mag_f2077_dors_s mag_k2077_dors_s], 'Color', 'blue');
+errorbar([2 6],[mag_f2077_sinis_m mag_k2077_sinis_m],[mag_f2077_sinis_s mag_k2077_sinis_s], '--*r');
+errorbar([2 6],[mag_f2077_dors_m mag_k2077_dors_m],[mag_f2077_dors_s mag_k2077_dors_s], ':ob');
 set(gca,'XTick',2:4:6); set(gca,'XTickLabel',2:4:6);
 set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
 set(gcf, 'PaperPositionMode', 'auto');
@@ -2060,8 +2072,8 @@ print -depsc graphics/mag_fetus_kopf_2077.eps
 figure
 hold on;
 errorbar([3 7],[mag_f2099_cran_m mag_k2099_cran_m],[mag_f2099_cran_s mag_k2099_cran_s], 'Color', 'black');
-errorbar([3 7],[mag_f2099_sinis_m mag_k2099_sinis_m],[mag_f2099_sinis_s mag_k2099_sinis_s], 'Color', 'red');
-errorbar([3 7],[mag_f2099_dors_m mag_k2099_dors_m],[mag_f2099_dors_s mag_k2099_dors_s], 'Color', 'blue');
+errorbar([3 7],[mag_f2099_sinis_m mag_k2099_sinis_m],[mag_f2099_sinis_s mag_k2099_sinis_s], '--*r');
+errorbar([3 7],[mag_f2099_dors_m mag_k2099_dors_m],[mag_f2099_dors_s mag_k2099_dors_s], ':ob');
 set(gca,'XTick',3:4:7); set(gca,'XTickLabel',3:4:7);
 set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
 set(gcf, 'PaperPositionMode', 'auto');
@@ -2303,814 +2315,958 @@ print -depsc graphics/mag_fetus_kopf_2099.eps
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_cran.dip',1025);
 
-n_f_fetus_1233_1025_cran = mag1{1};
+n_f_fetus_1233_cran = mag1{1};
 
-mag_f_fetus_1233_1025_cran_m = mean(mag1{1});
-mag_f_fetus_1233_1025_cran_s = std(mag1{1});
+mag_f_fetus_1233_cran_m = mean(mag1{1});
+mag_f_fetus_1233_cran_s = std(mag1{1});
 
-phi_f_fetus_1233_1025_cran=zeros(1025,1);
+phi_f_fetus_1233_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_1233_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_1233_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_1233_1025_cran_m = mean(phi_f_fetus_1233_1025_cran);
-phi_f_fetus_1233_1025_cran_s = std(phi_f_fetus_1233_1025_cran);
+phi_f_fetus_1233_cran_m = mean(phi_f_fetus_1233_cran);
+phi_f_fetus_1233_cran_s = std(phi_f_fetus_1233_cran);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D3_cran.dip',1025);
 
-n_f_fetus_1233_1025_D3_cran = mag1{1};
+n_f_fetus_1233_D3_cran = mag1{1};
 
-mag_f_fetus_1233_1025_D3_cran_m = mean(mag1{1});
-mag_f_fetus_1233_1025_D3_cran_s = std(mag1{1});
+mag_f_fetus_1233_D3_cran_m = mean(mag1{1});
+mag_f_fetus_1233_D3_cran_s = std(mag1{1});
 
-phi_f_fetus_1233_1025_D3_cran=zeros(1025,1);
+phi_f_fetus_1233_D3_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_1233_1025_D3_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_1233_D3_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_1233_1025_D3_cran_m = mean(phi_f_fetus_1233_1025_D3_cran);
-phi_f_fetus_1233_1025_D3_cran_s = std(phi_f_fetus_1233_1025_D3_cran);
+phi_f_fetus_1233_D3_cran_m = mean(phi_f_fetus_1233_D3_cran);
+phi_f_fetus_1233_D3_cran_s = std(phi_f_fetus_1233_D3_cran);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D2_cran.dip',1025);
 
-n_f_fetus_1233_1025_D2_cran = mag1{1};
+n_f_fetus_1233_D2_cran = mag1{1};
 
-mag_f_fetus_1233_1025_D2_cran_m = mean(mag1{1});
-mag_f_fetus_1233_1025_D2_cran_s = std(mag1{1});
+mag_f_fetus_1233_D2_cran_m = mean(mag1{1});
+mag_f_fetus_1233_D2_cran_s = std(mag1{1});
 
-phi_f_fetus_1233_1025_D2_cran=zeros(1025,1);
+phi_f_fetus_1233_D2_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_1233_1025_D2_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_1233_D2_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_1233_1025_D2_cran_m = mean(phi_f_fetus_1233_1025_D2_cran);
-phi_f_fetus_1233_1025_D2_cran_s = std(phi_f_fetus_1233_1025_D2_cran);
+phi_f_fetus_1233_D2_cran_m = mean(phi_f_fetus_1233_D2_cran);
+phi_f_fetus_1233_D2_cran_s = std(phi_f_fetus_1233_D2_cran);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1655_1025_cran.dip',1025);
 
-n_f_fetus_1655_1025_cran = mag1{1};
+n_f_fetus_1655_cran = mag1{1};
 
-mag_f_fetus_1655_1025_cran_m = mean(mag1{1});
-mag_f_fetus_1655_1025_cran_s = std(mag1{1});
+mag_f_fetus_1655_cran_m = mean(mag1{1});
+mag_f_fetus_1655_cran_s = std(mag1{1});
 
-phi_f_fetus_1655_1025_cran=zeros(1025,1);
+phi_f_fetus_1655_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_1655_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_1655_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_1655_1025_cran_m = mean(phi_f_fetus_1655_1025_cran);
-phi_f_fetus_1655_1025_cran_s = std(phi_f_fetus_1655_1025_cran);
+phi_f_fetus_1655_cran_m = mean(phi_f_fetus_1655_cran);
+phi_f_fetus_1655_cran_s = std(phi_f_fetus_1655_cran);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_2077_1025_cran.dip',1025);
 
-n_f_fetus_2077_1025_cran = mag1{1};
+n_f_fetus_2077_cran = mag1{1};
 
-mag_f_fetus_2077_1025_cran_m = mean(mag1{1});
-mag_f_fetus_2077_1025_cran_s = std(mag1{1});
+mag_f_fetus_2077_cran_m = mean(mag1{1});
+mag_f_fetus_2077_cran_s = std(mag1{1});
 
-phi_f_fetus_2077_1025_cran=zeros(1025,1);
+phi_f_fetus_2077_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_2077_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_2077_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_2077_1025_cran_m = mean(phi_f_fetus_2077_1025_cran);
-phi_f_fetus_2077_1025_cran_s = std(phi_f_fetus_2077_1025_cran);
+phi_f_fetus_2077_cran_m = mean(phi_f_fetus_2077_cran);
+phi_f_fetus_2077_cran_s = std(phi_f_fetus_2077_cran);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_2099_1025_cran.dip',1025);
 
-n_f_fetus_2099_1025_cran = mag1{1};
+n_f_fetus_2099_cran = mag1{1};
 
-mag_f_fetus_2099_1025_cran_m = mean(mag1{1});
-mag_f_fetus_2099_1025_cran_s = std(mag1{1});
+mag_f_fetus_2099_cran_m = mean(mag1{1});
+mag_f_fetus_2099_cran_s = std(mag1{1});
 
-phi_f_fetus_2099_1025_cran=zeros(1025,1);
+phi_f_fetus_2099_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_2099_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_2099_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_2099_1025_cran_m = mean(phi_f_fetus_2099_1025_cran);
-phi_f_fetus_2099_1025_cran_s = std(phi_f_fetus_2099_1025_cran);
+phi_f_fetus_2099_cran_m = mean(phi_f_fetus_2099_cran);
+phi_f_fetus_2099_cran_s = std(phi_f_fetus_2099_cran);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_kopf_1233_1025_cran.dip',1025);
 
-n_f_kopf_1233_1025_cran = mag1{1};
+n_f_kopf_1233_cran = mag1{1};
 
-mag_f_kopf_1233_1025_cran_m = mean(mag1{1});
-mag_f_kopf_1233_1025_cran_s = std(mag1{1});
+mag_f_kopf_1233_cran_m = mean(mag1{1});
+mag_f_kopf_1233_cran_s = std(mag1{1});
 
-phi_f_kopf_1233_1025_cran=zeros(1025,1);
+phi_f_kopf_1233_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_kopf_1233_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_kopf_1233_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_kopf_1233_1025_cran_m = mean(phi_f_kopf_1233_1025_cran);
-phi_f_kopf_1233_1025_cran_s = std(phi_f_kopf_1233_1025_cran);
+phi_f_kopf_1233_cran_m = mean(phi_f_kopf_1233_cran);
+phi_f_kopf_1233_cran_s = std(phi_f_kopf_1233_cran);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_kopf_1655_1025_cran.dip',1025);
 
-n_f_kopf_1655_1025_cran = mag1{1};
+n_f_kopf_1655_cran = mag1{1};
 
-mag_f_kopf_1655_1025_cran_m = mean(mag1{1});
-mag_f_kopf_1655_1025_cran_s = std(mag1{1});
+mag_f_kopf_1655_cran_m = mean(mag1{1});
+mag_f_kopf_1655_cran_s = std(mag1{1});
 
-phi_f_kopf_1655_1025_cran=zeros(1025,1);
+phi_f_kopf_1655_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_kopf_1655_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_kopf_1655_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_kopf_1655_1025_cran_m = mean(phi_f_kopf_1655_1025_cran);
-phi_f_kopf_1655_1025_cran_s = std(phi_f_kopf_1655_1025_cran);
+phi_f_kopf_1655_cran_m = mean(phi_f_kopf_1655_cran);
+phi_f_kopf_1655_cran_s = std(phi_f_kopf_1655_cran);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_kopf_2077_1025_cran.dip',1025);
 
-n_f_kopf_2077_1025_cran = mag1{1};
+n_f_kopf_2077_cran = mag1{1};
 
-mag_f_kopf_2077_1025_cran_m = mean(mag1{1});
-mag_f_kopf_2077_1025_cran_s = std(mag1{1});
+mag_f_kopf_2077_cran_m = mean(mag1{1});
+mag_f_kopf_2077_cran_s = std(mag1{1});
 
-phi_f_kopf_2077_1025_cran=zeros(1025,1);
+phi_f_kopf_2077_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_kopf_2077_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_kopf_2077_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_kopf_2077_1025_cran_m = mean(phi_f_kopf_2077_1025_cran);
-phi_f_kopf_2077_1025_cran_s = std(phi_f_kopf_2077_1025_cran);
+phi_f_kopf_2077_cran_m = mean(phi_f_kopf_2077_cran);
+phi_f_kopf_2077_cran_s = std(phi_f_kopf_2077_cran);
 
 [loc1,norm1,mag1] = curry_dip_read('result_f_kopf_2099_1025_cran.dip',1025);
 
-n_f_kopf_2099_1025_cran =mag1{1};
+n_f_kopf_2099_cran =mag1{1};
 
-mag_f_kopf_2099_1025_cran_m = mean(mag1{1});
-mag_f_kopf_2099_1025_cran_s = std(mag1{1});
+mag_f_kopf_2099_cran_m = mean(mag1{1});
+mag_f_kopf_2099_cran_s = std(mag1{1});
 
-phi_f_kopf_2099_1025_cran=zeros(1025,1);
+phi_f_kopf_2099_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_kopf_2099_1025_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_kopf_2099_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_kopf_2099_1025_cran_m = mean(phi_f_kopf_2099_1025_cran);
-phi_f_kopf_2099_1025_cran_s = std(phi_f_kopf_2099_1025_cran);
+phi_f_kopf_2099_cran_m = mean(phi_f_kopf_2099_cran);
+phi_f_kopf_2099_cran_s = std(phi_f_kopf_2099_cran);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%dorsal%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_dors.dip',1025);
 
-n_f_fetus_1233_1025_dors = mag1{1};
+n_f_fetus_1233_dors = mag1{1};
 
-mag_f_fetus_1233_1025_dors_m = mean(mag1{1});
-mag_f_fetus_1233_1025_dors_s = std(mag1{1});
+mag_f_fetus_1233_dors_m = mean(mag1{1});
+mag_f_fetus_1233_dors_s = std(mag1{1});
 
-phi_f_fetus_1233_1025_dors=zeros(1025,1);
+phi_f_fetus_1233_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_1233_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_1233_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_1233_1025_dors_m = mean(phi_f_fetus_1233_1025_dors);
-phi_f_fetus_1233_1025_dors_s = std(phi_f_fetus_1233_1025_dors);
+phi_f_fetus_1233_dors_m = mean(phi_f_fetus_1233_dors);
+phi_f_fetus_1233_dors_s = std(phi_f_fetus_1233_dors);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D3_dors.dip',1025);
 
-n_f_fetus_1233_1025_D3_dors = mag1{1};
+n_f_fetus_1233_D3_dors = mag1{1};
 
-mag_f_fetus_1233_1025_D3_dors_m = mean(mag1{1});
-mag_f_fetus_1233_1025_D3_dors_s = std(mag1{1});
+mag_f_fetus_1233_D3_dors_m = mean(mag1{1});
+mag_f_fetus_1233_D3_dors_s = std(mag1{1});
 
-phi_f_fetus_1233_1025_D3_dors=zeros(1025,1);
+phi_f_fetus_1233_D3_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_1233_1025_D3_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_1233_D3_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_1233_1025_D3_dors_m = mean(phi_f_fetus_1233_1025_D3_dors);
-phi_f_fetus_1233_1025_D3_dors_s = std(phi_f_fetus_1233_1025_D3_dors);
+phi_f_fetus_1233_D3_dors_m = mean(phi_f_fetus_1233_D3_dors);
+phi_f_fetus_1233_D3_dors_s = std(phi_f_fetus_1233_D3_dors);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D2_dors.dip',1025);
 
-n_f_fetus_1233_1025_D2_dors = mag1{1};
+n_f_fetus_1233_D2_dors = mag1{1};
 
-mag_f_fetus_1233_1025_D2_dors_m = mean(mag1{1});
-mag_f_fetus_1233_1025_D2_dors_s = std(mag1{1});
+mag_f_fetus_1233_D2_dors_m = mean(mag1{1});
+mag_f_fetus_1233_D2_dors_s = std(mag1{1});
 
-phi_f_fetus_1233_1025_D2_dors=zeros(1025,1);
+phi_f_fetus_1233_D2_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_1233_1025_D2_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_1233_D2_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_1233_1025_D2_dors_m = mean(phi_f_fetus_1233_1025_D2_dors);
-phi_f_fetus_1233_1025_D2_dors_s = std(phi_f_fetus_1233_1025_D2_dors);
+phi_f_fetus_1233_D2_dors_m = mean(phi_f_fetus_1233_D2_dors);
+phi_f_fetus_1233_D2_dors_s = std(phi_f_fetus_1233_D2_dors);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1655_1025_dors.dip',1025);
 
-n_f_fetus_1655_1025_dors = mag1{1};
+n_f_fetus_1655_dors = mag1{1};
 
-mag_f_fetus_1655_1025_dors_m = mean(mag1{1});
-mag_f_fetus_1655_1025_dors_s = std(mag1{1});
+mag_f_fetus_1655_dors_m = mean(mag1{1});
+mag_f_fetus_1655_dors_s = std(mag1{1});
 
-phi_f_fetus_1655_1025_dors=zeros(1025,1);
+phi_f_fetus_1655_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_1655_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_1655_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_1655_1025_dors_m = mean(phi_f_fetus_1655_1025_dors);
-phi_f_fetus_1655_1025_dors_s = std(phi_f_fetus_1655_1025_dors);
+phi_f_fetus_1655_dors_m = mean(phi_f_fetus_1655_dors);
+phi_f_fetus_1655_dors_s = std(phi_f_fetus_1655_dors);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_2077_1025_dors.dip',1025);
 
-n_f_fetus_2077_1025_dors = mag1{1};
+n_f_fetus_2077_dors = mag1{1};
 
-mag_f_fetus_2077_1025_dors_m = mean(mag1{1});
-mag_f_fetus_2077_1025_dors_s = std(mag1{1});
+mag_f_fetus_2077_dors_m = mean(mag1{1});
+mag_f_fetus_2077_dors_s = std(mag1{1});
 
-phi_f_fetus_2077_1025_dors=zeros(1025,1);
+phi_f_fetus_2077_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_2077_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_2077_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_2077_1025_dors_m = mean(phi_f_fetus_2077_1025_dors);
-phi_f_fetus_2077_1025_dors_s = std(phi_f_fetus_2077_1025_dors);
+phi_f_fetus_2077_dors_m = mean(phi_f_fetus_2077_dors);
+phi_f_fetus_2077_dors_s = std(phi_f_fetus_2077_dors);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_2099_1025_dors.dip',1025);
 
-n_f_fetus_2099_1025_dors = mag1{1};
+n_f_fetus_2099_dors = mag1{1};
 
-mag_f_fetus_2099_1025_dors_m = mean(mag1{1});
-mag_f_fetus_2099_1025_dors_s = std(mag1{1});
+mag_f_fetus_2099_dors_m = mean(mag1{1});
+mag_f_fetus_2099_dors_s = std(mag1{1});
 
-phi_f_fetus_2099_1025_dors=zeros(1025,1);
+phi_f_fetus_2099_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_2099_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_2099_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_2099_1025_dors_m = mean(phi_f_fetus_2099_1025_dors);
-phi_f_fetus_2099_1025_dors_s = std(phi_f_fetus_2099_1025_dors);
+phi_f_fetus_2099_dors_m = mean(phi_f_fetus_2099_dors);
+phi_f_fetus_2099_dors_s = std(phi_f_fetus_2099_dors);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_kopf_1233_1025_dors.dip',1025);
 
-n_f_kopf_1233_1025_dors = mag1{1};
+n_f_kopf_1233_dors = mag1{1};
 
-mag_f_kopf_1233_1025_dors_m = mean(mag1{1});
-mag_f_kopf_1233_1025_dors_s = std(mag1{1});
+mag_f_kopf_1233_dors_m = mean(mag1{1});
+mag_f_kopf_1233_dors_s = std(mag1{1});
 
-phi_f_kopf_1233_1025_dors=zeros(1025,1);
+phi_f_kopf_1233_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_kopf_1233_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_kopf_1233_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_kopf_1233_1025_dors_m = mean(phi_f_kopf_1233_1025_dors);
-phi_f_kopf_1233_1025_dors_s = std(phi_f_kopf_1233_1025_dors);
+phi_f_kopf_1233_dors_m = mean(phi_f_kopf_1233_dors);
+phi_f_kopf_1233_dors_s = std(phi_f_kopf_1233_dors);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_kopf_1655_1025_dors.dip',1025);
 
-n_f_kopf_1655_1025_dors = mag1{1};
+n_f_kopf_1655_dors = mag1{1};
 
-mag_f_kopf_1655_1025_dors_m = mean(mag1{1});
-mag_f_kopf_1655_1025_dors_s = std(mag1{1});
+mag_f_kopf_1655_dors_m = mean(mag1{1});
+mag_f_kopf_1655_dors_s = std(mag1{1});
 
-phi_f_kopf_1655_1025_dors=zeros(1025,1);
+phi_f_kopf_1655_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_kopf_1655_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_kopf_1655_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_kopf_1655_1025_dors_m = mean(phi_f_kopf_1655_1025_dors);
-phi_f_kopf_1655_1025_dors_s = std(phi_f_kopf_1655_1025_dors);
+phi_f_kopf_1655_dors_m = mean(phi_f_kopf_1655_dors);
+phi_f_kopf_1655_dors_s = std(phi_f_kopf_1655_dors);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_kopf_2077_1025_dors.dip',1025);
 
-n_f_kopf_2077_1025_dors = mag1{1};
+n_f_kopf_2077_dors = mag1{1};
 
-mag_f_kopf_2077_1025_dors_m = mean(mag1{1});
-mag_f_kopf_2077_1025_dors_s = std(mag1{1});
+mag_f_kopf_2077_dors_m = mean(mag1{1});
+mag_f_kopf_2077_dors_s = std(mag1{1});
 
-phi_f_kopf_2077_1025_dors=zeros(1025,1);
+phi_f_kopf_2077_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_kopf_2077_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_kopf_2077_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_kopf_2077_1025_dors_m = mean(phi_f_kopf_2077_1025_dors);
-phi_f_kopf_2077_1025_dors_s = std(phi_f_kopf_2077_1025_dors);
+phi_f_kopf_2077_dors_m = mean(phi_f_kopf_2077_dors);
+phi_f_kopf_2077_dors_s = std(phi_f_kopf_2077_dors);
 
 [loc1,norm1,mag1] = curry_dip_read('result_f_kopf_2099_1025_dors.dip',1025);
 
-n_f_kopf_2099_1025_dors =mag1{1};
+n_f_kopf_2099_dors =mag1{1};
 
-mag_f_kopf_2099_1025_dors_m = mean(mag1{1});
-mag_f_kopf_2099_1025_dors_s = std(mag1{1});
+mag_f_kopf_2099_dors_m = mean(mag1{1});
+mag_f_kopf_2099_dors_s = std(mag1{1});
 
-phi_f_kopf_2099_1025_dors=zeros(1025,1);
+phi_f_kopf_2099_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_kopf_2099_1025_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_kopf_2099_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_kopf_2099_1025_dors_m = mean(phi_f_kopf_2099_1025_dors);
-phi_f_kopf_2099_1025_dors_s = std(phi_f_kopf_2099_1025_dors);
+phi_f_kopf_2099_dors_m = mean(phi_f_kopf_2099_dors);
+phi_f_kopf_2099_dors_s = std(phi_f_kopf_2099_dors);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_sinis.dip',1025);
 
-n_f_fetus_1233_1025_sinis = mag1{1};
+n_f_fetus_1233_sinis = mag1{1};
 
-mag_f_fetus_1233_1025_sinis_m = mean(mag1{1});
-mag_f_fetus_1233_1025_sinis_s = std(mag1{1});
+mag_f_fetus_1233_sinis_m = mean(mag1{1});
+mag_f_fetus_1233_sinis_s = std(mag1{1});
 
-phi_f_fetus_1233_1025_sinis=zeros(1025,1);
+phi_f_fetus_1233_sinis=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_1233_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_1233_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_1233_1025_sinis_m = mean(phi_f_fetus_1233_1025_sinis);
-phi_f_fetus_1233_1025_sinis_s = std(phi_f_fetus_1233_1025_sinis);
+phi_f_fetus_1233_sinis_m = mean(phi_f_fetus_1233_sinis);
+phi_f_fetus_1233_sinis_s = std(phi_f_fetus_1233_sinis);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D3_sinis.dip',1025);
 
-n_f_fetus_1233_1025_D3_sinis = mag1{1};
+n_f_fetus_1233_D3_sinis = mag1{1};
 
-mag_f_fetus_1233_1025_D3_sinis_m = mean(mag1{1});
-mag_f_fetus_1233_1025_D3_sinis_s = std(mag1{1});
+mag_f_fetus_1233_D3_sinis_m = mean(mag1{1});
+mag_f_fetus_1233_D3_sinis_s = std(mag1{1});
 
-phi_f_fetus_1233_1025_D3_sinis=zeros(1025,1);
+phi_f_fetus_1233_D3_sinis=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_1233_1025_D3_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_1233_D3_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_1233_1025_D3_sinis_m = mean(phi_f_fetus_1233_1025_D3_sinis);
-phi_f_fetus_1233_1025_D3_sinis_s = std(phi_f_fetus_1233_1025_D3_sinis);
+phi_f_fetus_1233_D3_sinis_m = mean(phi_f_fetus_1233_D3_sinis);
+phi_f_fetus_1233_D3_sinis_s = std(phi_f_fetus_1233_D3_sinis);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_D2_sinis.dip',1025);
 
-n_f_fetus_1233_1025_D2_sinis = mag1{1};
+n_f_fetus_1233_D2_sinis = mag1{1};
 
-mag_f_fetus_1233_1025_D2_sinis_m = mean(mag1{1});
-mag_f_fetus_1233_1025_D2_sinis_s = std(mag1{1});
+mag_f_fetus_1233_D2_sinis_m = mean(mag1{1});
+mag_f_fetus_1233_D2_sinis_s = std(mag1{1});
 
-phi_f_fetus_1233_1025_D2_sinis=zeros(1025,1);
+phi_f_fetus_1233_D2_sinis=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_1233_1025_D2_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_1233_D2_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_1233_1025_D2_sinis_m = mean(phi_f_fetus_1233_1025_D2_sinis);
-phi_f_fetus_1233_1025_D2_sinis_s = std(phi_f_fetus_1233_1025_D2_sinis);
+phi_f_fetus_1233_D2_sinis_m = mean(phi_f_fetus_1233_D2_sinis);
+phi_f_fetus_1233_D2_sinis_s = std(phi_f_fetus_1233_D2_sinis);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1655_1025_sinis.dip',1025);
 
-n_f_fetus_1655_1025_sinis = mag1{1};
+n_f_fetus_1655_sinis = mag1{1};
 
-mag_f_fetus_1655_1025_sinis_m = mean(mag1{1});
-mag_f_fetus_1655_1025_sinis_s = std(mag1{1});
+mag_f_fetus_1655_sinis_m = mean(mag1{1});
+mag_f_fetus_1655_sinis_s = std(mag1{1});
 
-phi_f_fetus_1655_1025_sinis=zeros(1025,1);
+phi_f_fetus_1655_sinis=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_1655_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_1655_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_1655_1025_sinis_m = mean(phi_f_fetus_1655_1025_sinis);
-phi_f_fetus_1655_1025_sinis_s = std(phi_f_fetus_1655_1025_sinis);
+phi_f_fetus_1655_sinis_m = mean(phi_f_fetus_1655_sinis);
+phi_f_fetus_1655_sinis_s = std(phi_f_fetus_1655_sinis);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_2077_1025_sinis.dip',1025);
 
-n_f_fetus_2077_1025_sinis = mag1{1};
+n_f_fetus_2077_sinis = mag1{1};
 
-mag_f_fetus_2077_1025_sinis_m = mean(mag1{1});
-mag_f_fetus_2077_1025_sinis_s = std(mag1{1});
+mag_f_fetus_2077_sinis_m = mean(mag1{1});
+mag_f_fetus_2077_sinis_s = std(mag1{1});
 
-phi_f_fetus_2077_1025_sinis=zeros(1025,1);
+phi_f_fetus_2077_sinis=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_2077_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_2077_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_2077_1025_sinis_m = mean(phi_f_fetus_2077_1025_sinis);
-phi_f_fetus_2077_1025_sinis_s = std(phi_f_fetus_2077_1025_sinis);
+phi_f_fetus_2077_sinis_m = mean(phi_f_fetus_2077_sinis);
+phi_f_fetus_2077_sinis_s = std(phi_f_fetus_2077_sinis);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_2099_1025_sinis.dip',1025);
 
-n_f_fetus_2099_1025_sinis = mag1{1};
+n_f_fetus_2099_sinis = mag1{1};
 
-mag_f_fetus_2099_1025_sinis_m = mean(mag1{1});
-mag_f_fetus_2099_1025_sinis_s = std(mag1{1});
+mag_f_fetus_2099_sinis_m = mean(mag1{1});
+mag_f_fetus_2099_sinis_s = std(mag1{1});
 
-phi_f_fetus_2099_1025_sinis=zeros(1025,1);
+phi_f_fetus_2099_sinis=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_fetus_2099_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_fetus_2099_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_fetus_2099_1025_sinis_m = mean(phi_f_fetus_2099_1025_sinis);
-phi_f_fetus_2099_1025_sinis_s = std(phi_f_fetus_2099_1025_sinis);
+phi_f_fetus_2099_sinis_m = mean(phi_f_fetus_2099_sinis);
+phi_f_fetus_2099_sinis_s = std(phi_f_fetus_2099_sinis);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_kopf_1233_1025_sinis.dip',1025);
 
-n_f_kopf_1233_1025_sinis = mag1{1};
+n_f_kopf_1233_sinis = mag1{1};
 
-mag_f_kopf_1233_1025_sinis_m = mean(mag1{1});
-mag_f_kopf_1233_1025_sinis_s = std(mag1{1});
+mag_f_kopf_1233_sinis_m = mean(mag1{1});
+mag_f_kopf_1233_sinis_s = std(mag1{1});
 
-phi_f_kopf_1233_1025_sinis=zeros(1025,1);
+phi_f_kopf_1233_sinis=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_kopf_1233_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_kopf_1233_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_kopf_1233_1025_sinis_m = mean(phi_f_kopf_1233_1025_sinis);
-phi_f_kopf_1233_1025_sinis_s = std(phi_f_kopf_1233_1025_sinis);
+phi_f_kopf_1233_sinis_m = mean(phi_f_kopf_1233_sinis);
+phi_f_kopf_1233_sinis_s = std(phi_f_kopf_1233_sinis);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_kopf_1655_1025_sinis.dip',1025);
 
-n_f_kopf_1655_1025_sinis = mag1{1};
+n_f_kopf_1655_sinis = mag1{1};
 
-mag_f_kopf_1655_1025_sinis_m = mean(mag1{1});
-mag_f_kopf_1655_1025_sinis_s = std(mag1{1});
+mag_f_kopf_1655_sinis_m = mean(mag1{1});
+mag_f_kopf_1655_sinis_s = std(mag1{1});
 
-phi_f_kopf_1655_1025_sinis=zeros(1025,1);
+phi_f_kopf_1655_sinis=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_kopf_1655_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_kopf_1655_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_kopf_1655_1025_sinis_m = mean(phi_f_kopf_1655_1025_sinis);
-phi_f_kopf_1655_1025_sinis_s = std(phi_f_kopf_1655_1025_sinis);
+phi_f_kopf_1655_sinis_m = mean(phi_f_kopf_1655_sinis);
+phi_f_kopf_1655_sinis_s = std(phi_f_kopf_1655_sinis);
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_kopf_2077_1025_sinis.dip',1025);
 
-n_f_kopf_2077_1025_sinis = mag1{1};
+n_f_kopf_2077_sinis = mag1{1};
 
-mag_f_kopf_2077_1025_sinis_m = mean(mag1{1});
-mag_f_kopf_2077_1025_sinis_s = std(mag1{1});
+mag_f_kopf_2077_sinis_m = mean(mag1{1});
+mag_f_kopf_2077_sinis_s = std(mag1{1});
 
-phi_f_kopf_2077_1025_sinis=zeros(1025,1);
+phi_f_kopf_2077_sinis=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_kopf_2077_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_kopf_2077_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_kopf_2077_1025_sinis_m = mean(phi_f_kopf_2077_1025_sinis);
-phi_f_kopf_2077_1025_sinis_s = std(phi_f_kopf_2077_1025_sinis);
+phi_f_kopf_2077_sinis_m = mean(phi_f_kopf_2077_sinis);
+phi_f_kopf_2077_sinis_s = std(phi_f_kopf_2077_sinis);
 
 [loc1,norm1,mag1] = curry_dip_read('result_f_kopf_2099_1025_sinis.dip',1025);
 
-n_f_kopf_2099_1025_sinis =mag1{1};
+n_f_kopf_2099_sinis =mag1{1};
 
-mag_f_kopf_2099_1025_sinis_m = mean(mag1{1});
-mag_f_kopf_2099_1025_sinis_s = std(mag1{1});
+mag_f_kopf_2099_sinis_m = mean(mag1{1});
+mag_f_kopf_2099_sinis_s = std(mag1{1});
 
-phi_f_kopf_2099_1025_sinis=zeros(1025,1);
+phi_f_kopf_2099_sinis=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
 bvec=[1,0,0];
 for i=1:1025
-    phi_f_kopf_2099_1025_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
+    phi_f_kopf_2099_sinis(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
-phi_f_kopf_2099_1025_sinis_m = mean(phi_f_kopf_2099_1025_sinis);
-phi_f_kopf_2099_1025_sinis_s = std(phi_f_kopf_2099_1025_sinis);
+phi_f_kopf_2099_sinis_m = mean(phi_f_kopf_2099_sinis);
+phi_f_kopf_2099_sinis_s = std(phi_f_kopf_2099_sinis);
+
+figure
+hold on;
+errorbar([8 9],[phi_f_fetus_1233_D3_cran_m phi_f_fetus_1233_D2_cran_m],[phi_f_fetus_1233_D3_cran_s phi_f_fetus_1233_D2_cran_s], 'Color', 'black');
+errorbar([8 9],[phi_f_fetus_1233_D3_sinis_m phi_f_fetus_1233_D2_sinis_m],[phi_f_fetus_1233_D3_sinis_s phi_f_fetus_1233_D2_sinis_s], '--*r');
+errorbar([8 9],[phi_f_fetus_1233_D3_dors_m phi_f_fetus_1233_D2_dors_m],[phi_f_fetus_1233_D3_dors_s phi_f_fetus_1233_D2_dors_s], ':ob');
+set(gcf, 'PaperPositionMode', 'auto');
+print -depsc graphics/phi_f_1233_vernix.eps
+
+figure
+hold on;
+errorbar([1 2 3],[phi_f_fetus_1655_cran_m phi_f_fetus_2077_cran_m phi_f_fetus_2099_cran_m],[phi_f_fetus_1655_cran_s phi_f_fetus_2077_cran_s phi_f_fetus_2099_cran_s], 'Color', 'black');
+errorbar([1 2 3],[phi_f_fetus_1655_sinis_m phi_f_fetus_2077_sinis_m phi_f_fetus_2099_sinis_m],[phi_f_fetus_1655_sinis_s phi_f_fetus_2077_sinis_s phi_f_fetus_2099_sinis_s], '--*r');
+errorbar([1 2 3],[phi_f_fetus_1655_dors_m phi_f_fetus_2077_dors_m phi_f_fetus_2099_dors_m],[phi_f_fetus_1655_dors_s phi_f_fetus_2077_dors_s phi_f_fetus_2099_dors_s], ':ob');
+set(gcf, 'PaperPositionMode', 'auto');
+print -depsc graphics/phi_f_fetus.eps
+
+figure
+hold on;
+errorbar([0 4],[0 phi_f_kopf_1233_cran_m],[0 phi_f_kopf_1233_cran_s], 'Color', 'black');
+errorbar([0 4],[0 phi_f_kopf_1233_sinis_m],[0 phi_f_kopf_1233_sinis_s], '--*r');
+errorbar([0 4],[0 phi_f_kopf_1233_dors_m],[0 phi_f_kopf_1233_dors_s], ':ob');
+set(gca,'XTick',0:4:4); set(gca,'XTickLabel',0:4:4);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 1.5]);
+set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
+print -depsc graphics/phi_f_fetus_kopf_1233.eps
+
+figure
+hold on;
+errorbar([1 5],[phi_f_fetus_1655_cran_m phi_f_kopf_1655_cran_m],[phi_f_fetus_1655_cran_s phi_f_kopf_1655_cran_s], 'Color', 'black');
+errorbar([1 5],[phi_f_fetus_1655_sinis_m phi_f_kopf_1655_sinis_m],[phi_f_fetus_1655_sinis_s phi_f_kopf_1655_sinis_s], '--*r');
+errorbar([1 5],[phi_f_fetus_1655_dors_m phi_f_kopf_1655_dors_m],[phi_f_fetus_1655_dors_s phi_f_kopf_1655_dors_s], ':ob');
+set(gca,'XTick',1:4:5); set(gca,'XTickLabel',1:4:5);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 1.5]);
+set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
+print -depsc graphics/phi_f_fetus_kopf_1655.eps
+
+figure
+hold on;
+errorbar([2 6],[phi_f_fetus_2077_cran_m phi_f_kopf_2077_cran_m],[phi_f_fetus_2077_cran_s phi_f_kopf_2077_cran_s], 'Color', 'black');
+errorbar([2 6],[phi_f_fetus_2077_sinis_m phi_f_kopf_2077_sinis_m],[phi_f_fetus_2077_sinis_s phi_f_kopf_2077_sinis_s], '--*r');
+errorbar([2 6],[phi_f_fetus_2077_dors_m phi_f_kopf_2077_dors_m],[phi_f_fetus_2077_dors_s phi_f_kopf_2077_dors_s], ':ob');
+set(gca,'XTick',2:4:6); set(gca,'XTickLabel',2:4:6);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 1.5]);
+set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
+print -depsc graphics/phi_f_fetus_kopf_2077.eps
+
+figure
+hold on;
+errorbar([3 7],[phi_f_fetus_2099_cran_m phi_f_kopf_2099_cran_m],[phi_f_fetus_2099_cran_s phi_f_kopf_2099_cran_s], 'Color', 'black');
+errorbar([3 7],[phi_f_fetus_2099_sinis_m phi_f_kopf_2099_sinis_m],[phi_f_fetus_2099_sinis_s phi_f_kopf_2099_sinis_s], '--*r');
+errorbar([3 7],[phi_f_fetus_2099_dors_m phi_f_kopf_2099_dors_m],[phi_f_fetus_2099_dors_s phi_f_kopf_2099_dors_s], ':ob');
+set(gca,'XTick',3:4:7); set(gca,'XTickLabel',3:4:7);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 1.5]);
+set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
+print -depsc graphics/phi_f_fetus_kopf_2099.eps
+
+figure
+hold on;
+errorbar([8 9],[mag_f_fetus_1233_D3_cran_m mag_f_fetus_1233_D2_cran_m],[mag_f_fetus_1233_D3_cran_s mag_f_fetus_1233_D2_cran_s], 'Color', 'black');
+errorbar([8 9],[mag_f_fetus_1233_D3_sinis_m mag_f_fetus_1233_D2_sinis_m],[mag_f_fetus_1233_D3_sinis_s mag_f_fetus_1233_D2_sinis_s], '--*r');
+errorbar([8 9],[mag_f_fetus_1233_D3_dors_m mag_f_fetus_1233_D2_dors_m],[mag_f_fetus_1233_D3_dors_s mag_f_fetus_1233_D2_dors_s], ':ob');
+set(gcf, 'PaperPositionMode', 'auto');
+print -depsc graphics/mag_f_1233_vernix.eps
+
+figure
+hold on;
+errorbar([1 2 3],[mag_f_fetus_1655_cran_m mag_f_fetus_2077_cran_m mag_f_fetus_2099_cran_m],[mag_f_fetus_1655_cran_s mag_f_fetus_2077_cran_s mag_f_fetus_2099_cran_s], 'Color', 'black');
+errorbar([1 2 3],[mag_f_fetus_1655_sinis_m mag_f_fetus_2077_sinis_m mag_f_fetus_2099_sinis_m],[mag_f_fetus_1655_sinis_s mag_f_fetus_2077_sinis_s mag_f_fetus_2099_sinis_s], '--*r');
+errorbar([1 2 3],[mag_f_fetus_1655_dors_m mag_f_fetus_2077_dors_m mag_f_fetus_2099_dors_m],[mag_f_fetus_1655_dors_s mag_f_fetus_2077_dors_s mag_f_fetus_2099_dors_s], ':ob');
+set(gcf, 'PaperPositionMode', 'auto');
+print -depsc graphics/mag_f_fetus.eps
+
+figure
+hold on;
+errorbar([0 4],[0 mag_f_kopf_1233_cran_m],[0 mag_f_kopf_1233_cran_s], 'Color', 'black');
+errorbar([0 4],[0 mag_f_kopf_1233_sinis_m],[0 mag_f_kopf_1233_sinis_s], '--*r');
+errorbar([0 4],[0 mag_f_kopf_1233_dors_m],[0 mag_f_kopf_1233_dors_s], ':ob');
+set(gca,'XTick',0:4:4); set(gca,'XTickLabel',0:4:4);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 1.5]);
+set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
+print -depsc graphics/mag_f_fetus_kopf_1233.eps
+
+figure
+hold on;
+errorbar([1 5],[mag_f_fetus_1655_cran_m mag_f_kopf_1655_cran_m],[mag_f_fetus_1655_cran_s mag_f_kopf_1655_cran_s], 'Color', 'black');
+errorbar([1 5],[mag_f_fetus_1655_sinis_m mag_f_kopf_1655_sinis_m],[mag_f_fetus_1655_sinis_s mag_f_kopf_1655_sinis_s], '--*r');
+errorbar([1 5],[mag_f_fetus_1655_dors_m mag_f_kopf_1655_dors_m],[mag_f_fetus_1655_dors_s mag_f_kopf_1655_dors_s], ':ob');
+set(gca,'XTick',1:4:5); set(gca,'XTickLabel',1:4:5);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 1.5]);
+set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
+print -depsc graphics/mag_f_fetus_kopf_1655.eps
+
+figure
+hold on;
+errorbar([2 6],[mag_f_fetus_2077_cran_m mag_f_kopf_2077_cran_m],[mag_f_fetus_2077_cran_s mag_f_kopf_2077_cran_s], 'Color', 'black');
+errorbar([2 6],[mag_f_fetus_2077_sinis_m mag_f_kopf_2077_sinis_m],[mag_f_fetus_2077_sinis_s mag_f_kopf_2077_sinis_s], '--*r');
+errorbar([2 6],[mag_f_fetus_2077_dors_m mag_f_kopf_2077_dors_m],[mag_f_fetus_2077_dors_s mag_f_kopf_2077_dors_s], ':ob');
+set(gca,'XTick',2:4:6); set(gca,'XTickLabel',2:4:6);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 1.5]);
+set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
+print -depsc graphics/mag_f_fetus_kopf_2077.eps
+
+figure
+hold on;
+errorbar([3 7],[mag_f_fetus_2099_cran_m mag_f_kopf_2099_cran_m],[mag_f_fetus_2099_cran_s mag_f_kopf_2099_cran_s], 'Color', 'black');
+errorbar([3 7],[mag_f_fetus_2099_sinis_m mag_f_kopf_2099_sinis_m],[mag_f_fetus_2099_sinis_s mag_f_kopf_2099_sinis_s], '--*r');
+errorbar([3 7],[mag_f_fetus_2099_dors_m mag_f_kopf_2099_dors_m],[mag_f_fetus_2099_dors_s mag_f_kopf_2099_dors_s], ':ob');
+set(gca,'XTick',3:4:7); set(gca,'XTickLabel',3:4:7);
+set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 1.5]);
+set(gcf, 'PaperPositionMode', 'auto');
+az = -90;
+el = 90;
+view(az, el);
+print -depsc graphics/mag_f_fetus_kopf_2099.eps
 
 % figure;
 % subplot(1,3,1);
-% hist(phi_f_fetus_1233_1025_cran);
+% hist(phi_f_fetus_1233_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(phi_f_fetus_1233_1025_dors);
+% hist(phi_f_fetus_1233_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(phi_f_fetus_1233_1025_sinis);
+% hist(phi_f_fetus_1233_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(phi_f_fetus_1233_1025_D3_cran);
+% hist(phi_f_fetus_1233_D3_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(phi_f_fetus_1233_1025_D3_dors);
+% hist(phi_f_fetus_1233_D3_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(phi_f_fetus_1233_1025_D3_sinis);
+% hist(phi_f_fetus_1233_D3_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(phi_f_fetus_1233_1025_D2_cran);
+% hist(phi_f_fetus_1233_D2_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(phi_f_fetus_1233_1025_D2_dors);
+% hist(phi_f_fetus_1233_D2_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(phi_f_fetus_1233_1025_D2_sinis);
+% hist(phi_f_fetus_1233_D2_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(phi_f_fetus_1655_1025_cran);
+% hist(phi_f_fetus_1655_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(phi_f_fetus_1655_1025_dors);
+% hist(phi_f_fetus_1655_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(phi_f_fetus_1655_1025_sinis);
+% hist(phi_f_fetus_1655_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(phi_f_fetus_2077_1025_cran);
+% hist(phi_f_fetus_2077_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(phi_f_fetus_2077_1025_dors);
+% hist(phi_f_fetus_2077_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(phi_f_fetus_2077_1025_sinis);
+% hist(phi_f_fetus_2077_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(phi_f_fetus_2099_1025_cran);
+% hist(phi_f_fetus_2099_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(phi_f_fetus_2099_1025_dors);
+% hist(phi_f_fetus_2099_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(phi_f_fetus_2099_1025_sinis);
+% hist(phi_f_fetus_2099_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(phi_f_kopf_1233_1025_cran);
+% hist(phi_f_kopf_1233_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(phi_f_kopf_1233_1025_dors);
+% hist(phi_f_kopf_1233_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(phi_f_kopf_1233_1025_sinis);
+% hist(phi_f_kopf_1233_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(phi_f_kopf_1655_1025_cran);
+% hist(phi_f_kopf_1655_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(phi_f_kopf_1655_1025_dors);
+% hist(phi_f_kopf_1655_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(phi_f_kopf_1655_1025_sinis);
+% hist(phi_f_kopf_1655_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(phi_f_kopf_2077_1025_cran);
+% hist(phi_f_kopf_2077_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(phi_f_kopf_2077_1025_dors);
+% hist(phi_f_kopf_2077_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(phi_f_kopf_2077_1025_sinis);
+% hist(phi_f_kopf_2077_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(phi_f_kopf_2099_1025_cran);
+% hist(phi_f_kopf_2099_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(phi_f_kopf_2099_1025_dors);
+% hist(phi_f_kopf_2099_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(phi_f_kopf_2099_1025_sinis);
+% hist(phi_f_kopf_2099_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Orientierungsfehler, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Orientierungsfehler in deg', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(n_f_fetus_1233_1025_cran);
+% hist(n_f_fetus_1233_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(n_f_fetus_1233_1025_dors);
+% hist(n_f_fetus_1233_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(n_f_fetus_1233_1025_sinis);
+% hist(n_f_fetus_1233_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(n_f_fetus_1233_1025_D3_cran);
+% hist(n_f_fetus_1233_D3_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(n_f_fetus_1233_1025_D3_dors);
+% hist(n_f_fetus_1233_D3_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(n_f_fetus_1233_1025_D3_sinis);
+% hist(n_f_fetus_1233_D3_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(n_f_fetus_1233_1025_D2_cran);
+% hist(n_f_fetus_1233_D2_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(n_f_fetus_1233_1025_D2_dors);
+% hist(n_f_fetus_1233_D2_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(n_f_fetus_1233_1025_D2_sinis);
+% hist(n_f_fetus_1233_D2_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(n_f_fetus_1655_1025_cran);
+% hist(n_f_fetus_1655_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(n_f_fetus_1655_1025_dors);
+% hist(n_f_fetus_1655_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(n_f_fetus_1655_1025_sinis);
+% hist(n_f_fetus_1655_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(n_f_fetus_2077_1025_cran);
+% hist(n_f_fetus_2077_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(n_f_fetus_2077_1025_dors);
+% hist(n_f_fetus_2077_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(n_f_fetus_2077_1025_sinis);
+% hist(n_f_fetus_2077_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(n_f_fetus_2099_1025_cran);
+% hist(n_f_fetus_2099_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(n_f_fetus_2099_1025_dors);
+% hist(n_f_fetus_2099_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(n_f_fetus_2099_1025_sinis);
+% hist(n_f_fetus_2099_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(n_f_kopf_1233_1025_cran);
+% hist(n_f_kopf_1233_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(n_f_kopf_1233_1025_dors);
+% hist(n_f_kopf_1233_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(n_f_kopf_1233_1025_sinis);
+% hist(n_f_kopf_1233_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(n_f_kopf_1655_1025_cran);
+% hist(n_f_kopf_1655_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(n_f_kopf_1655_1025_dors);
+% hist(n_f_kopf_1655_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(n_f_kopf_1655_1025_sinis);
+% hist(n_f_kopf_1655_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(n_f_kopf_2077_1025_cran);
+% hist(n_f_kopf_2077_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(n_f_kopf_2077_1025_dors);
+% hist(n_f_kopf_2077_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(n_f_kopf_2077_1025_sinis);
+% hist(n_f_kopf_2077_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % 
 % figure;
 % subplot(1,3,1);
-% hist(n_f_kopf_2099_1025_cran);
+% hist(n_f_kopf_2099_cran);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung cranial', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,2);
-% hist(n_f_kopf_2099_1025_dors);
+% hist(n_f_kopf_2099_dors);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung dorsal', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 % subplot(1,3,3);
-% hist(n_f_kopf_2099_1025_sinis);
+% hist(n_f_kopf_2099_sinis);
 % h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); h = findobj(gca,'Type','patch'); set(h,'FaceColor','black','EdgeColor','w'); title('Histogramm der Amplitudenfaktoren, Referenzorientierung sinistral', 'interpreter', 'latex');
 % xlabel('Amplitudenfaktor', 'interpreter', 'latex');
 
