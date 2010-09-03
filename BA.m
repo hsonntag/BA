@@ -1471,11 +1471,19 @@ print -depsc graphics/rdm_fetus.eps
 
 figure
 hold on;
+errorbar([4 5 6 7],[rdm_k1233_cran_m rdm_k1655_cran_m rdm_k2077_cran_m rdm_k2099_cran_m],[rdm_k1233_cran_s rdm_k1655_cran_s rdm_k2077_cran_s rdm_k2099_cran_s], 'Color', 'black');
+errorbar([4 5 6 7],[rdm_k1233_sinis_m rdm_k1655_sinis_m rdm_k2077_sinis_m rdm_k2099_sinis_m],[rdm_k1233_sinis_s rdm_k1655_sinis_s rdm_k2077_sinis_s rdm_k2099_sinis_s], '--*r');
+errorbar([4 5 6 7],[rdm_k1233_dors_m rdm_k1655_dors_m rdm_k2077_dors_m rdm_k2099_dors_m],[rdm_k1233_dors_s rdm_k1655_dors_s rdm_k2077_dors_s rdm_k2099_dors_s], ':ob');
+set(gcf, 'PaperPositionMode', 'auto');
+print -depsc graphics/rdm_kopf.eps
+
+figure
+hold on;
 errorbar([5 6 7],[rdm_kk1655_cran_m rdm_kk2077_cran_m rdm_kk2099_cran_m],[rdm_kk1655_cran_s rdm_kk2077_cran_s rdm_kk2099_cran_s], 'Color', 'black');
 errorbar([5 6 7],[rdm_kk1655_sinis_m rdm_kk2077_sinis_m rdm_kk2099_sinis_m],[rdm_kk1655_sinis_s rdm_kk2077_sinis_s rdm_kk2099_sinis_s], '--*r');
 errorbar([5 6 7],[rdm_kk1655_dors_m rdm_kk2077_dors_m rdm_kk2099_dors_m],[rdm_kk1655_dors_s rdm_kk2077_dors_s rdm_kk2099_dors_s], ':ob');
 set(gcf, 'PaperPositionMode', 'auto');
-print -depsc graphics/rdm_kopf.eps
+print -depsc graphics/rdm_kopf_kopf.eps
 
 figure
 hold on;
@@ -1484,7 +1492,7 @@ errorbar([0 4],[0 rdm_k1233_sinis_m],[0 rdm_k1233_sinis_s], '--*r');
 errorbar([0 4],[0 rdm_k1233_dors_m],[0 rdm_k1233_dors_s], ':ob');
 set(gca,'XTick',0:4:4); set(gca,'XTickLabel',0:4:4);
 set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
-ylim([0 1.5]);
+ylim([-0.5 1.5]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -1498,7 +1506,7 @@ errorbar([1 5],[rdm_f1655_sinis_m rdm_k1655_sinis_m],[rdm_f1655_sinis_s rdm_k165
 errorbar([1 5],[rdm_f1655_dors_m rdm_k1655_dors_m],[rdm_f1655_dors_s rdm_k1655_dors_s], ':ob');
 set(gca,'XTick',1:4:5); set(gca,'XTickLabel',1:4:5);
 set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
-ylim([0 1.5]);
+ylim([-0.5 1.5]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -1512,7 +1520,7 @@ errorbar([2 6],[rdm_f2077_sinis_m rdm_k2077_sinis_m],[rdm_f2077_sinis_s rdm_k207
 errorbar([2 6],[rdm_f2077_dors_m rdm_k2077_dors_m],[rdm_f2077_dors_s rdm_k2077_dors_s], ':ob');
 set(gca,'XTick',2:4:6); set(gca,'XTickLabel',2:4:6);
 set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
-ylim([0 1.5]);
+ylim([-0.5 1.5]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -1526,7 +1534,7 @@ errorbar([3 7],[rdm_f2099_sinis_m rdm_k2099_sinis_m],[rdm_f2099_sinis_s rdm_k209
 errorbar([3 7],[rdm_f2099_dors_m rdm_k2099_dors_m],[rdm_f2099_dors_s rdm_k2099_dors_s], ':ob');
 set(gca,'XTick',3:4:7); set(gca,'XTickLabel',3:4:7);
 set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
-ylim([0 1.5]);
+ylim([-0.5 1.5]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -2024,11 +2032,19 @@ print -depsc graphics/mag_fetus.eps
 
 figure
 hold on;
+errorbar([4 5 6 7],[mag_k1233_cran_m mag_k1655_cran_m mag_k2077_cran_m mag_k2099_cran_m],[mag_k1233_cran_s mag_k1655_cran_s mag_k2077_cran_s mag_k2099_cran_s], 'Color', 'black');
+errorbar([4 5 6 7],[mag_k1233_sinis_m mag_k1655_sinis_m mag_k2077_sinis_m mag_k2099_sinis_m],[mag_k1233_sinis_s mag_k1655_sinis_s mag_k2077_sinis_s mag_k2099_sinis_s], '--*r');
+errorbar([4 5 6 7],[mag_k1233_dors_m mag_k1655_dors_m mag_k2077_dors_m mag_k2099_dors_m],[mag_k1233_dors_s mag_k1655_dors_s mag_k2077_dors_s mag_k2099_dors_s], ':ob');
+set(gcf, 'PaperPositionMode', 'auto');
+print -depsc graphics/mag_kopf.eps
+
+figure
+hold on;
 errorbar([5 6 7],[mag_kk1655_cran_m mag_kk2077_cran_m mag_kk2099_cran_m],[mag_kk1655_cran_s mag_kk2077_cran_s mag_kk2099_cran_s], 'Color', 'black');
 errorbar([5 6 7],[mag_kk1655_sinis_m mag_kk2077_sinis_m mag_kk2099_sinis_m],[mag_kk1655_sinis_s mag_kk2077_sinis_s mag_kk2099_sinis_s], '--*r');
 errorbar([5 6 7],[mag_kk1655_dors_m mag_kk2077_dors_m mag_kk2099_dors_m],[mag_kk1655_dors_s mag_kk2077_dors_s mag_kk2099_dors_s], ':ob');
 set(gcf, 'PaperPositionMode', 'auto');
-print -depsc graphics/mag_kopf.eps
+print -depsc graphics/mag_kopf_kopf.eps
 
 figure
 hold on;
@@ -2037,6 +2053,7 @@ errorbar([0 4],[1 mag_k1233_sinis_m],[0 mag_k1233_sinis_s], '--*r');
 errorbar([0 4],[1 mag_k1233_dors_m],[0 mag_k1233_dors_s], ':ob');
 set(gca,'XTick',0:4:4); set(gca,'XTickLabel',0:4:4);
 set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 3]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -2050,6 +2067,7 @@ errorbar([1 5],[mag_f1655_sinis_m mag_k1655_sinis_m],[mag_f1655_sinis_s mag_k165
 errorbar([1 5],[mag_f1655_dors_m mag_k1655_dors_m],[mag_f1655_dors_s mag_k1655_dors_s], ':ob');
 set(gca,'XTick',1:4:5); set(gca,'XTickLabel',1:4:5);
 set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 3]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -2063,6 +2081,7 @@ errorbar([2 6],[mag_f2077_sinis_m mag_k2077_sinis_m],[mag_f2077_sinis_s mag_k207
 errorbar([2 6],[mag_f2077_dors_m mag_k2077_dors_m],[mag_f2077_dors_s mag_k2077_dors_s], ':ob');
 set(gca,'XTick',2:4:6); set(gca,'XTickLabel',2:4:6);
 set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 3]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -2076,6 +2095,7 @@ errorbar([3 7],[mag_f2099_sinis_m mag_k2099_sinis_m],[mag_f2099_sinis_s mag_k209
 errorbar([3 7],[mag_f2099_dors_m mag_k2099_dors_m],[mag_f2099_dors_s mag_k2099_dors_s], ':ob');
 set(gca,'XTick',3:4:7); set(gca,'XTickLabel',3:4:7);
 set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
+ylim([0 3]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -2322,7 +2342,7 @@ mag_f_fetus_1233_cran_s = std(mag1{1});
 
 phi_f_fetus_1233_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
-bvec=[1,0,0];
+bvec=[0,0,1];
 for i=1:1025
     phi_f_fetus_1233_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2339,7 +2359,7 @@ mag_f_fetus_1233_D3_cran_s = std(mag1{1});
 
 phi_f_fetus_1233_D3_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
-bvec=[1,0,0];
+bvec=[0,0,1];
 for i=1:1025
     phi_f_fetus_1233_D3_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2356,7 +2376,7 @@ mag_f_fetus_1233_D2_cran_s = std(mag1{1});
 
 phi_f_fetus_1233_D2_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
-bvec=[1,0,0];
+bvec=[0,0,1];
 for i=1:1025
     phi_f_fetus_1233_D2_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2374,7 +2394,7 @@ mag_f_fetus_1655_cran_s = std(mag1{1});
 phi_f_fetus_1655_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,0,1];
 for i=1:1025
     phi_f_fetus_1655_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2392,7 +2412,7 @@ mag_f_fetus_2077_cran_s = std(mag1{1});
 phi_f_fetus_2077_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,0,1];
 for i=1:1025
     phi_f_fetus_2077_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2410,7 +2430,7 @@ mag_f_fetus_2099_cran_s = std(mag1{1});
 phi_f_fetus_2099_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,0,1];
 for i=1:1025
     phi_f_fetus_2099_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2428,7 +2448,7 @@ mag_f_kopf_1233_cran_s = std(mag1{1});
 phi_f_kopf_1233_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,0,1];
 for i=1:1025
     phi_f_kopf_1233_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2446,7 +2466,7 @@ mag_f_kopf_1655_cran_s = std(mag1{1});
 phi_f_kopf_1655_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,0,1];
 for i=1:1025
     phi_f_kopf_1655_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2464,7 +2484,7 @@ mag_f_kopf_2077_cran_s = std(mag1{1});
 phi_f_kopf_2077_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,0,1];
 for i=1:1025
     phi_f_kopf_2077_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2482,7 +2502,7 @@ mag_f_kopf_2099_cran_s = std(mag1{1});
 phi_f_kopf_2099_cran=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,0,1];
 for i=1:1025
     phi_f_kopf_2099_cran(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2501,7 +2521,7 @@ mag_f_fetus_1233_dors_s = std(mag1{1});
 
 phi_f_fetus_1233_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
-bvec=[1,0,0];
+bvec=[0,1,0];
 for i=1:1025
     phi_f_fetus_1233_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2518,7 +2538,7 @@ mag_f_fetus_1233_D3_dors_s = std(mag1{1});
 
 phi_f_fetus_1233_D3_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
-bvec=[1,0,0];
+bvec=[0,1,0];
 for i=1:1025
     phi_f_fetus_1233_D3_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2535,7 +2555,7 @@ mag_f_fetus_1233_D2_dors_s = std(mag1{1});
 
 phi_f_fetus_1233_D2_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
-bvec=[1,0,0];
+bvec=[0,1,0];
 for i=1:1025
     phi_f_fetus_1233_D2_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2553,7 +2573,7 @@ mag_f_fetus_1655_dors_s = std(mag1{1});
 phi_f_fetus_1655_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,1,0];
 for i=1:1025
     phi_f_fetus_1655_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2571,7 +2591,7 @@ mag_f_fetus_2077_dors_s = std(mag1{1});
 phi_f_fetus_2077_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,1,0];
 for i=1:1025
     phi_f_fetus_2077_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2589,7 +2609,7 @@ mag_f_fetus_2099_dors_s = std(mag1{1});
 phi_f_fetus_2099_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,1,0];
 for i=1:1025
     phi_f_fetus_2099_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2607,7 +2627,7 @@ mag_f_kopf_1233_dors_s = std(mag1{1});
 phi_f_kopf_1233_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,1,0];
 for i=1:1025
     phi_f_kopf_1233_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2625,7 +2645,7 @@ mag_f_kopf_1655_dors_s = std(mag1{1});
 phi_f_kopf_1655_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,1,0];
 for i=1:1025
     phi_f_kopf_1655_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2643,7 +2663,7 @@ mag_f_kopf_2077_dors_s = std(mag1{1});
 phi_f_kopf_2077_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,1,0];
 for i=1:1025
     phi_f_kopf_2077_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
@@ -2661,13 +2681,15 @@ mag_f_kopf_2099_dors_s = std(mag1{1});
 phi_f_kopf_2099_dors=zeros(1025,1);
 avec = [norm1{1,1}, norm1{1,2}, norm1{1,3}];
 
-bvec=[1,0,0];
+bvec=[0,1,0];
 for i=1:1025
     phi_f_kopf_2099_dors(i)=acosd(dot(avec(i,:),bvec)/(sqrt(sum(avec(i,:).^2)*sum(bvec.^2))));
 end
 
 phi_f_kopf_2099_dors_m = mean(phi_f_kopf_2099_dors);
 phi_f_kopf_2099_dors_s = std(phi_f_kopf_2099_dors);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%sinistral%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 [tilde,norm1,mag1] = curry_dip_read('result_f_fetus_1233_1025_sinis.dip',1025);
 
@@ -2864,12 +2886,20 @@ print -depsc graphics/phi_f_fetus.eps
 
 figure
 hold on;
+errorbar([4 5 6 7],[phi_f_kopf_1233_cran_m phi_f_kopf_1655_cran_m phi_f_kopf_2077_cran_m phi_f_kopf_2099_cran_m],[phi_f_kopf_1233_cran_s phi_f_kopf_1655_cran_s phi_f_kopf_2077_cran_s phi_f_kopf_2099_cran_s], 'Color', 'black');
+errorbar([4 5 6 7],[phi_f_kopf_1233_sinis_m phi_f_kopf_1655_sinis_m phi_f_kopf_2077_sinis_m phi_f_kopf_2099_sinis_m],[phi_f_kopf_1233_sinis_s phi_f_kopf_1655_sinis_s phi_f_kopf_2077_sinis_s phi_f_kopf_2099_sinis_s], '--*r');
+errorbar([4 5 6 7],[phi_f_kopf_1233_dors_m phi_f_kopf_1655_dors_m phi_f_kopf_2077_dors_m phi_f_kopf_2099_dors_m],[phi_f_kopf_1233_dors_s phi_f_kopf_1655_dors_s phi_f_kopf_2077_dors_s phi_f_kopf_2099_dors_s], ':ob');
+set(gcf, 'PaperPositionMode', 'auto');
+print -depsc graphics/phi_f_kopf.eps
+
+figure
+hold on;
 errorbar([0 4],[0 phi_f_kopf_1233_cran_m],[0 phi_f_kopf_1233_cran_s], 'Color', 'black');
 errorbar([0 4],[0 phi_f_kopf_1233_sinis_m],[0 phi_f_kopf_1233_sinis_s], '--*r');
 errorbar([0 4],[0 phi_f_kopf_1233_dors_m],[0 phi_f_kopf_1233_dors_s], ':ob');
 set(gca,'XTick',0:4:4); set(gca,'XTickLabel',0:4:4);
-set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
-ylim([0 1.5]);
+set(gca,'YTick',-10:10:90); set(gca,'YTickLabel',-10:10:90);
+ylim([-10 90]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -2882,8 +2912,8 @@ errorbar([1 5],[phi_f_fetus_1655_cran_m phi_f_kopf_1655_cran_m],[phi_f_fetus_165
 errorbar([1 5],[phi_f_fetus_1655_sinis_m phi_f_kopf_1655_sinis_m],[phi_f_fetus_1655_sinis_s phi_f_kopf_1655_sinis_s], '--*r');
 errorbar([1 5],[phi_f_fetus_1655_dors_m phi_f_kopf_1655_dors_m],[phi_f_fetus_1655_dors_s phi_f_kopf_1655_dors_s], ':ob');
 set(gca,'XTick',1:4:5); set(gca,'XTickLabel',1:4:5);
-set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
-ylim([0 1.5]);
+set(gca,'YTick',-10:10:90); set(gca,'YTickLabel',-10:10:90);
+ylim([-10 90]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -2896,8 +2926,8 @@ errorbar([2 6],[phi_f_fetus_2077_cran_m phi_f_kopf_2077_cran_m],[phi_f_fetus_207
 errorbar([2 6],[phi_f_fetus_2077_sinis_m phi_f_kopf_2077_sinis_m],[phi_f_fetus_2077_sinis_s phi_f_kopf_2077_sinis_s], '--*r');
 errorbar([2 6],[phi_f_fetus_2077_dors_m phi_f_kopf_2077_dors_m],[phi_f_fetus_2077_dors_s phi_f_kopf_2077_dors_s], ':ob');
 set(gca,'XTick',2:4:6); set(gca,'XTickLabel',2:4:6);
-set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
-ylim([0 1.5]);
+set(gca,'YTick',-10:10:90); set(gca,'YTickLabel',-10:10:90);
+ylim([-10 90]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -2910,8 +2940,8 @@ errorbar([3 7],[phi_f_fetus_2099_cran_m phi_f_kopf_2099_cran_m],[phi_f_fetus_209
 errorbar([3 7],[phi_f_fetus_2099_sinis_m phi_f_kopf_2099_sinis_m],[phi_f_fetus_2099_sinis_s phi_f_kopf_2099_sinis_s], '--*r');
 errorbar([3 7],[phi_f_fetus_2099_dors_m phi_f_kopf_2099_dors_m],[phi_f_fetus_2099_dors_s phi_f_kopf_2099_dors_s], ':ob');
 set(gca,'XTick',3:4:7); set(gca,'XTickLabel',3:4:7);
-set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
-ylim([0 1.5]);
+set(gca,'YTick',-10:10:90); set(gca,'YTickLabel',-10:10:90);
+ylim([-10 90]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -2936,12 +2966,20 @@ print -depsc graphics/mag_f_fetus.eps
 
 figure
 hold on;
+errorbar([4 5 6 7],[mag_f_kopf_1233_cran_m mag_f_kopf_1655_cran_m mag_f_kopf_2077_cran_m mag_f_kopf_2099_cran_m],[mag_f_kopf_1233_cran_s mag_f_kopf_1655_cran_s mag_f_kopf_2077_cran_s mag_f_kopf_2099_cran_s], 'Color', 'black');
+errorbar([4 5 6 7],[mag_f_kopf_1233_sinis_m mag_f_kopf_1655_sinis_m mag_f_kopf_2077_sinis_m mag_f_kopf_2099_sinis_m],[mag_f_kopf_1233_sinis_s mag_f_kopf_1655_sinis_s mag_f_kopf_2077_sinis_s mag_f_kopf_2099_sinis_s], '--*r');
+errorbar([4 5 6 7],[mag_f_kopf_1233_dors_m mag_f_kopf_1655_dors_m mag_f_kopf_2077_dors_m mag_f_kopf_2099_dors_m],[mag_f_kopf_1233_dors_s mag_f_kopf_1655_dors_s mag_f_kopf_2077_dors_s mag_f_kopf_2099_dors_s], ':ob');
+set(gcf, 'PaperPositionMode', 'auto');
+print -depsc graphics/mag_f_kopf.eps
+
+figure
+hold on;
 errorbar([0 4],[0 mag_f_kopf_1233_cran_m],[0 mag_f_kopf_1233_cran_s], 'Color', 'black');
 errorbar([0 4],[0 mag_f_kopf_1233_sinis_m],[0 mag_f_kopf_1233_sinis_s], '--*r');
 errorbar([0 4],[0 mag_f_kopf_1233_dors_m],[0 mag_f_kopf_1233_dors_s], ':ob');
 set(gca,'XTick',0:4:4); set(gca,'XTickLabel',0:4:4);
-set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
-ylim([0 1.5]);
+set(gca,'YTick',-1:1:9); set(gca,'YTickLabel',-1:1:9);
+ylim([-1 9]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -2954,8 +2992,8 @@ errorbar([1 5],[mag_f_fetus_1655_cran_m mag_f_kopf_1655_cran_m],[mag_f_fetus_165
 errorbar([1 5],[mag_f_fetus_1655_sinis_m mag_f_kopf_1655_sinis_m],[mag_f_fetus_1655_sinis_s mag_f_kopf_1655_sinis_s], '--*r');
 errorbar([1 5],[mag_f_fetus_1655_dors_m mag_f_kopf_1655_dors_m],[mag_f_fetus_1655_dors_s mag_f_kopf_1655_dors_s], ':ob');
 set(gca,'XTick',1:4:5); set(gca,'XTickLabel',1:4:5);
-set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
-ylim([0 1.5]);
+set(gca,'YTick',-1:1:9); set(gca,'YTickLabel',-1:1:9);
+ylim([-1 9]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -2968,8 +3006,8 @@ errorbar([2 6],[mag_f_fetus_2077_cran_m mag_f_kopf_2077_cran_m],[mag_f_fetus_207
 errorbar([2 6],[mag_f_fetus_2077_sinis_m mag_f_kopf_2077_sinis_m],[mag_f_fetus_2077_sinis_s mag_f_kopf_2077_sinis_s], '--*r');
 errorbar([2 6],[mag_f_fetus_2077_dors_m mag_f_kopf_2077_dors_m],[mag_f_fetus_2077_dors_s mag_f_kopf_2077_dors_s], ':ob');
 set(gca,'XTick',2:4:6); set(gca,'XTickLabel',2:4:6);
-set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
-ylim([0 1.5]);
+set(gca,'YTick',-1:1:9); set(gca,'YTickLabel',-1:1:9);
+ylim([-1 9]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
@@ -2982,8 +3020,8 @@ errorbar([3 7],[mag_f_fetus_2099_cran_m mag_f_kopf_2099_cran_m],[mag_f_fetus_209
 errorbar([3 7],[mag_f_fetus_2099_sinis_m mag_f_kopf_2099_sinis_m],[mag_f_fetus_2099_sinis_s mag_f_kopf_2099_sinis_s], '--*r');
 errorbar([3 7],[mag_f_fetus_2099_dors_m mag_f_kopf_2099_dors_m],[mag_f_fetus_2099_dors_s mag_f_kopf_2099_dors_s], ':ob');
 set(gca,'XTick',3:4:7); set(gca,'XTickLabel',3:4:7);
-set(gca,'YTick',0:0.2:3); set(gca,'YTickLabel',0:0.2:3);
-ylim([0 1.5]);
+set(gca,'YTick',-1:1:9); set(gca,'YTickLabel',-1:1:9);
+ylim([-1 9]);
 set(gcf, 'PaperPositionMode', 'auto');
 az = -90;
 el = 90;
