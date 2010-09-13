@@ -3050,7 +3050,7 @@ barweb([phi_f_fetus_1233_cran_m phi_f_fetus_1233_dors_m phi_f_fetus_1233_sinis_m
     phi_f_fetus_2099_cran_m phi_f_fetus_2099_dors_m phi_f_fetus_2099_sinis_m], [phi_f_fetus_1233_cran_s phi_f_fetus_1233_dors_s phi_f_fetus_1233_sinis_s;
     phi_f_fetus_1655_cran_s phi_f_fetus_1655_dors_s phi_f_fetus_1655_sinis_s;
     phi_f_fetus_2077_cran_s phi_f_fetus_2077_dors_s phi_f_fetus_2077_sinis_s;
-    phi_f_fetus_2099_cran_s phi_f_fetus_2099_dors_s phi_f_fetus_2099_sinis_s], [], ['3mm'; '5mm'; '7mm'; '9mm'], ['Orientierungsfehler in Abhängigkeit von der Randelementediskretisierung'], ['Dreiecksseitenlänge der inneren Schichten'], ['Orientierungsfehler in °'], copper, ['y'], [], [], [], 0.05);
+    phi_f_fetus_2099_cran_s phi_f_fetus_2099_dors_s phi_f_fetus_2099_sinis_s], [], ['3mm'; '5mm'; '7mm'; '9mm'], ['Orientierungsfehler über der Randelementediskretisierung'], ['Dreiecksseitenlänge der inneren Schichten'], ['Orientierungsfehler in °'], copper, ['y'], [], [], [], 0.05);
 ylim([0 90]);
 %legend('\alpha (\mu \pm \sigma), (Dipolorientierung: cranial)','\alpha (\mu \pm \sigma), (Dipolorientierung: dorsal)','\alpha (\mu \pm \sigma), (Dipolorientierung: sinistral)',-1);
 set(gcf, 'PaperPositionMode', 'auto');
