@@ -1,3 +1,5 @@
+   %> @file orientation.m
+   %> @brief returns angle between two vectors
    % ======================================================================
    %> @brief ORIENTATION calculates the angle between two vectors
    %>

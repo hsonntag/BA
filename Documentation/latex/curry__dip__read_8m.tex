@@ -1,0 +1,55 @@
+\hypertarget{curry__dip__read_8m}{
+\section{curry\_\-dip\_\-read.m File Reference}
+\label{curry__dip__read_8m}\index{curry\_\-dip\_\-read.m@{curry\_\-dip\_\-read.m}}
+}
+
+
+reads CURRY reconstruction data files  
+
+
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{curry__dip__read_8m_acc8495a7ff254bc8ca37354356abd9fe}{in}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+function \hyperlink{curry__dip__read_8m_a99dc3cfcade7d1693e4f6f0bcec8c872}{curry\_\-dip\_\-read} (\hyperlink{curry__dip__read_8m_acc8495a7ff254bc8ca37354356abd9fe}{in} filename, \hyperlink{curry__dip__read_8m_acc8495a7ff254bc8ca37354356abd9fe}{in} size)
+\begin{DoxyCompactList}\small\item\em CURRY\_\-DIP\_\-READ extracts localisations, normals and magnitudes. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+reads CURRY reconstruction data files 
+
+\subsection{Typedef Documentation}
+\hypertarget{curry__dip__read_8m_acc8495a7ff254bc8ca37354356abd9fe}{
+\index{curry\_\-dip\_\-read.m@{curry\_\-dip\_\-read.m}!in@{in}}
+\index{in@{in}!curry_dip_read.m@{curry\_\-dip\_\-read.m}}
+\subsubsection[{in}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf in}}}
+\label{curry__dip__read_8m_acc8495a7ff254bc8ca37354356abd9fe}
+
+
+\subsection{Function Documentation}
+\hypertarget{curry__dip__read_8m_a99dc3cfcade7d1693e4f6f0bcec8c872}{
+\index{curry\_\-dip\_\-read.m@{curry\_\-dip\_\-read.m}!curry\_\-dip\_\-read@{curry\_\-dip\_\-read}}
+\index{curry\_\-dip\_\-read@{curry\_\-dip\_\-read}!curry_dip_read.m@{curry\_\-dip\_\-read.m}}
+\subsubsection[{curry\_\-dip\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}function curry\_\-dip\_\-read (
+\begin{DoxyParamCaption}
+\item[{{\bf in}}]{ filename, }
+\item[{{\bf in}}]{ size}
+\end{DoxyParamCaption}
+)}}
+\label{curry__dip__read_8m_a99dc3cfcade7d1693e4f6f0bcec8c872}
+
+
+CURRY\_\-DIP\_\-READ extracts localisations, normals and magnitudes. 
+
+CURRY\_\-DIP\_\-READ(F,S) reads the reconstruction $\ast$.dip data and gives only the localisation, normals and magnitude segment.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em filename}]of saved reconstruction data \item[{\em size}]number of elements to read\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+\item[{\em loc}]vector of reconstructed locations \item[{\em norm}]vector of reconstructed normals \item[{\em mag}]vector of reconstructed magnitudes \end{DoxyRetVals}

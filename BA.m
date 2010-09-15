@@ -1,3 +1,6 @@
+   %> @file BA.m
+   %> @brief contains main procedure
+
 % von caudal nach cranial
 
 clear all;

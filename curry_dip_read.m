@@ -1,5 +1,19 @@
+   %> @file curry_dip_read.m
+   %> @brief reads CURRY reconstruction data files
+   % ======================================================================
+   %> @brief CURRY_DIP_READ extracts localisations, normals and magnitudes
+   %>
+   %> CURRY_DIP_READ(F,S) reads the reconstruction *.dip data and gives only the localisation, normals and magnitude segment.
+   %>
+   %> @param filename of saved reconstruction data
+   %> @param size number of elements to read
+   %>
+   %> @retval loc vector of reconstructed locations
+   %> @retval norm vector of reconstructed normals
+   %> @retval mag vector of reconstructed magnitudes
+   % ======================================================================
 function [loc,norm,mag] = curry_dip_read(filename,size)
-% this function reads the dipole data and gives only the localisation-, normals- and magnitude segment
+% this function reads the reconstruction *.dip data and gives only the localisation, normals and magnitude segment
 
 dat=fopen(filename,'r','l');
 
