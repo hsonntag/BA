@@ -1,71 +1,71 @@
 \chapter{Einleitung}
-Quellenrekonstruktion beim FÃ¶tus bietet eine MÃ¶glichkeit die Funktion
-und Entwicklungsstufe des fÃ¶talen Gehirns zu untersuchen. Ein
+Quellenrekonstruktion beim Fötus bietet eine Möglichkeit die Funktion
+und Entwicklungsstufe des fötalen Gehirns zu untersuchen. Ein
 Anwendungsgebiet ist die Untersuchung des auditorischen Kortex als Teil
-des zentralen Nervernsystems und des HÃ¶rsystems und somit eines
+des zentralen Nervernsystems und des Hörsystems und somit eines
 sensorischen Apparates. Die auditorische Stimulation ist sehr geeignet
-um die Reaktionen des FÃ¶tus zu Ã¼berprÃ¼fen da es eine nichtinvasive,
+um die Reaktionen des Fötus zu überprüfen da es eine nichtinvasive,
 schnelle, einfach erzeugbare und variierbare (in Frequenz und
-LautstÃ¤rke) Erregung einer komplexen Nervenbahn ist. Auditorische
-Stimuli erzeugen beim gesunden FÃ¶tus auditorisch evozierte Felder,
-deren Quellen im auditorischen Kortex des FÃ¶tus positioniert sind. Ein
+Lautstärke) Erregung einer komplexen Nervenbahn ist. Auditorische
+Stimuli erzeugen beim gesunden Fötus auditorisch evozierte Felder,
+deren Quellen im auditorischen Kortex des Fötus positioniert sind. Ein
 weiterer Vorteil ist, dass ein auditorischer Stimulus nicht mit
-elektrischem Stromfluss und somit nicht mit stÃ¶renden Magnetfeldern
+elektrischem Stromfluss und somit nicht mit störenden Magnetfeldern
 verbunden ist.
 
-Um eine Quellenrekonstruktion, basierend auf MEG-Messungen, durchfÃ¼hren
-zu kÃ¶nnen, muss ein Modell des Volumenleiters, in dem sich die gesuchte
-Quelle befindet, erstellt werden. Quellenrekonstruktion wird beim FÃ¶tus
-hÃ¤ufig nur von gemessenen Magnetfeldern und nicht von den elektrischen
-Feldern durchgefÃ¼hrt, da das elektrische Feld durch die Vernix caseosa
-in der spÃ¤teren Schwangerschaftszeit weitgehend abgeschirmt ist. Das
+Um eine Quellenrekonstruktion, basierend auf MEG-Messungen, durchführen
+zu können, muss ein Modell des Volumenleiters, in dem sich die gesuchte
+Quelle befindet, erstellt werden. Quellenrekonstruktion wird beim Fötus
+häufig nur von gemessenen Magnetfeldern und nicht von den elektrischen
+Feldern durchgeführt, da das elektrische Feld durch die Vernix caseosa
+in der späteren Schwangerschaftszeit weitgehend abgeschirmt ist. Das
 Magnetfeld wird in einem elektrisch abgeschirmten Raum mit einem
-SQUID-Sensorsystem Ã¼ber dem Abdomen der Mutter aufgenommen, dabei ist
-das Signal-Rausch-VerhÃ¤ltnis (SNR) sehr klein, was hohe Anforderungen
-an die QuellenstabilitÃ¤t des verwendeten Modells stellt. In diesem Fall
-besteht der Volumenleiter nÃ¤herungsweise aus dem FÃ¶tus, der Vernix
-caseosa und dem Abdomen der Mutter. Der Ansatz fÃ¼r die Modellierung mit
+SQUID-Sensorsystem über dem Abdomen der Mutter aufgenommen, dabei ist
+das Signal-Rausch-Verhältnis (SNR) sehr klein, was hohe Anforderungen
+an die Quellenstabilität des verwendeten Modells stellt. In diesem Fall
+besteht der Volumenleiter näherungsweise aus dem Fötus, der Vernix
+caseosa und dem Abdomen der Mutter. Der Ansatz für die Modellierung mit
 hoher Genauigkeit ist ein realistisches 3D-Modell, wobei jedem
-Volumenelement eine spezifische elektrische LeitfÃ¤higkeit zugeordnet
-wird. Damit lassen sich Anisotropien und InhomogenitÃ¤ten der
-elektrischen LeitfÃ¤higkeit im Volumenleiter modellieren, die Werte fÃ¼r
-die LeitfÃ¤higkeiten kÃ¶nnen beispielsweise aus MRT- und CT-Aufnahmen
-geschÃ¤tzt werden. GegenÃ¼ber analytischen Modellen besitzen die
+Volumenelement eine spezifische elektrische Leitfähigkeit zugeordnet
+wird. Damit lassen sich Anisotropien und Inhomogenitäten der
+elektrischen Leitfähigkeit im Volumenleiter modellieren, die Werte für
+die Leitfähigkeiten können beispielsweise aus MRT- und CT-Aufnahmen
+geschätzt werden. Gegenüber analytischen Modellen besitzen die
 realistischen Volumenleitermodelle den Vorteil, dass sie die
 menschliche Anatomie wesentlich exakter beschreiben, was zu einer
-verbesserten Genauigkeit der Quellenrekonstruktion fÃ¼hrt \cite{a2}.
+verbesserten Genauigkeit der Quellenrekonstruktion führt \cite{Haueisen1997}.
 
 3D-Modelle haben den Nachteil, dass sie sehr komplex sind und
 dementsprechend sind die Berechnungen mit diesen Modellen sehr
 aufwendig und zeitintensiv. Die Alternative sind 2.5-D Modelle wie
 \textit{Boundary-Element-Method}{}-Modelle (BEM-Modelle), die hier
-verwendet werden. Dabei werden nur die OberflÃ¤chen einzelner
-Volumenleiterschichten unterschiedlicher LeitfÃ¤higkeit modelliert.
-InhomogenitÃ¤ten und Anisotropien der LeitfÃ¤higkeit in den Schichten
-werden vernachlÃ¤ssigt \cite{a1}. Eine weitere Vereinfachung ist die
-Diskretisierung der OberflÃ¤chen zwischen den Schichten
-unterschiedlicher LeitfÃ¤higkeit mit Dreiecken (Randelementen)
-\cite{a1}. Der Vorteil dieser Vereinfachungen ist die deutliche
-KomplexitÃ¤tsreduzierung der Modelle, damit vereinfachen sich die
-Berechnungen und die Rechenzeiten verkÃ¼rzen sich. Es wird ein 3-Schalen
-BEM-Modell mit den Schichten Abdomen, Vernix caseosa und FÃ¶tus
+verwendet werden. Dabei werden nur die Oberflächen einzelner
+Volumenleiterschichten unterschiedlicher Leitfähigkeit modelliert.
+Inhomogenitäten und Anisotropien der Leitfähigkeit in den Schichten
+werden vernachlässigt \cite{996268}. Eine weitere Vereinfachung ist die
+Diskretisierung der Oberflächen zwischen den Schichten
+unterschiedlicher Leitfähigkeit mit Dreiecken (Randelementen)
+\cite{996268}. Der Vorteil dieser Vereinfachungen ist die deutliche
+Komplexitätsreduzierung der Modelle, damit vereinfachen sich die
+Berechnungen und die Rechenzeiten verkürzen sich. Es wird ein 3-Schalen
+BEM-Modell mit den Schichten Abdomen, Vernix caseosa und Fötus
 verwendet. Die Rechenzeit spielt bei der Quellenrekonstruktion eine
 wichtige Rolle, daher wird in dieser Arbeit eine Optimierung von
-Diskretisierungsfehlern und Exaktheit der der LÃ¶sung der
-VorwÃ¤rtsrechnung und des inversen Problems gesucht.
+Diskretisierungsfehlern und Exaktheit der der Lösung der
+Vorwärtsrechnung und des inversen Problems gesucht.
 
-Um die Diskretisierungsfehler der Modelle vergleichen zu kÃ¶nnen wurden
-VorwÃ¤rtsrechnungen mit verschiedenen Quellen durchgefÃ¼hrt, wobei die
+Um die Diskretisierungsfehler der Modelle vergleichen zu können wurden
+Vorwärtsrechnungen mit verschiedenen Quellen durchgeführt, wobei die
 entstehenden Messwerte des Magnetfeldes der Quellen in einem
-Sensorsystem von jedem Modell berechnet wurden. DafÃ¼r wurden zunÃ¤chst
-Quellen im Gehirn des FÃ¶tus definiert. Bei der Auswertung wurden die
+Sensorsystem von jedem Modell berechnet wurden. Dafür wurden zunächst
+Quellen im Gehirn des Fötus definiert. Bei der Auswertung wurden die
 RDM- und MAG-Werte der Simulierten Daten jeweils mit denen des
-hÃ¶chstaufgelÃ¶sten Modells berechnet und daraus statistische Parameter
+höchstaufgelösten Modells berechnet und daraus statistische Parameter
 ermittelt. Die Simulationsergebnisse des Modells mit der feinsten
-Diskretisierung wurden als Referenzfelder fÃ¼r Quellenrekonstruktionen
+Diskretisierung wurden als Referenzfelder für Quellenrekonstruktionen
 mit allen Modellen verwendet. Die Auswirkungen der
-DiskretisierungsabstÃ¤nde auf die Quellenrekonstruktion wurde durch
-Winkelabweichungen und VerhÃ¤ltnisse der StrÃ¤rken von definierten und
+Diskretisierungsabstände auf die Quellenrekonstruktion wurde durch
+Winkelabweichungen und Verhältnisse der Strärken von definierten und
 rekonstruierten Quellen bewertet. Vergleichen wurden jeweils die
 Modelle mit gleicher Segmentierungsgrundlage und gleicher
 Vernixschichtdicke also gleicher Geometrie aber unterschiedlicher
@@ -74,4 +74,3 @@ allen Schichten aber unterschiedlicher Geometrie verglichen und als
 drittes wurden Modelle mit gleicher Diskretisierung und gleicher
 Segmentierungsgrundlage aber verschiedener Vernixschichtdicke
 verglichen.
-

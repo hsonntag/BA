@@ -1,8 +1,6 @@
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bachelorarbeit Hermann Sonntag
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{header}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,7 +13,7 @@
 % Deckblatt und Abstract ohne Seitenzahl
 \include{Deckblatt}
 
-% Leere Seite, nur fÃ¼r doppelseitigen Druck!
+% Leere Seite, nur für doppelseitigen Druck!
 \thispagestyle{empty} \mbox{} \newpage
 
 \include{Inhalt/Danksagung}
@@ -35,13 +33,14 @@
 
 \tableofcontents			% Inhaltsverzeichnis
 \clearpage\markboth{\nomname}{\nomname} 
-\printnomenclature		% AbkÃ¼rzungsverzeichnis
+\printnomenclature		% Abkürzungsverzeichnis
 %\listoftables				% Tabellenverzeichnis
 \listoffigures				% Abbildungsverzeichnis
 %\lstlistoflistings		% Listings-Verzeichnis
-\listoftodos					% TODOs, nicht im final Dokument!
+%\listoftodos					% TODOs, nicht im final Dokument!
 
 \clearpage
+\thispagestyle{empty} \mbox{} \newpage
 \pagenumbering{arabic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -62,7 +61,7 @@
 %% Literaturangaben
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliography{Literatur}
-\nocite{*} % alle Quellen auffÃ¼hren
+\nocite{*} % alle Quellen aufführen
 
 %\include{Anhang/Anhang}
 \newpage
@@ -70,10 +69,10 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Eidesstattliche ErklÃ¤rung
+%% Eidesstattliche Erklärung
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\textbf{\Huge Eidesstattliche ErklÃ¤rung}
-\addchap{Eidesstattliche ErklÃ¤rung}
+%\textbf{\Huge Eidesstattliche Erklärung}
+\addchap{Eidesstattliche Erklärung}
 
 \vspace{2cm}
 
@@ -81,8 +80,7 @@
 \begin{quote}
 \textit{\arbeitstitel}
 \end{quote}
-selbstÃ¤ndig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe, wobei ich alle wÃ¶rtlichen und sinngemÃ¤ÃŸen Zitate als solche gekennzeichnet habe. Die Arbeit wurde bisher keiner anderen PrÃ¼fungsbehÃ¶rde vorgelegt und auch nicht verÃ¶ffentlicht.\\[6ex]
-
+selbständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe, wobei ich alle wörtlichen und sinngemäßen Zitate als solche gekennzeichnet habe. Die Arbeit wurde bisher keiner anderen Prüfungsbehörde vorgelegt und auch nicht veröffentlicht.\\[6ex]
 \ort, den \today\\
 
 \rule[-0.2cm]{5cm}{0.5pt}
@@ -96,9 +94,10 @@ selbstÃ¤ndig verfasst und keine anderen als die angegebenen Quellen und Hilfsmit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{appendix}
 \clearpage
+\thispagestyle{empty} \mbox{} \newpage
 \pagenumbering{roman}
-%\setdefaultleftmargin{1em}{}{}{}{}{} % Rand der AufzÃ¤hlungen in Tabellen anpassen
-%\include{Inhalt/Anhang}
+%\setdefaultleftmargin{1em}{}{}{}{}{} % Rand der Aufzählungen in Tabellen anpassen
+\include{Inhalt/Anhang}
 \end{appendix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

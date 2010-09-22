@@ -1,140 +1,106 @@
 \chapter{Diskussion}
 Es wurden mit verschiedenen Volumenleitermodellen, ausgehend von
-vorgegebenen Dipolen im Hirnvolumen des FÃ¶tus, die resultierenden
+vorgegebenen Dipolen im Hirnvolumen des Fötus, die resultierenden
 Magnetfelder simuliert. Die Magnetfeldvektoren der Modelle wurden mit
 denen von Referenzmodellen verglichen und deren Abweichungen wurden in
 \textit{RDM} und Amplitudenfaktoren (\textit{MAG}) umgerechnet. Um die
 Auswirkungen der Modellunterschiede auf das inverse Problem zu
 untersuchen, wurden die Magnetfeldvektoren des Referenzmodells
-(BEM-Modell 0 in \tablename~\ref{seq:refTable0}) fÃ¼r
-Quellenrekonstruktionen verwendet. Die GÃ¼te der Rekonstruktionen wurde
-Ã¼ber die Winkelabweichungen der rekonstruierten Dipole von den
-vorgegebenen Dipolen und Ã¼ber die Faktoren der entsprechenden
-DipolstÃ¤rken bestimmt.
+(BEM-Modell 0 in \tablename~\ref{seq:refTable0}) für
+Quellenrekonstruktionen verwendet. Die Güte der Rekonstruktionen wurde
+über die Winkelabweichungen der rekonstruierten Dipole von den
+vorgegebenen Dipolen und über die Faktoren der entsprechenden
+Dipolstärken bestimmt.
 
-Im Allgemeinen ensprechen die VerlÃ¤ufe der Ergebnisse in AbhÃ¤ngigkeit
+Im Allgemeinen ensprechen die Verläufe der Ergebnisse in Abhängigkeit
 von Diskretisierung, Segmentierung und Schichtdicke der Vernix caseosa
-den Erwartungen mit Ausnahme der AbhÃ¤ngigkeit der Ergebnisse bei
+den Erwartungen mit Ausnahme der Abhängigkeit der Ergebnisse bei
 Verwendung der Kopfsegmentierung von der Diskretisierung. Die
-Ergebnisse der LÃ¶sung des direkten Problems korrelieren mit denen der
-LÃ¶sung des inversen Problems.
+Ergebnisse der Lösung des direkten Problems korrelieren mit denen der
+Lösung des inversen Problems.
 
 Die RDM- und Amplitudenfaktorergebnisse und deren Standardabweichungen
-fÃ¼r die VorwÃ¤rtssimulationen zeigen, dass es eine deutliche
-QualitÃ¤tseinbuÃŸe bei der Verwendung der Segmentierung des FÃ¶tuskopfes
-anstelle der Segmentierung des gesamten FÃ¶tus gibt. Dies spiegeln auch
+für die Vorwärtssimulationen zeigen, dass es eine deutliche
+Qualitätseinbuße bei der Verwendung der Segmentierung des Fötuskopfes
+anstelle der Segmentierung des gesamten Fötus gibt. Dies spiegeln auch
 die Winkelabweichungen und Amplitudenfaktoren der
 Rekonstruktionsergebnisse wieder.
 
-Beim Vergleich der verschiedenen Vernixschichtdicken fÃ¤llt auf, dass
+Beim Vergleich der verschiedenen Vernixschichtdicken fällt auf, dass
 eine Reduktion der Vernixschichtdicke um 1mm bzw. $\frac{1}{4}$ genauso
 wie eine Reduktion um 2mm bzw. $\frac{1}{2}$ , kaum messbare
-VerÃ¤nderungen in der Topologie und Amplitude der resultierenden
+Veränderungen in der Topologie und Amplitude der resultierenden
 magnetischen Felder verursacht. Auch die Rekonstruktion von Dipolen
-wurde dadurch nicht bedeutend beeintrÃ¤chtigt, da die
-Orientierungsabweichungen kleiner als 1Â° waren und die DipolstÃ¤rken mit
+wurde dadurch nicht bedeutend beeinträchtigt, da die
+Orientierungsabweichungen kleiner als 1° waren und die Dipolstärken mit
 einem maximalen mittleren Faktor von 1.003 zu den definierten Dipolen,
-sehr gut rekonstruiert wurden. Eine VerÃ¤nderung der Schichtdicke der
+sehr gut rekonstruiert wurden. Eine Veränderung der Schichtdicke der
 Vernix caseoso um wenige Millimeter ist also bei der BEM-Modellierung
-vom FÃ¶tus ohne maÃŸgebliche BeeintrÃ¤chtigung der Quellenrekonstruktion
-mÃ¶glich.
+vom Fötus ohne maßgebliche Beeinträchtigung der Quellenrekonstruktion
+möglich.
 
-Bei klinischen Fragestellungen ist insbesondere die Genauigkeit der
-rÃ¤umlichen Lokalisierung der Quellen von groÃŸer Bedeutung \cite{a2},
-daher wird hier die Bewertung der Lokalisierung durch den
-Orientierungsfehler in \figurename~\ref{seq:refIllustration7} explizit
-dargestellt.
-
-
-
-\begin{center}
-\begin{minipage}{17cm}
-
-
- [Warning: Image ignored] % Unhandled or unsupported graphics:
-%\includegraphics[width=13.723cm,height=11.289cm]{BA-img/BA-img24.eps}
-\begin{center}
-\tablehead{}
-\begin{supertabular}{|m{8.3cm}|m{8.3cm}|}
-\hline
-Ausgehend von der Segmentierung des FÃ¶tus &
-Ausgehend von der Segmentierung des FÃ¶tuskopfes\\\hline
-\includegraphics[width=8.304cm,height=1.884cm]{BA-img/BA-img25.png} &
-\includegraphics[width=8.304cm,height=1.85cm]{BA-img/BA-img26.png}\\\hline
-\end{supertabular}
-\end{center}
-\captionof{figure}[Darstellung der Mittelwerte der Orientierungsfehler
-und deren Standardabweichungen in Â° auf der Ordinatenachse in
-AbhÃ¤ngigkeit von der DreiecksseitenlÃ¤nge der inneren Schichten auf der
-Abszissenachse]{Darstellung der Mittelwerte der Orientierungsfehler und
-deren Standardabweichungen in Â° auf der Ordinatenachse in AbhÃ¤ngigkeit
-von der DreiecksseitenlÃ¤nge der inneren Schichten auf der
-Abszissenachse}
-\label{seq:refIllustration7}
-\end{minipage}
-\end{center}
-Bei den BEM-Modellen, welche von der Segmentierung des FÃ¶tus erstellt
+Bei den BEM-Modellen, welche von der Segmentierung des Fötus erstellt
 wurden, hat die Randelementediskretisierung einen direkten Einfluss auf
-die LÃ¶sung in beiden Richtungen. Das heiÃŸt, grÃ¶ÃŸere
-DreiecksseitenlÃ¤ngen in den BEM-Schichten haben grÃ¶ÃŸere Abweichungen
-der RDM- und MAG-Ergebnisse von den Idealwerten in der VorwÃ¤rtslÃ¶sung
-und gleichzeitig grÃ¶ÃŸere Fehler der rekonstruierten Dipolorientierungen
-(\figurename~\ref{seq:refIllustration7}) und DipolstÃ¤rken zur Folge.
-Beispielsweise verdoppeln sich die Differenzen dieser 4 KenngrÃ¶ÃŸen von
-den minimalen Fehlern bei der Verwendung einer DreiecksseitenlÃ¤nge von
+die Lösung in beiden Richtungen. Das heißt, größere
+Dreiecksseitenlängen in den BEM-Schichten haben größere Abweichungen
+der RDM- und MAG-Ergebnisse von den Idealwerten in der Vorwärtslösung
+und gleichzeitig größere Fehler der rekonstruierten Dipolorientierungen
+(\figurename~\ref{seq:refIllustration7}) und Dipolstärken zur Folge.
+Beispielsweise verdoppeln sich die Differenzen dieser 4 Kenngrößen von
+den minimalen Fehlern bei der Verwendung einer Dreiecksseitenlänge von
 7mm anstelle von 5mm in den inneren Schichten. Diese Verdoppelung ist
 in etwa proportional der Anzahl der verwendeten Dreiecke bzw. Knoten in
 den BEM-Modellen. Die Schlussfolgerung ist, dass hier bei der
-Modellierung des gesamten FÃ¶tus keine Ãœberdiskretisierung gemacht
+Modellierung des gesamten Fötus keine Überdiskretisierung gemacht
 wurde, da andernfalls numerische Fehler eine Verschlechterung der
-LÃ¶sung des inversen Problems bei zu feiner Diskretisierung verursachen.
+Lösung des inversen Problems bei zu feiner Diskretisierung verursachen.
 
-Anders ist es bei der Verwendung der Segmentierung des FÃ¶tuskopfes, hier
-bewirken grÃ¶ÃŸere DreiecksseitenlÃ¤ngen grÃ¶ÃŸere Abweichungen in der
-VorwÃ¤rtslÃ¶sung aber kleinere Fehler bei der LÃ¶sung des inversen
+Anders ist es bei der Verwendung der Segmentierung des Fötuskopfes, hier
+bewirken größere Dreiecksseitenlängen größere Abweichungen in der
+Vorwärtslösung aber kleinere Fehler bei der Lösung des inversen
 Problems (\figurename~\ref{seq:refIllustration7}). Die BEM-Schichten,
-welche den FÃ¶tuskopf und dessen Vernix caseosa modellieren, haben eine
-sphÃ¤rische Geometrie, die aufgrund der begrenzten Detailerkennbarkeit
-in den Ultraschallbildern nur grob geschÃ¤tzt ist. Bei dieser Geometrie
-wird eine Ã¶rtliche Ãœberabtastung bei der Diskretisierung durchgefÃ¼hrt,
-welche bei der VorwÃ¤rtslÃ¶sung in diesem Fall keine negativen
-Auswirkungen hat aber bei der LÃ¶sung des inversen Problems numerische
+welche den Fötuskopf und dessen Vernix caseosa modellieren, haben eine
+sphärische Geometrie, die aufgrund der begrenzten Detailerkennbarkeit
+in den Ultraschallbildern nur grob geschätzt ist. Bei dieser Geometrie
+wird eine örtliche Überabtastung bei der Diskretisierung durchgeführt,
+welche bei der Vorwärtslösung in diesem Fall keine negativen
+Auswirkungen hat aber bei der Lösung des inversen Problems numerische
 Fehler verursacht.
 
-Wenn ein BEM-Modell, dessen innere Schicht den FÃ¶tuskopf modelliert
-(BEM-Modell 4), als Referenz fÃ¼r diese Art von Modell verwendet wird,
-dann sind die Abweichungen der Felder von Dipolen in diesen Modellen in
-AbhÃ¤ngigkeit von der Randelementediskretisierung grÃ¶ÃŸer als die der
-Felder von Modellen, in denen die innere Schicht den gesamten FÃ¶tus
-modelliert (BEM-Modell 0 als Referenz).Dies lÃ¤sst sich auf die
-Geometrie der BEM-Schicht des FÃ¶tus zurÃ¼ckfÃ¼hren, die aufgrund der
-begrenzten AuflÃ¶sung und des schwachen Kontrastes in den
+Wenn ein BEM-Modell, dessen innere Schicht den Fötuskopf modelliert
+(BEM-Modell 4), als Referenz für diese Gruppe von Modell verwendet
+wird, dann sind die Abweichungen der Felder von Dipolen in diesen
+Modellen in Abhängigkeit von der Randelementediskretisierung größer als
+die der Felder von Modellen, in denen die innere Schicht den gesamten
+Fötus modelliert (BEM-Modell 0 als Referenz).Dies lässt sich auf die
+Geometrie der BEM-Schicht des Fötus zurückführen, die aufgrund der
+begrenzten Auflösung und des schwachen Kontrastes in den
 Ultraschallbildern eher konvex und geschlossen ist. Die Kopfmodelle
-haben eine wesentlich kleinere OberflÃ¤che und daher haben die
-DreiecksseitenlÃ¤ngen grÃ¶ÃŸere EinflÃ¼sse auf die Geometrie und damit auf
+haben eine wesentlich kleinere Oberfläche und daher haben die
+Dreiecksseitenlängen größere Einflüsse auf die Geometrie und damit auf
 die magnetischen Feldvektoren.
 
-Bei den BEM-Modellen, deren Grundlage die Segmentierung des FÃ¶tuskopfes
-ist, ist eine AbhÃ¤ngigkeit der untersuchten KenngrÃ¶ÃŸen
-(\textit{RDM},\textit{ MAG},\textit{ a} und $\alpha $) fÃ¼r die
-Bewertung der LÃ¶sung des direkten und inversen Problems, von der
+Bei den BEM-Modellen, deren Grundlage die Segmentierung des Fötuskopfes
+ist, ist eine Abhängigkeit der untersuchten Kenngrößen
+(\textit{RDM},\textit{ MAG},\textit{ a} und $\alpha $) für die
+Bewertung der Lösung des direkten und inversen Problems, von der
 Dipolorientierung erkennbar. Dies ist ebenfalls auf die Geometrie des
-FÃ¶tus zurÃ¼ckzufÃ¼hren, welche eine stÃ¤rkere Anisotropie als die
-sphÃ¤rische Geometrie des FÃ¶tuskopfes aufweist.
+Fötus zurückzuführen, welche eine stärkere Anisotropie als die
+sphärische Geometrie des Fötuskopfes aufweist.
 
 Ein guter Kompromiss ist ein Modell dessen innere Schichten den gesamten
-FÃ¶tus modellieren und eine AuflÃ¶sung von ca. 5mm haben, vgl. BEM-Modell
+Fötus modellieren und eine Auflösung von ca. 5mm haben, vgl. BEM-Modell
 1, wobei die Vernixschichtdicke wenige Millimeter von der realen
-abweichen kann. Eine DreiecksseitenlÃ¤nge von 16mm beim Abdomen und 5mm
+abweichen kann. Eine Dreiecksseitenlänge von 16mm beim Abdomen und 5mm
 in den inneren Schichten ist ausreichend, um Orientierungsabweichungen
-von ca. 5Â° und Amplitudenfaktoren von ca. 0.97 zu erreichen.
+von ca. 5° und Amplitudenfaktoren von ca. 0.97 zu erreichen.
 
-In einer weiteren Studie kÃ¶nnten die Auswirkungen von Rauschen in den
+In einer weiteren Studie könnten die Auswirkungen von Rauschen in den
 simulierten Feldern auf die Quellenrekonstruktion untersucht werden. Es
-kÃ¶nnte zusÃ¤tzlich eine vergleichbare Studie unter BerÃ¼cksichtigung des
-fÃ¶talen EEG (fEEG) durchgefÃ¼hrt werden, sowohl kombiniert mit fMEG als
+könnte zusätzlich eine vergleichbare Studie unter Berücksichtigung des
+fötalen EEG (fEEG) durchgeführt werden, sowohl kombiniert mit fMEG als
 auch separat. Der Einfluss von Dipoltiefe, betrachteter Gehirnregion
-und quasisphÃ¤rischer Korrektur auf die Genauigkeit der LÃ¶sung des
-direkten und inversen Problems bei dem MEG des FÃ¶tus sollte noch
+und quasisphärischer Korrektur auf die Genauigkeit der Lösung des
+direkten und inversen Problems bei dem MEG des Fötus sollte noch
 quantifiziert werden, so wie es bereits beim MEG und EEG des
-Erwachsenen gemacht wurde \cite{a2}.
+Erwachsenen gemacht wurde \cite{Haueisen1997}.

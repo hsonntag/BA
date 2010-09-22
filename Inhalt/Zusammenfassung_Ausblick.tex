@@ -1,32 +1,42 @@
-
-\chapter{Zusammenfassung}
-Die Rekonstruktion von magnetischen Quellen im Gehirn des FÃ¶tus Ã¼ber
-eine LÃ¶sung des inversen Problems von aufgenommenen fÃ¶talen
-Magnetoencephalogrammen, kann Aufschluss Ã¼ber die fÃ¶tale Entwicklung
+\chapter{Zusammenfassung und Ausblick}
+Die Rekonstruktion von magnetischen Quellen im Gehirn des Fötus über
+eine Lösung des inversen Problems von aufgenommenen fötalen
+Magnetoencephalogrammen, kann Aufschluss über die fötale Entwicklung
 geben. In dieser Arbeit wird untersucht, welche realistischen
-Volumenleitermodelle fÃ¼r eine Quellenrekonstruktion, ausgehend vom
-fÃ¶talen Magnetoencephalogramm, geeignet sind. Dabei wird die
+Volumenleitermodelle für eine Quellenrekonstruktion, ausgehend vom
+fötalen Magnetoencephalogramm, geeignet sind. Dabei wird die
 Untersuchung auf die \textit{Boundary-Element-Methode} (BEM)
-eingeschrÃ¤nkt, wobei als FÃ¶tusmodell einmal der gesamte FÃ¶tus und
-einmal nur der Kopf des FÃ¶tus dient. Ziel ist es ein Modell zu finden,
-welches genaue Ergebnisse liefert und dennoch mÃ¶glichst wenig
+eingeschränkt, wobei als Fötusmodell einmal der gesamte Fötus und
+einmal nur der Kopf des Fötus dient. Ziel ist es ein Modell zu finden,
+welches genaue Ergebnisse liefert und dennoch möglichst wenig
 rechenintensiv ist.
 
-Es wurden mit allen Modellen VorwÃ¤rtsrechnungen fÃ¼r gegebene
+Es wurden mit allen Modellen Vorwärtsrechnungen für gegebene
 Quellenparameter mit identisch festgelegten Positionen, Ausrichtungen
-und Amplituden der Dipole durchgefÃ¼hrt. Aus den Ergebnissen der
-VorwÃ¤rtsrechnungen wurden die Abweichungen der simulierten Felder der
-einzelnen Modelle bezogen auf ein Referenzmodell berechnet. Als
-Referenzmodell wurden fÃ¼r alle Modelle das FÃ¶tusmodell mit dem feinsten
-Gitter und zusÃ¤tzlich fÃ¼r die Kopfmodelle das Kopfmodell mit dem
-feinsten Gitter verwendet. Als GrÃ¶ÃŸen fÃ¼r die Bewertung der
-Abweichungen wurden die MAG- und RDM-Werte berechnet. Im nÃ¤chsten
-Schritt wurden die Modelle auf ihre Genauigkeit in bezug auf das
-inverse Problem untersucht. Als Datensatz fÃ¼r die Quellenrekonstruktion
-wurde bei allen Modellen das Simulationsergebnis des hÃ¶chstaufgelÃ¶sten
-FÃ¶tusmodell verwendet.
+und Amplituden von Dipolen durchgeführt. Aus den Ergebnissen der
+Vorwärtsrechnungen wurden die Abweichungen der simulierten Felder der
+einzelnen Modelle bezogen auf ein Referenzmodell berechnet. Als Größen
+für die Bewertung der Abweichungen wurden Amplitudenabweichungen und
+\textit{relative differece measures} (als Maß für die
+Topologieabweichung) berechnet. Im nächsten Schritt wurden die Modelle
+auf ihre Genauigkeit in Bezug auf das inverse Problem untersucht. Als
+Datensatz für die Quellenrekonstruktion wurde bei allen Modellen das
+Simulationsergebnis eines geeigneten Referenzmodells mit hoher
+Auflösung verwendet und es wurden die Amplituden- und
+Orientierungsfehler der rekonstruierten Dipole berechnet.
 
-Es hat sich herausgestellt, dass die Modelle in denen der gesamte FÃ¶tus
-modelliert wurde, mit einer verhÃ¤ltnismÃ¤ÃŸig groben Diskretisierung fÃ¼r
+Es hat sich herausgestellt, dass die Modelle in denen der gesamte Fötus
+modelliert wurde, mit einer Diskretisierung durch eine Dreiecksseitenlänge 
+von 5mm in den inneren Schichten, für
 eine Quellenrekonstruktion der optimale Kompromiss zwischen Rechenzeit
-und QuellenstabilitÃ¤t ist.
+und Quellenstabilität ist. Eine Veränderung der Schichtdicke der Vernix
+caseosa in den BEM-Modellen hatte nur einen sehr geringen Einfluss auf
+die durchgeführten Vorwärtsrechnungen und Quellenrekonstruktionen.
+Die Vernachlässigbarkeit von kleinen Änderungen der Schichtdicke der Vernix caseosa
+muss für den allgemeinen Fall noch validiert werden, da hier unter idealisierten 
+Bedingungen gearbeitet wurde. 
+
+Eine Validierung der Ergebnisse sollte für das direkte und inverse Problem verschiedene Modelle
+einsetzen, \dh beispielsweise FEM-Modelle für die Vorwärtsrechnung und BEM-Modelle für die Lösung
+des inversen Problems, um die Ergebnisse der Lösung des inversen Problems verlässlich auswerten zu können.
+Dabei könnte auch untersucht werden wie sich das Fehlen der Vernix caseosa in BEM-Modellen auf die Lösung des inversen Problems auswirkt.

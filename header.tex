@@ -1,6 +1,6 @@
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% BACHELORARBEIT Hermann Sonntag %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bachelorarbeit Hermann Sonntag
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Dokumentkopf %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[
 		12pt, 									% Schriftgröße
@@ -13,37 +13,40 @@
 		%headings=normal, 			% Größe der Überschriften verkleinern
 		listof=totoc, 					% Verzeichnisse im Inhaltsverzeichnis aufführen
 		bibliography=totoc, 		% Literaturverzeichnis im Inhaltsverzeichnis aufführen
-		captions=tableheading,	% Beschriftung von Tabellen unterhalb ausgeben
+		%captions=tableheading,	% Beschriftung von Tabellen unterhalb ausgeben
 ]{scrreprt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %% Globale Dokument-Informationen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\arbeitstitel}{Exaktheit der L\"osung des direkten und inversen Problems in Abh\"angigkeit von Volumenleitermodelierung und Randelementediskretisierung bei der f\"otalen Magnetoenzephalographie}
+\newcommand{\arbeitstitel}{Exaktheit der Lösung des direkten und inversen
+Problems in Abhängigkeit von
+Volumenleitermodelierung und
+Randelementediskretisierung bei der fötalen
+Magnetoenzephalographie}
 \newcommand{\arbeitsart}{Bachelorarbeit}
 \newcommand{\autor}{Hermann Sonntag}
 \newcommand{\mail}{Hermann.Sonntag@tu-ilmenau.de}
-\newcommand{\studiengang}{Biomedizinische Technik}
+\newcommand{\studiengang}{Ingenieurinformatik}
 \newcommand{\matrikelnr}{41016}
 \newcommand{\erstgutachter}{Prof. Dr.-Ing. habil. Jens Haueisen}
 \newcommand{\zweitgutachter}{Dipl.-Inf. Roland Eichardt}
 \newcommand{\ort}{Ilmenau}
 \newcommand{\ausgabedatum}{1.~April 2010}
-\newcommand{\abgabedatum}{15.~September 2010}
+\newcommand{\abgabedatum}{22.~September 2010}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %% Deutsche Anpassungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[ngerman]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{Documentation/latex/doxygen}
-\usepackage{supertabular}
-%\usepackage[ansinew]{inputenc}
-\usepackage[T3,T1]{fontenc}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
 \usepackage{textcomp} 	% Euro-Zeichen etc.
 \usepackage{lmodern} 		% Type1-Schriftart für nicht-englische Texte
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% Doxygen Anhang %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{doxygen}
 
 %% Packages für Grafiken & Abbildungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{graphicx}		% Zum Laden von Grafiken
@@ -51,6 +54,8 @@
 \usepackage{subfig}			% Einbinden von mehreren Objekten innerhalb eines floats
 \usepackage{pdfpages}   % bindet eine Grafikdatei (.pdf oder .jpg) seitenfüllend in das Dokument ein
 \graphicspath{{Bilder/}}
+%\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
+\captionsetup{margin=10pt,font=small,labelfont=bf}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -75,6 +80,7 @@
 %% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[numbers,square]{natbib}
 %\bibliographystyle{alphadin}
+\bibliographystyle{plain}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -147,25 +153,16 @@
 \usepackage{array}
 \usepackage{xspace}
 \usepackage{xcolor}
-\setlength\tabcolsep{1mm}
-\renewcommand\arraystretch{1.3}
-\newcounter{Text}
-\renewcommand\theText{\arabic{Text}}
-\newcommand\boldsubformula[1]{\text{\mathversion{bold}$#1$}}
 %\usepackage[usenames,dvipsnames]{color}
-\usepackage{listings} % Programmcode
+%\usepackage{listings} % Programmcode
 \usepackage{chngcntr} % fortlaufendes Durchnummerieren der Fußnoten
 % Kopf- und Fußzeilen anpassen
-\usepackage[
-    automark, % Kapitelangaben in Kopfzeile automatisch erstellen
-    headsepline, % Trennlinie unter Kopfzeile
-    %footsepline, % Trennlinie über Fußzeile
-    ilines % Trennlinie linksbündig ausrichten
-]{scrpage2}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[
+%    automark, % Kapitelangaben in Kopfzeile automatisch erstellen
+%    headsepline, % Trennlinie unter Kopfzeile
+%    %footsepline, % Trennlinie über Fußzeile
+%    ilines % Trennlinie linksbündig ausrichten
+%]{scrpage2}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \makenomenclature
@@ -178,27 +175,49 @@
 \setlength{\topskip}{\ht\strutbox} % behebt Warnung von geometry
 \geometry{paper=a4paper,left=30mm,right=18mm,top=15mm,bottom=55mm}
 
-\pagestyle{scrheadings} % Kopf- und Fußzeilen
-\renewcommand*{\chapterpagestyle}{scrheadings} % Kopf- und Fußzeile auch auf Kapitelanfangsseiten 
-\renewcommand{\headfont}{\normalfont} % Schriftform der Kopfzeile
+\usepackage[Sonny]{fncychap} %% Chapter style
+%\ChNameVar{\Large\sf} 
+%\ChNumVar{\Huge} 
+%\ChTitleVar{\Large\sf}
+%\ChRuleWidth{0.5pt} 
+%\ChNameUpperCase
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           Header/Footer Format
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+%\newcommand{\helv}{%
+%\fontfamily{phv}\fontsize{12}{14}\selectfont}
+\fancyhead[RO]{\textit{\rightmark}}
+\fancyhead[LE]{\leftmark}
+\fancyfoot[RO]{\thepage}
+\fancyfoot[LE]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+%\addtolength{\headheight}{2.5pt}
+\usepackage[bottom,perpage]{footmisc} %% Footnotes at bottom of page
+
+%\pagestyle{scrheadings} % Kopf- und Fußzeilen
+%\renewcommand*{\chapterpagestyle}{scrheadings} % Kopf- und Fußzeile auch auf Kapitelanfangsseiten 
+%\renewcommand{\headfont}{\normalfont} % Schriftform der Kopfzeile
+%\automark[chapter]{chapter}
 
 % Kopfzeile
 %\ihead{\large{\textsc{\arbeitstitel}}\\ \small{\arbeitstitel} \\[2ex] \textit{\headmark}}
 %\ihead{\large{\textsc{\arbeitsart}}\ - \small{\autor} \\ \textit{\headmark}}
-\ihead{\textit{\headmark}}
-\chead{}
-\ohead{\pagemark}
+%\ihead{\textit{\leftmark}}
+%\chead{}
+%\ohead{\pagemark}
 %\ohead{\includegraphics[scale=0.15]{\logo}}
 \setlength{\headheight}{30mm} % Höhe der Kopfzeile
 % Kopfzeile über den Text hinaus verbreitern
-\setheadwidth[0pt]{textwithmarginpar} 
-\setheadsepline[text]{0.4pt} % Trennlinie unter Kopfzeile
+%\setheadwidth[0pt]{textwithmarginpar} 
+%\setheadsepline[text]{0.4pt} % Trennlinie unter Kopfzeile
 
 % Fußzeile
 %\ifoot{\small{\arbeitsart\ \autor}}
-\ifoot{}
-\cfoot{}
-\ofoot{\pagemark}
+%\ifoot{}
+%\cfoot{}
+%\ofoot{\pagemark}
 
 %% Verschiedenes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frenchspacing % erzeugt ein wenig mehr Platz hinter einem Punkt
@@ -222,37 +241,43 @@
 \definecolor{colComments}{rgb}{0.5,0.5,0.5}	%grau
 \definecolor{colString}{rgb}{0,0.5,0}
 
+%Definitionen für Trademark, Copyright, Registered
+
+\def\TReg{\textsuperscript{\textregistered}}
+\def\TCop{\textsuperscript{\textcopyright}}
+\def\TTra{\textsuperscript{\texttrademark}}
+
 % Quellcode-Ausgabe formatieren
-\renewcommand{\lstlistlistingname}{Verzeichnis der Listings}
-\lstset{
-		float=tbph,												% makes sense on individual displayed listings only and lets them float
-		language=C++,											% choose the language of the code
-		basicstyle=\footnotesize,					% the size of the fonts that are used for the code
-		numbers=left,											% where to put the line-numbers
-		numberstyle=\tiny,								% the size of the fonts that are used for the line-numbers
-		%numberstyle=\footnotesize,				% the size of the fonts that are used for the line-numbers
-		stepnumber=1,											% the step between two line-numbers. If it's 1 each line will be numbered
-		numbersep=7pt,										% how far the line-numbers are from the code
-		backgroundcolor=\color{hellgelb},	% choose the background color. You must add \usepackage{color}
-		showspaces=false,									% show spaces adding particular underscores
-		showstringspaces=false,						% underline spaces within strings
-		showtabs=false,										% show tabs within strings adding particular underscores
-		frame=single,											% adds a frame around the code
-		%frame={trLb},										% adds a frame around the code
-		tabsize=4,												% sets default tabsize to 2 spaces
-		captionpos=b,											% sets the caption-position (b or t)
-		breaklines=true,									% sets automatic line breaking
-		breakatwhitespace=false,					% sets if automatic breaks should only happen at whitespace
-		breakindent=5pt,									% is the indention of the second, third,... line of broken lines
-		%escapeinside={\%*}{*)},					% if you want to add a comment within your code
-		identifierstyle=\color{colIdentifier},
-		keywordstyle=\color{colKeys},
-		stringstyle=\color{colString},
-		commentstyle=\color{colComments},
-		columns=fixed,
-		%emph={bool,int,unsigned,char,true,false,void}, emphstyle=\color{blue},
-		%emph={[2]\#include,\#define,\#ifdef,\#endif}, emphstyle={[2]\color{darkblue}},
-}
+%\renewcommand{\lstlistlistingname}{Verzeichnis der Listings}
+%\lstset{
+%		float=tbph,												% makes sense on individual displayed listings only and lets them float
+%		language=C++,											% choose the language of the code
+%		basicstyle=\footnotesize,					% the size of the fonts that are used for the code
+%		numbers=left,											% where to put the line-numbers
+%		numberstyle=\tiny,								% the size of the fonts that are used for the line-numbers
+%		%numberstyle=\footnotesize,				% the size of the fonts that are used for the line-numbers
+%		stepnumber=1,											% the step between two line-numbers. If it's 1 each line will be numbered
+%		numbersep=7pt,										% how far the line-numbers are from the code
+%		backgroundcolor=\color{hellgelb},	% choose the background color. You must add \usepackage{color}
+%		showspaces=false,									% show spaces adding particular underscores
+%		showstringspaces=false,						% underline spaces within strings
+%		showtabs=false,										% show tabs within strings adding particular underscores
+%		frame=single,											% adds a frame around the code
+%		%frame={trLb},										% adds a frame around the code
+%		tabsize=4,												% sets default tabsize to 2 spaces
+%		captionpos=b,											% sets the caption-position (b or t)
+%		breaklines=true,									% sets automatic line breaking
+%		breakatwhitespace=false,					% sets if automatic breaks should only happen at whitespace
+%		breakindent=5pt,									% is the indention of the second, third,... line of broken lines
+%		%escapeinside={\%*}{*)},					% if you want to add a comment within your code
+%		identifierstyle=\color{colIdentifier},
+%		keywordstyle=\color{colKeys},
+%		stringstyle=\color{colString},
+%		commentstyle=\color{colComments},
+%		columns=fixed,
+%		%emph={bool,int,unsigned,char,true,false,void}, emphstyle=\color{blue},
+%		%emph={[2]\#include,\#define,\#ifdef,\#endif}, emphstyle={[2]\color{darkblue}},
+%}
 
 % Neuberechnung des Satzspiegels (zur Vermeidung von overfull boxes)
 %\KOMAoptions{DIV=last}
@@ -274,6 +299,21 @@
 \newcommand{\bzw}{bzw.\ }
 \newcommand{\evtl}{evtl.\ }
 
+% Befehl für fettgedruckte Vektoren in mathematischen Ausdrücken
+\newcommand\boldsubformula[1]{\text{\mathversion{bold}$#1$}}
+
+%%% Makes page numbers, hyperlinked
+\renewcommand*{\pagedeclaration}[1]{\unskip, \hyperpage{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Fix the colours of transparent images
+\pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Make it look like a book in acroread
+\pdfcatalog{/PageLayout /TwoPageRight}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% BACHELORARBEIT Hermann Sonntag %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bachelorarbeit Hermann Sonntag
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
