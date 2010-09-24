@@ -12,20 +12,26 @@ Quellenrekonstruktionen verwendet. Die Güte der Rekonstruktionen wurde
 vorgegebenen Dipolen und über die Faktoren der entsprechenden
 Dipolstärken bestimmt.
 
+Es wurde für die Modellierung der inneren Schichten zum einen der gesamte Fötus segmentiert
+und zum anderen nur der Fötuskopf. Beide Varianten haben Vor- und Nachteile. Die Segmentierung des Fötuskopfes ist einfacher und genauer, da der Schädel eine große und gut erkennbare Begrenzung des Kopfes im US ausmacht. In der
+fMEG befinden sich die Quellen im Gehirn des Fötus und dafür ist Segmentierung des Kopfes als Begrenzung eine gute Näherung in Anbetracht der Qualität von 3D-US-Bildern. Die kugelähnliche Form des Kopfes ermöglicht es quasisphärische Korrekturen bei der Lösung des inversen Problems sinnvoll einzusetzen, dabei werden
+ausschließlich tangential gerichtete Dipole benutzt, da das MEG ca. 6-
+bis 10mal sensitiver gegenüber tangentialen Dipolen verglichen mit
+radialen Dipolen ist \cite{Haueisen1997}. Nach [?CURRY REFERENCE MANUAL] verbessert diese Korrektur die Berechnungen für annähernd sphärische Volumenleiter. Dise Verbesserung sollte in weiteren Arbeiten für Volumenleitermodelle des Fötus noch quantifiziert werden. Ein weiterer Vorteil der näherungsweise sphärischen Geometrie des Kopfes ist die Möglichkeit der Suche der Kopfposition im Abdomen ausgehend vom fMEG, wie es in \cite{eltit} mit einer Kugelschicht als Kopfmodell gezeigt wurde.
+Problematisch ist die Modellierung der Vernix caseosa, die hier an die innerste Schicht geknüpft ist. Da die Vernix caseosa den gesamten Fötus umschließt, ist die Beschränkung auf den Fötuskopf eine starke Abweichung von der Realität bei der modellierung dieser Schicht. Die Vernix caseosa hat gegenüber den umliegenden Schichten Abdomen und Fötus, eine wesentlich kleinere spezifische elektrische Leitfähigkeit und diese kann nur dann entsprechend berücksichtigt werden, wenn der gesamte Fötus dafür erfasst wird.
+
 Im Allgemeinen ensprechen die Verläufe der Ergebnisse in Abhängigkeit
 von Diskretisierung, Segmentierung und Schichtdicke der Vernix caseosa
 den Erwartungen mit Ausnahme der Abhängigkeit der Ergebnisse bei
 Verwendung der Kopfsegmentierung von der Diskretisierung. Die
 Ergebnisse der Lösung des direkten Problems korrelieren mit denen der
 Lösung des inversen Problems.
-
 Die RDM- und Amplitudenfaktorergebnisse und deren Standardabweichungen
 für die Vorwärtssimulationen zeigen, dass es eine deutliche
 Qualitätseinbuße bei der Verwendung der Segmentierung des Fötuskopfes
 anstelle der Segmentierung des gesamten Fötus gibt. Dies spiegeln auch
 die Winkelabweichungen und Amplitudenfaktoren der
 Rekonstruktionsergebnisse wieder.
-
 Beim Vergleich der verschiedenen Vernixschichtdicken fällt auf, dass
 eine Reduktion der Vernixschichtdicke um 1mm bzw. $\frac{1}{4}$ genauso
 wie eine Reduktion um 2mm bzw. $\frac{1}{2}$ , kaum messbare

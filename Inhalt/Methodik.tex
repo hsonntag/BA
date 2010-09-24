@@ -1,6 +1,5 @@
 \chapter{Methodik}
 \section{Volumenleitermodellierung}
-%\subsection{Segmentierung}
 Um ein BEM-Modell zu erstellen, wurde die Oberfläche des Fötus aus
 3D-Ultraschallaufnahmen einer gesunden, freiwilligen Probandin
 segmentiert. Bei einem 3D-Ultraschallbild werden gewöhnliche
@@ -26,12 +25,12 @@ Die Vernix caseosa war in den Ultraschallaufnahmen nicht erkennbar, aus
 diesem Grund wurde später bei der Modellbildung eine konstante
 Vernixschichtdicke, wie in \cite{a3} verwendet.
 
-Zusätzlich zur Fötussegmentierung wurde analog eine Kopfsegmentierung
+Zusätzlich zur Fötussegmentierung wurde analog eine Segementierung des Fötuskopfes erstellt
 erstellt.
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=15cm]{BA-img/BA-img98.pdf}
+\includegraphics[]{BA-img/BA-img98.png}
 \end{center}
 \caption[Segmentierung (gelb) des Fötus in den verwendeten
 Ultraschallbildern mit Pass Markers (grün).]{Segmentierung (gelb) des
@@ -40,17 +39,11 @@ Fötus in den verwendeten Ultraschallbildern mit Pass Markers (grün). In den Bild
 
 \end{figure}
 
-%\subsection{Diskretisierung der Oberflächen}
-Ausgehend von den Segmentierungsergebnissen wurden BEM-Modelle erstellt,
-wobei die Dreiecksseitenlängen der Oberflächen in den Modellen variiert
-wurden. 
-
-
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=6.77cm,height=6.77cm]{graphics/fetus+vernix.pdf}
-\includegraphics[width=6.77cm,height=6.77cm]{graphics/kopf+vernix.pdf}
+\includegraphics[width=6.77cm,height=6.77cm]{BA-img/fetus+vernix.png}
+\includegraphics[width=6.77cm,height=6.77cm]{BA-img/kopf+vernix.png}
 \end{center}
 \caption[Segmentierungsergebnisse für Fötus mit Vernix caseosa
 (links) und Kopf mit Vernix caseosa (rechts) in frontaler Ansicht. Die
@@ -84,10 +77,19 @@ aus Dreiecken mit definierter Dreiecksseitenlänge gelegt. Jedes dieser
 Dreiecke wurde wiederum in 4 planare Unterdreiecke verfeinert um in
 diesen Unterdreiecken ein stückweise konstantes Dreieckspotential
 verwenden zu können.
-welches für die magnetische Flussdichte
+
+%\section{Modellierung und Sensorsystem}
+Aus den Dreiecksnetzen von Abdomen
+(\figurename~\ref{seq:refIllustration3}), Vernix caseosa und Fötus
+(\figurename~\ref{seq:refIllustration2}) wurde jeweils ein 3-Schalen
+BEM-Modell erstellt, sodass insgesamt 10 verschiedene, in
+\tablename~\ref{seq:refTable0} aufgelistete, BEM-Modelle enstanden.
+
+BEM-Modelle dienen hier der Beschreibung des Magnetischen Feldeswelches in Abhängigkeit
+von gegebenen Quellenparametern im Volumenleiter. Die Vorwärtsrechnung ist dabei für die magnetische Flussdichte
 $\boldsubformula{b}(\boldsubformula{r},\boldsubformula{r}_{Q})$ an der
 Sensorposition $\boldsubformula{r}$, ausgehend von der Quellenposition
-$\boldsubformula{r}_{Q}$ als
+$\boldsubformula{r}_{Q}$ eindeutig beschreibbar als
 
 %\begin{center}
 \begin{equation}
@@ -101,9 +103,10 @@ _{p}^{\text{{}-}}\right]\iint _{S_{p}}\Phi
 g(\boldsubformula{r},\boldsubformula{r}_{Q})\times
 \boldsubformula{{\tilde {n}}}\mathit{dS}_{Q}
 %\end{gathered}
+\label{eqn:direkt}
 \end{equation}
 %\end{center}
-definiert ist \cite{a3}. In dieser Gleichung ist $S_{p}$ die Oberfläche,
+\cite{a3}. In dieser Gleichung ist $S_{p}$ die Oberfläche,
 welche zwei Schichten der Leitfähigkeiten $\sigma _{p}^{\text{+}}$ und
 $\sigma _{p}^{\text{{}-}}$ voneinander trennt. Der nach Außen
 gerichtete Normalenvektor der Oberfläche $S_{p}$ wurde mit
@@ -115,27 +118,6 @@ Dipolposition $\boldsubformula{r}_{Q}$ . Für homogene, isotrope
 Kompartimente lässt sich die Greensche Funktion als
 $g(\boldsubformula{r},\boldsubformula{r}_{Q})=\frac{\mu _{0}}{4\pi
 \|\boldsubformula{r}-\boldsubformula{r}_{Q}\|}$ formulieren.
-
-
-Jedes BEM-Modell, welches in dieser Arbeit erstellt wurde, besteht aus 3
-Schichten, der Fötusoberfläche, der Vernixoberfläche und der
-Abdomenoberfläche. Das Abdomen ist in den BEM-Modellen die Schicht mit
-den wenigsten Unebenheiten und mit der größten Oberfläche, deshalb
-wurde eine größere Dreiecksseitenlängen beim Abdomen als bei den 2
-inneren Schichten verwendet. Für die Vernix- und die Fötusoberfläche
-wurde jeweils die gleiche Dreiecksseitenlänge gewählt, da diese sich
-nur wenig unterscheiden. Das gleiche galt auch für die Kopfmodelle. Die
-Dreiecksseitenlänge des Referenzmodells wurde für die inneren Schichten
-mit 3mm und für das Abdomen mit 12mm festgelegt. Die Variation der
-Dreiecksseitenlänge erfolgte bei den inneren Schichten in
-2-mm-Schritten und beim Abdomen in 4-mm-Schritten.
-
-%\section{Modellierung und Sensorsystem}
-Aus den Dreiecksnetzen von Abdomen
-(\figurename~\ref{seq:refIllustration3}), Vernix caseosa und Fötus
-(\figurename~\ref{seq:refIllustration2}) wurde jeweils ein 3-Schalen
-BEM-Modell erstellt, sodass insgesamt 10 verschiedene, in
-\tablename~\ref{seq:refTable0} aufgelistete, BEM-Modelle enstanden.
 
 
 \begin{figure}
@@ -163,19 +145,27 @@ spezifische elektrische Leitfähigkeit von $\sigma _{M}=\sigma
 _{C}=2\cdot 10^{-1}\frac{S}{m}$ und für die Vernix eine spezifische
 elektrische Leitfähigkeit von $\sigma _{V}=2\cdot 10^{-6}\frac{S}{m}$
 verwendet.
+Für die Vorwärtsrechnung und die Lösung des inversen Problems wurden
+in den BEM-Modellen stückweise konstante Potentiale der
+Unterdreiecke verwendet und es wurde der IPA (isolated problem approach) angewandt. 
+Der IPA verbessert die Ergebnisse der Lösung des direkten und inversen Problems, wenn
+eine Schicht mit stark abweichender spezifischer elektrischer Leitfähigkeit im Volumenleiter
+verwendet wird, wie es hier durch die Vernix caseosa der Fall ist.
 
 \section{Sensorsystem}
 Für die Simulationen und Quellenrekonstruktionen wurde das Argos-200
-Sensorsystem verwendet, es hat eine feste Sensoranordnung, bestehend
-aus einem hexagonalen Gitter, mit 65 Sensoren in jeder der 3
-Raumesrichtungen. Die Sensoren sind in 4 planen Ebenen über dem
+Sensorsystem virtualisiert, es hat eine feste Sensoranordnung, bestehend
+aus einem gleichmäßgien, hexagonalen Gitter, mit 65 Sensoren in jeder der 3
+Raumesrichtungen. Die Sensoren sind in 4 planaren Ebenen über dem
 Messobjekt angeordnet, wobei die Ebene mit dem geringsten Abstand zum
-Objekt die meisten Sensoren und die oberste Ebene nur 1 für jede der 3
+Objekt die meisten (56) Sensoren und die oberste Ebene nur 1 für jede der 3
 unabhängigen Feldkomponenten besitzt. Die 3 oberen Sensorebenen dienen
 ausschließlich der Schätzung der restlichen Rauschleistung in den
 gemessenen MEG-Kanälen und wurden in dieser Arbeit in den
 Vorwärtssimulationen einbezogen, aber nicht für die Lösung des inversen
-Problems verwendet.
+Problems verwendet. Das Koordinatensystem des Sensorsystems wurde zu dem Koordinatensystem der BEM-Modelle
+so ausgerichtet, dass es wie in \figurename~\ref{seq:refIllustrationSensor} dargestellt, über dem mütterlichen Abdomen den Kopf des Fötus in der Mittelachse
+des Sensorsystems hat. Die Stärke des gemessenen magnetischen Feldes hängt stark von der Distanz zwischen Quelle und Sensor ab \cite{RevModPhys.65.413}, daher wurde dieser Abstand so gering wie möglich gewählt.
 
 
 \begin{figure}
@@ -186,6 +176,7 @@ Problems verwendet.
 Fötus (hautfarben) mit virtuellem SQUID{}-Sensorsystem
 (blau).]{BEM-Modell ausgehend von der Segmentierung des Fötus
 (hautfarben) mit virtuellem SQUID-Sensorsystem (blau).}
+\label{seq:refIllustrationSensor}
 \end{figure}
 
 \section{Quellenmodell}
@@ -226,13 +217,28 @@ Fötus (hautfarben) und Kopfes (grau).]{Volumenpunkte (hellgrün) im
 Volumenleitermodell des Fötus (hautfarben) und Kopfes (grau).}
 \end{figure}
 
-\section{Verwendung von zwei Segmentierungsgrundlagen: Fötus und Fötuskopf}
+\section{Erstellung von zwei Segmentierungsgrundlagen: Fötus und Fötuskopf}
 Für die zwei inneren Schichten der BEM-Modelle wurde zum einen der gesamte Fötus segmentiert
-und zum anderen nur der Fötuskopf. Diese Variation der BEM-Modelle ermöglicht es, den Einfluss von Veränderungen in Form, Größe und Lage der inneren Schichten, welche bei US-Aufnahmen nur grob geschätzt werden können, zu quantifizieren. Beide Varianten haben Vor- und Nachteile. Die Segmentierung des Fötuskopfes ist einfacher und genauer, da der Schädel eine große und gut erkennbare Begrenzung des Kopfes im US ausmacht. In der
-fMEG befinden sich die Quellen im Gehirn des Fötus und dafür ist Segmentierung des Kopfes als Begrenzung eine gute Näherung in Anbetracht der Qualität von 3D-US-Bildern. Problematisch ist die Modellierung der Vernix caseosa, die an die innerste Schicht geknüpft ist. 
+und zum anderen nur der Fötuskopf. Diese Variation der BEM-Modelle ermöglicht es, den Einfluss von Veränderungen in Form, Größe und Lage der inneren Schichten, welche bei US-Aufnahmen nur grob geschätzt werden können, zu quantifizieren. Für die Segmentierung des gesamten Fötus wurde eine Vorlage von Roland Eichardt verwendet. Die Segmentierung des Fötuskopfes wurde weitestgehend manuell mit Stop- und Pass-Markern erstellt. Dabei werden Bild für Bild in den 3D-US-Aufnahmen die Voxel definiert, die trotz eines hohen Helligkeitswertes zum Kopfvolumen gehören (Pass-Marker) und die, welche die Umrandung ausmachen (Stop-Marker). Die Umrandung ist an vielen Stellen mehrere Voxel Breit, damit keine Löcher zwischen den Schnittbildern entstehen. Für die Segmentierung der Kopfoberfläche wurde nach der Definition aller Stop- und Pass-Marker ein Schwellwertverfahren eingesetzt.
+Die segmentierte Kopfoberfläche wird vollständig von der Segmentierung des gesamten Fötus eingeschlossen. Das heißt, der Kopf ist bei der Fötussegmentierung etwas größer als bei der eigentlichen Kopfsegmentierung. 
+
+Das Abdomen wurde nur einmal segmentiert, für die Glättung der Spur des Ultraschallkopfes wurden drei Kugeln in die US-Aufnahmen eingepasst. Alle Segmentierungen wurden mit CURRY\TTra Version 4.6 durchgeführt.
 
 \section{Variation der Randelementediskretisierung}
-
+Ausgehend von den erstellten Oberflächen, wie in \figurename~\ref{seq:refIllustration0} veranschaulicht, wurden BEM-Modelle erstellt, wobei die Dreiecksseitenlängen der Oberflächen in den Modellen variiert
+wurden. Dabei wird für jede Schicht eine diskretisierte Oberfläche mit bestimmter Dreiecksseitenlänge gewählt und eine entsprechende spezifische elektrische Leitfähigkeit für das eingeschlossene Kompartiment definiert.
+Jedes BEM-Modell, welches in dieser Arbeit erstellt wurde, besteht aus 3
+Schichten, der Fötusoberfläche, der Vernixoberfläche und der
+Abdomenoberfläche. Das Abdomen ist in den BEM-Modellen die Schicht mit
+den wenigsten Unebenheiten und mit der größten Oberfläche, deshalb
+wurde eine größere Dreiecksseitenlängen beim Abdomen als bei den 2
+inneren Schichten verwendet. Für die Vernix- und die Fötusoberfläche
+wurde jeweils die gleiche Dreiecksseitenlänge gewählt, da diese sich
+nur wenig unterscheiden. Das gleiche galt auch für die Kopfmodelle. Die
+Dreiecksseitenlänge des Referenzmodells wurde für die inneren Schichten
+mit 3mm und für das Abdomen mit 12mm festgelegt. Die Variation der
+Dreiecksseitenlänge erfolgte bei den inneren Schichten in
+2-mm-Schritten und beim Abdomen in 4-mm-Schritten.
 \begin{table}
 \caption{Übersicht über die Dreiecksseitenlängen in den
 einzelnen Modellen.}
@@ -243,22 +249,19 @@ einzelnen Modellen.}
 \end{table}
 
 \section{Variation der Schichtdicke der Vernix caseosa}
-kopfvernix=3mm...
-Um den Einfluss der Vernixschichtdicke zu überprüfen wurden noch Modelle
-mit einer Vernixschichtdicke von 3mm und 2mm erstellt. Eine
-Vernixschichtdicke von 2 bis 3mm enspricht den Ergebnissen von [3] und
-wird hier nur mit den kleinsten Seitenlängen verwendet, da gröbere
-Auflösungen bei dünnen Schichten Überschneidungen der Oberflächen
-erzeugen und da nur die Auswirkungen einer Veränderung der
-Vernixschichtdicke beim Fötusreferenzmodell (BEM-Modell 0 in
-\tablename~\ref{seq:refTable0}) untersucht werden sollten.
+Um den Einfluss der Vernixschichtdicke zu überprüfen wurden weitere Oberfläche 
+für die Modellierung der Vernix caseosa erstellt. In \cite{a3} wurde die
+Vernixschichtdicke mit 2mm bis 3mm angegeben. In den inneren Schichten, welche den Fötuskopf modellieren,
+wurde entsprechend eine Schichtdicke von 3mm gewählt. Bei einer Dreiecksseitenlänge von 9mm verursacht eine 
+Schichtdicke von 3mm bei der Modellierung des gesamten Fötus jedoch Überschneidungen der Oberflächen aufgrund der groben Diskretisierung. Als minimale Schichtdicke ergab sich eine Dicke von 4mm, welche bei allen verwendeten Diskretisierungen überschneidungsfreie Oberflächen lierferte. Daher beschränkte sich die Variation der Vernixschichtdicke auf die Modellierung des Fötus mit einer Dreiecksseitenlänge von 3mm. Es wurden bei diesem Modell Vernixschichtdicken von 2mm und 3mm modelliert, wie in \tablename~\ref{seq:refTable0} aufgelistet.
+
 \section{Simulation von MEG-Messdaten}
-Die MEG-Feldvektoren wurden für die definierten Dipolpositionen mit 3
-orthogonalen Dipolorientierungen durchgeführt an jeder Sensorposition
+Die MEG-Feldvektoren wurden in CURRY\TTra für die definierten Dipolpositionen mit 3
+orthogonalen Dipolorientierungen an jeder Sensorposition
 simuliert. Die Orientierungen der Dipole waren dabei cranial (nach
 oben, zum Schädel), sinistral (nach links) und dorsal (nach hinten, zum
 Rücken). Die simulierten Messdaten sind die Lösung des Vorwärtsproblems
-für gegebene Quellenparameter, 
+für gegebene Quellenparameter, \dahe die linke Seite der Gleichung \eqref{eqn:direkt}, für jede Sensorposition und Sensorrichtung. In den Simulationen hatten die Dipole eine einheitliche Stärke von $j = 1\mu Amm$.
 
 \begin{figure}
 \begin{center}
@@ -281,19 +284,11 @@ Dreieckspotentiale in den Unterdreiecken verwendet.
 Mit den simulierten Messwerten für die Felder des Referenzmodells
 BEM-Modell 0, wurden für jedes Modell Quellenrekonstruktionen
 durchgeführt. Dabei wurden als a priori Information die Dipolpositionen
-vorgegeben. Die Rekonstruktion beschränkte sich also auf
-Dipolorientierung und Dipolstärke. Quellenrekonstruktionen wurden mit
+als Startpositionen für den unten beschriebenen Optimierungsalgorithmus vorgegeben. Die eigentliche Rekonstruktion beschränkte sich also auf Dipolorientierung und Dipolstärke. Quellenrekonstruktionen wurden mit
 jedem Model für alle drei Dipolorientierungen (cranial, dorsal und
-sinistral) durchgeführt. Bei der Lösung des inversen Problems wurden
-wie bei der Vorwärtsrechnung stückweise konstante Potentiale der
-Unterdreiecke verwendet und es wurde als isoliertes Problem betrachtet
-ohne quasisphärische Korrekturen. Bei Quasisphärischer Korrektur werden
-ausschließlich tangential gerichtete Dipole benutzt, da das MEG ca. 6-
-bis 10mal sensitiver gegenüber tangentialen Dipolen verglichen mit
-radialen Dipolen ist \cite{Haueisen1997}, was die Berechnungen für annähernd
-sphärische Volumenleiter verbessert [?CURRY REFERENCE MANUAL].
+sinistral) durchgeführt.
 
-Die Fragestellung des inversen Problems geht nach [?] von der Gleichung
+Die Fragestellung des inversen Problems geht nach \cite{4137694} von der Gleichung
 
 \begin{equation}
 \boldsubformula{B}=\boldsubformula{L}\boldsubformula{J}+n
@@ -309,7 +304,8 @@ $\boldsubformula{B}=\left(\begin{matrix}\boldsubformula{b}(\boldsubformula{r}_{\
 ist der gemessene magnetische Flussdichtevektor, der in dieser Arbeit
 56 Elemente enthält (NB=56) und $\boldsubformula{L}$ ist die Lead-field
 Matrix. Die Rauschkomponente \textit{n} entfällt in diesem Spezialfall
-der simulierten Messdaten.
+der simulierten Messdaten. Die Lead-field Matrix wird für die Lösung des inversen Problems invertiert, damit hängt die Genauigkeit der Rekonstruktion bedeutend von der Besetzung dieser Matrix ab. In Anbetracht der Vorgehensweise, dass hier die Dipolpositionen vorgegeben wurden, wird deutlich, dass es sich um ein überbestimmtes Gleichungssystem handelt. Diese Tatsache ist ungewöhnlich, in den meisten realen Fällen der Quellenrekonstruktion in der MEG ist das zu lösende Gleichungssystem stark unterbestimmt \cite{4137694}. Aus diesem Grund und dem normalerweise niedrigen SNR, ist das inverse Problem der MEG-Quellenrekonstruktion oft schlecht gestellt, \dahe es gibt keine eindeutige, stabile Lösung \cite{5512917}. Die Lösung ist sehr empfindlich gegenüber kleinen Änderungen in den Daten und im Volumenleitermodell \cite{5512917}. Für die Lösung des inversen Problems wurde CURRY\TTra verwendet. Es wurde in CURRY\TTra ein Dipol-Fit (\textit{Dipole Fit}) für Bewegte Dipole (\textit{Moving Dipoles}) angewandt, wobei die Startpositionen (\textit{Seeds}) über die \textit{Localize}-Funktion in CURRY\TTra  vorgegeben wurden. Als Optimierer für die Dipollokalisationen wurde der Simplex-Algorithmus, mit einer Anfagnsschrittweite von 1mm verwendet. Die Dipolpositionen wurden dabei mit einem nichtlinearen, erneuerten Nelder-Mead \cite{NelderMead65} Simplex-Algorithmus bestimmt, wohingegen die Dipolkomponenten Orientierung und Stärke mit linearer Algebra berechnet wurden [?CURRY REFERENCE]. Dabei musste für jede Dipolposition die Lead-field Matrix neu aufgestellt werden \cite{Fuchs20041442}.
+
 \section{Bewertungskriterien}
 \subsection{Vorwärtslösung}
 Von den Simulierten Feldern wurden jeweils die \textit{relative

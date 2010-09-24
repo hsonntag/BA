@@ -34,6 +34,8 @@ geschätzt werden. Gegenüber analytischen Modellen besitzen die
 realistischen Volumenleitermodelle den Vorteil, dass sie die
 menschliche Anatomie wesentlich exakter beschreiben, was zu einer
 verbesserten Genauigkeit der Quellenrekonstruktion führt \cite{Haueisen1997}.
+Für analytische Volumenleitermodelle gibt es bereits Studien mit vergleichbaren
+Fragestellungen zu dieser Arbeit \cite{0031-9155-52-3-016}, \cite{0031-9155-50-9-015}.
 
 3D-Modelle haben den Nachteil, dass sie sehr komplex sind und
 dementsprechend sind die Berechnungen mit diesen Modellen sehr
@@ -45,13 +47,14 @@ Inhomogenitäten und Anisotropien der Leitfähigkeit in den Schichten
 werden vernachlässigt \cite{996268}. Eine weitere Vereinfachung ist die
 Diskretisierung der Oberflächen zwischen den Schichten
 unterschiedlicher Leitfähigkeit mit Dreiecken (Randelementen)
-\cite{996268}. Der Vorteil dieser Vereinfachungen ist die deutliche
+\cite{996268}, damit bringen diese Modelle naturgemäß numerische Ungenauigeiten mit sich. 
+Der Vorteil dieser Vereinfachungen ist die deutliche
 Komplexitätsreduzierung der Modelle, damit vereinfachen sich die
 Berechnungen und die Rechenzeiten verkürzen sich. Es wird ein 3-Schalen
 BEM-Modell mit den Schichten Abdomen, Vernix caseosa und Fötus
 verwendet. Die Rechenzeit spielt bei der Quellenrekonstruktion eine
 wichtige Rolle, daher wird in dieser Arbeit eine Optimierung von
-Diskretisierungsfehlern und Exaktheit der der Lösung der
+Diskretisierungsfehlern und Exaktheit der Lösung der
 Vorwärtsrechnung und des inversen Problems gesucht.
 
 Um die Diskretisierungsfehler der Modelle vergleichen zu können wurden
