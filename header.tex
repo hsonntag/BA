@@ -27,13 +27,13 @@ Magnetoenzephalographie}
 \newcommand{\arbeitsart}{Bachelorarbeit}
 \newcommand{\autor}{Hermann Sonntag}
 \newcommand{\mail}{Hermann.Sonntag@tu-ilmenau.de}
-\newcommand{\studiengang}{Ingenieurinformatik}
+\newcommand{\studiengang}{Biomedizinische Technik}
 \newcommand{\matrikelnr}{41016}
 \newcommand{\erstgutachter}{Prof. Dr.-Ing. habil. Jens Haueisen}
 \newcommand{\zweitgutachter}{Dipl.-Inf. Roland Eichardt}
 \newcommand{\ort}{Ilmenau}
 \newcommand{\ausgabedatum}{1.~April 2010}
-\newcommand{\abgabedatum}{22.~September 2010}
+\newcommand{\abgabedatum}{28.~September 2010}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -55,7 +55,7 @@ Magnetoenzephalographie}
 %\usepackage{subfig}			% Einbinden von mehreren Objekten innerhalb eines floats
 %\usepackage{pdfpages}   % bindet eine Grafikdatei (.pdf oder .jpg) seitenfüllend in das Dokument ein
 %\graphicspath{{Bilder/}}
-%\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
+\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
 %\captionsetup{margin=10pt,font=small,labelfont=bf}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -98,12 +98,12 @@ Magnetoenzephalographie}
 %		menucolor=red, 			% Acrobat-Menüpunkte
 %		urlcolor=cyan, 
 % diese Farbdefinitionen sollten für den Druck verwendet werden (alles schwarz)
-		%linkcolor=black, 	% einfache interne Verknüpfungen
-		%anchorcolor=black, % Ankertext
-		%citecolor=black, 	% Verweise auf Literaturverzeichniseinträge im Text
-		%filecolor=black, 	% Verknüpfungen, die lokale Dateien öffnen
-		%menucolor=black, 	% Acrobat-Menüpunkte
-		%urlcolor=black, 
+%		linkcolor=black, 	% einfache interne Verknüpfungen
+%		anchorcolor=black, % Ankertext
+%		citecolor=black, 	% Verweise auf Literaturverzeichniseinträge im Text
+%		filecolor=black, 	% Verknüpfungen, die lokale Dateien öffnen
+%		menucolor=black, 	% Acrobat-Menüpunkte
+%		urlcolor=black, 
 % diese Farbdefinitionen kann für farbigen Druck verwendet werden
 		linkcolor=darkblue,	% einfache interne Verknüpfungen
 		citecolor=darkblue, % Verweise auf Literaturverzeichniseinträge im Text
@@ -187,10 +187,10 @@ Magnetoenzephalographie}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-%\newcommand{\helv}{%
-%\fontfamily{phv}\fontsize{12}{14}\selectfont}
-\fancyhead[RO]{\textit{\rightmark}}
-\fancyhead[LE]{\leftmark}
+\newcommand{\helv}{%
+\fontfamily{phv}\fontsize{10}{12}\selectfont}
+\fancyhead[RO]{\helv \textit{\rightmark}}
+\fancyhead[LE]{\helv \leftmark}
 \fancyfoot[RO]{\thepage}
 \fancyfoot[LE]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}

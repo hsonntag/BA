@@ -1,17 +1,25 @@
 \chapter{Einleitung}
-Quellenrekonstruktion beim Fötus bietet eine Möglichkeit die Funktion
-und Entwicklungsstufe des fötalen Gehirns zu untersuchen. Ein
-Anwendungsgebiet ist die Untersuchung des auditorischen Kortex als Teil
+Quellenrekonstruktion in der Magnetoenzephalographie
+beim Fötus bietet eine Möglichkeit die Funktion
+und Entwicklungsstufe des fötalen Gehirns zu untersuchen.
+Es gibt eine Reihe weiterer Techniken, welche vergleichbare Möglichkeiten bieten,
+darunter ist fMRI eine Variante welche ebenfalls ohne ionisierende Strahlung arbeitet.
+Das fMRI liefert beides, anatomische und funktionelle Informationen des Fötus, es gibt jedoch
+Bedenken bezüglich der Sicherheit für Probandin und Fötus \cite{Hykin1999645}.
+Die Magnetoenzephalographie hat die Vorteile,
+dass sie durch die passive Messung vollkommen nichtinvasiv und unbedenklich für Mutter und Fötus ist und
+verglichen mit fMRI eine höhere zeitliche Auflösung besitzt.
+Ein Anwendungsgebiet der Magnetoenzephalographie ist die Untersuchung des auditorischen Kortex als Teil
 des zentralen Nervernsystems und des Hörsystems und somit eines
 sensorischen Apparates. Die auditorische Stimulation ist sehr geeignet
 um die Reaktionen des Fötus zu überprüfen da es eine nichtinvasive,
 schnelle, einfach erzeugbare und variierbare (in Frequenz und
-Lautstärke) Erregung einer komplexen Nervenbahn ist. Auditorische
-Stimuli erzeugen beim gesunden Fötus auditorisch evozierte Felder,
-deren Quellen im auditorischen Kortex des Fötus positioniert sind. Ein
-weiterer Vorteil ist, dass ein auditorischer Stimulus nicht mit
+Lautstärke) Erregung einer komplexen Nervenbahn ist. Ein
+weiterer Vorteil auditorischer Stimuli ist, dass sie nicht mit
 elektrischem Stromfluss und somit nicht mit störenden Magnetfeldern
-verbunden ist.
+verbunden sind. Auditorische
+Stimuli erzeugen beim gesunden Fötus auditorisch evozierte Felder,
+deren Quellen im auditorischen Kortex des Fötus positioniert sind.
 
 Um eine Quellenrekonstruktion, basierend auf MEG-Messungen, durchführen
 zu können, muss ein Modell des Volumenleiters, in dem sich die gesuchte
@@ -24,12 +32,12 @@ SQUID-Sensorsystem über dem Abdomen der Mutter aufgenommen, dabei ist
 das Signal-Rausch-Verhältnis (SNR) sehr klein, was hohe Anforderungen
 an die Quellenstabilität des verwendeten Modells stellt. In diesem Fall
 besteht der Volumenleiter näherungsweise aus dem Fötus, der Vernix
-caseosa und dem Abdomen der Mutter. Der Ansatz für die Modellierung mit
+caseosa und dem Abdomen der Mutter. Ein Ansatz für die Modellierung mit
 hoher Genauigkeit ist ein realistisches 3D-Modell, wobei jedem
 Volumenelement eine spezifische elektrische Leitfähigkeit zugeordnet
 wird. Damit lassen sich Anisotropien und Inhomogenitäten der
 elektrischen Leitfähigkeit im Volumenleiter modellieren, die Werte für
-die Leitfähigkeiten können beispielsweise aus MRT- und CT-Aufnahmen
+die Leitfähigkeiten können beispielsweise aus MRT- oder CT-Aufnahmen
 geschätzt werden. Gegenüber analytischen Modellen besitzen die
 realistischen Volumenleitermodelle den Vorteil, dass sie die
 menschliche Anatomie wesentlich exakter beschreiben, was zu einer
@@ -40,40 +48,41 @@ Fragestellungen zu dieser Arbeit \cite{0031-9155-52-3-016}, \cite{0031-9155-50-9
 3D-Modelle haben den Nachteil, dass sie sehr komplex sind und
 dementsprechend sind die Berechnungen mit diesen Modellen sehr
 aufwendig und zeitintensiv. Die Alternative sind 2.5-D Modelle wie
-\textit{Boundary-Element-Method}{}-Modelle (BEM-Modelle), die hier
+ BEM-Modelle (boundary element method models), die hier
 verwendet werden. Dabei werden nur die Oberflächen einzelner
 Volumenleiterschichten unterschiedlicher Leitfähigkeit modelliert.
 Inhomogenitäten und Anisotropien der Leitfähigkeit in den Schichten
 werden vernachlässigt \cite{996268}. Eine weitere Vereinfachung ist die
 Diskretisierung der Oberflächen zwischen den Schichten
-unterschiedlicher Leitfähigkeit mit Dreiecken (Randelementen)
+unterschiedlicher Leitfähigkeit mit planaren Dreiecken (Randelementen)
 \cite{996268}, damit bringen diese Modelle naturgemäß numerische Ungenauigeiten mit sich. 
 Der Vorteil dieser Vereinfachungen ist die deutliche
 Komplexitätsreduzierung der Modelle, damit vereinfachen sich die
-Berechnungen und die Rechenzeiten verkürzen sich. Es wird ein 3-Schalen
+Berechnungen und die Rechenzeiten verkürzen sich. Es wird in dieser Arbeit ein 3-Schalen
 BEM-Modell mit den Schichten Abdomen, Vernix caseosa und Fötus
-verwendet. Die Rechenzeit spielt bei der Quellenrekonstruktion eine
-wichtige Rolle, daher wird in dieser Arbeit eine Optimierung von
+verwendet. Die anatomischen Informationen wurden aus 3D-Ultraschallaufnahmen gewonnen.
+Bei der Quellenrekonstruktion spielt der Rechenaufwand eine
+wesentliche Rolle, daher wird in dieser Arbeit eine Optimierung zwischen
 Diskretisierungsfehlern und Exaktheit der Lösung der
 Vorwärtsrechnung und des inversen Problems gesucht.
 
 Um die Diskretisierungsfehler der Modelle vergleichen zu können wurden
 Vorwärtsrechnungen mit verschiedenen Quellen durchgeführt, wobei die
 entstehenden Messwerte des Magnetfeldes der Quellen in einem
-Sensorsystem von jedem Modell berechnet wurden. Dafür wurden zunächst
+Sensorsystem für jedes Modell simuliert wurden. Dafür wurden zunächst
 Quellen im Gehirn des Fötus definiert. Bei der Auswertung wurden die
-RDM- und MAG-Werte der Simulierten Daten jeweils mit denen des
+\textit{RDM}- und \textit{MAG}-Werte der Simulierten Daten jeweils mit denen des
 höchstaufgelösten Modells berechnet und daraus statistische Parameter
 ermittelt. Die Simulationsergebnisse des Modells mit der feinsten
 Diskretisierung wurden als Referenzfelder für Quellenrekonstruktionen
 mit allen Modellen verwendet. Die Auswirkungen der
 Diskretisierungsabstände auf die Quellenrekonstruktion wurde durch
 Winkelabweichungen und Verhältnisse der Strärken von definierten und
-rekonstruierten Quellen bewertet. Vergleichen wurden jeweils die
+rekonstruierten Quellen bewertet. Verglichen wurden jeweils die
 Modelle mit gleicher Segmentierungsgrundlage und gleicher
 Vernixschichtdicke also gleicher Geometrie aber unterschiedlicher
-Diskretisierung, dann wurden Modelle mit gleicher Diskretisierung in
-allen Schichten aber unterschiedlicher Geometrie verglichen und als
+Diskretisierung, sowie Modelle mit gleicher Diskretisierung in
+allen Schichten aber unterschiedlicher Geometrie und als
 drittes wurden Modelle mit gleicher Diskretisierung und gleicher
 Segmentierungsgrundlage aber verschiedener Vernixschichtdicke
 verglichen.

@@ -25,16 +25,15 @@ Die Vernix caseosa war in den Ultraschallaufnahmen nicht erkennbar, aus
 diesem Grund wurde später bei der Modellbildung eine konstante
 Vernixschichtdicke, wie in \cite{a3} verwendet.
 
-Zusätzlich zur Fötussegmentierung wurde analog eine Segementierung des Fötuskopfes erstellt
-erstellt.
+Zusätzlich zur Fötussegmentierung wurde analog eine Segementierung des Fötuskopfes erstellt.
 
 \begin{figure}
 \begin{center}
 \includegraphics[]{BA-img/BA-img98.png}
 \end{center}
 \caption[Segmentierung (gelb) des Fötus in den verwendeten
-Ultraschallbildern mit Pass Markers (grün).]{Segmentierung (gelb) des
-Fötus in den verwendeten Ultraschallbildern mit Pass Markers (grün). In den Bildern steht L für links, R für rechts, A für anterior und P für posterior.}
+Ultraschallbildern mit Pass-Marker (grün).]{Segmentierung (gelb) des
+Fötus in den verwendeten Ultraschallbildern mit Pass-Marker (grün). In den Bildern steht L für Links, R für Rechts, A für Anterior und P für Posterior.}
 \label{seq:refIllustration0}
 
 \end{figure}
@@ -46,9 +45,7 @@ Fötus in den verwendeten Ultraschallbildern mit Pass Markers (grün). In den Bild
 \includegraphics[width=6.77cm,height=6.77cm]{BA-img/kopf+vernix.png}
 \end{center}
 \caption[Segmentierungsergebnisse für Fötus mit Vernix caseosa
-(links) und Kopf mit Vernix caseosa (rechts) in frontaler Ansicht. Die
-Vernix ist hier hautfarben dargestellt und Fötus bzw. Kopf sind
-grau.]{Segmentierungsergebnisse für Fötus mit Vernix caseosa (links)
+(links) und Kopf mit Vernix caseosa (rechts) in frontaler Ansicht.]{Segmentierungsergebnisse für Fötus mit Vernix caseosa (links)
 und Kopf mit Vernix caseosa (rechts) in frontaler Ansicht. Die Vernix
 ist hier hautfarben dargestellt und Fötus bzw. Kopf sind grau.}
 \label{seq:refIllustration1}
@@ -56,7 +53,7 @@ ist hier hautfarben dargestellt und Fötus bzw. Kopf sind grau.}
 \end{figure}
 Das Segmentierungsergebnis des Fötus wurde durch Anwenden von Smoothing
 und Closing mit jeweils 9mm geglättet. Durch anschließende Dilatation
-um 4mm beim Fötus und 3mm beim Fötuskopf entstanden die Vernixschichten
+um 4mm beim Fötus und 3mm beim Fötuskopf entstanden die Oberflächen der Vernix caseosa
 für Fötus und Kopf (\figurename~\ref{seq:refIllustration1}). 
 
 
@@ -74,18 +71,19 @@ Ansicht.}
 
 Über die Oberflächen der Segmentierungen wurden Dreiecksnetze bestehend
 aus Dreiecken mit definierter Dreiecksseitenlänge gelegt. Jedes dieser
-Dreiecke wurde wiederum in 4 planare Unterdreiecke verfeinert um in
+Dreiecke wurde in den BEM-Modellen wiederum in 4 planare Unterdreiecke verfeinert um in
 diesen Unterdreiecken ein stückweise konstantes Dreieckspotential
-verwenden zu können.
+verwenden zu können. Für die Erstellung der Dreiecksnetze und die daraus resultierenden BEM-Modelle wurde
+CURRY Version 4.6 verwendet.
 
 %\section{Modellierung und Sensorsystem}
 Aus den Dreiecksnetzen von Abdomen
 (\figurename~\ref{seq:refIllustration3}), Vernix caseosa und Fötus
 (\figurename~\ref{seq:refIllustration2}) wurde jeweils ein 3-Schalen
 BEM-Modell erstellt, sodass insgesamt 10 verschiedene, in
-\tablename~\ref{seq:refTable0} aufgelistete, BEM-Modelle enstanden.
+\tablename~\ref{seq:refTable0} aufgelistete BEM-Modelle enstanden.
 
-BEM-Modelle dienen hier der Beschreibung des Magnetischen Feldeswelches in Abhängigkeit
+BEM-Modelle dienen hier der Beschreibung des magnetischen Feldes in Abhängigkeit
 von gegebenen Quellenparametern im Volumenleiter. Die Vorwärtsrechnung ist dabei für die magnetische Flussdichte
 $\boldsubformula{b}(\boldsubformula{r},\boldsubformula{r}_{Q})$ an der
 Sensorposition $\boldsubformula{r}$, ausgehend von der Quellenposition
@@ -117,23 +115,23 @@ und $\Phi (\boldsubformula{r}_{Q})$ ist das Potential an der
 Dipolposition $\boldsubformula{r}_{Q}$ . Für homogene, isotrope
 Kompartimente lässt sich die Greensche Funktion als
 $g(\boldsubformula{r},\boldsubformula{r}_{Q})=\frac{\mu _{0}}{4\pi
-\|\boldsubformula{r}-\boldsubformula{r}_{Q}\|}$ formulieren.
+\|\boldsubformula{r}-\boldsubformula{r}_{Q}\|}$ formulieren \cite{a3}.
 
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=7.92cm,height=7.99cm]{BA-img/BA-img6.pdf}\includegraphics[width=7.99cm,height=7.99cm]{BA-img/BA-img7.pdf}
 \end{center}
-\captionof{figure}[Volumenleitermodell des Abdomens mit feinser
+\caption[Volumenleitermodell des Abdomens mit feiner
 Randelementediskretisierung (links) und grober
-(rechts).]{Volumenleitermodell des Abdomens mit feinser
+(rechts).]{Volumenleitermodell des Abdomens mit feiner
 Randelementediskretisierung (links) und grober (rechts).}
 \label{seq:refIllustration3}
 
 \end{figure}
 
 \tablename~\ref{seq:refTable0} zeigt die Kombinationen der Seitenlängen
-in den verschiedenen Modellen analog zu \cite{996268}:
+in den verschiedenen Modellen analog zu \cite{996268}.
 
 
 
@@ -141,29 +139,33 @@ Für das Innere jeder entstandenen Schicht wurde eine entsprechende
 spezifische elektrische Leitfähigkeit definiert, dabei wurden
 Leitfähigkeitswerte analog zu Werten aus \cite{a3} gewählt. In allen
 BEM-Modellen wurde für das Abdomen und den Fötus bzw. den Kopf eine
-spezifische elektrische Leitfähigkeit von $\sigma _{M}=\sigma
-_{C}=2\cdot 10^{-1}\frac{S}{m}$ und für die Vernix eine spezifische
-elektrische Leitfähigkeit von $\sigma _{V}=2\cdot 10^{-6}\frac{S}{m}$
-verwendet.
+spezifische elektrische Leitfähigkeit von $\sigma _{M}=\sigma_{C}=2\cdot 10^{-1}\frac{S}{m}$ und für die Vernix eine spezifische elektrische Leitfähigkeit von $\sigma _{V}=2\cdot 10^{-6}\frac{S}{m}$ verwendet \footnote[1]{Die Leitfähgikeitswerte sind der Literatur \cite{a3} entnommen, wobei $\sigma _{M}$ für Muskelgewebe, $\sigma _{C}$ für Knorpel und $\sigma _{V}$ für die Vernix caseosa jeweils Messwerte der spezifischen elektrischen Leitfähigkeit bei 37°C in einem Frequenzband von 1 bis 100Hz sind}.
 Für die Vorwärtsrechnung und die Lösung des inversen Problems wurden
 in den BEM-Modellen stückweise konstante Potentiale der
-Unterdreiecke verwendet und es wurde der IPA (isolated problem approach) angewandt. 
-Der IPA verbessert die Ergebnisse der Lösung des direkten und inversen Problems, wenn
+Unterdreiecke verwendet und es wurde der IPA (isolated problem approach) angewendet. 
+Der IPA verringert numerische Ungenauigkeiten bei der Lösung des direkten und inversen Problems, wenn
 eine Schicht mit stark abweichender spezifischer elektrischer Leitfähigkeit im Volumenleiter
-verwendet wird, wie es hier durch die Vernix caseosa der Fall ist.
+verwendet wird \cite{16463}, wie es hier durch die Vernix caseosa der Fall ist.
 
 \section{Sensorsystem}
 Für die Simulationen und Quellenrekonstruktionen wurde das Argos-200
 Sensorsystem virtualisiert, es hat eine feste Sensoranordnung, bestehend
-aus einem gleichmäßgien, hexagonalen Gitter, mit 65 Sensoren in jeder der 3
-Raumesrichtungen. Die Sensoren sind in 4 planaren Ebenen über dem
+aus einem gleichmäßigen, hexagonalen Gitter, mit 65 Sensortripletts für die Magnetfeldmessung in 3
+orthogonalen Raumesrichtungen, also insgesamt 195 Sensoren (\figurename~\ref{seq:refIllustrationSensorArray}). Die Sensoren sind in vier planaren und parallelen Ebenen über dem
 Messobjekt angeordnet, wobei die Ebene mit dem geringsten Abstand zum
-Objekt die meisten (56) Sensoren und die oberste Ebene nur 1 für jede der 3
-unabhängigen Feldkomponenten besitzt. Die 3 oberen Sensorebenen dienen
-ausschließlich der Schätzung der restlichen Rauschleistung in den
-gemessenen MEG-Kanälen und wurden in dieser Arbeit in den
+Objekt die meisten (56) Sensortripletts hat und die obersten zwei Ebenen nur einen Sensor für jede der 3
+unabhängigen Feldkomponenten besitzen. Die unterste Ebene hat einen Durchmesser von 23 cm \cite{15341659}. Darüber liegt eine Referenzebene mit 7 Sensoren in einem Abstand von 98 mm \cite{15341659}. Die obersten zwei Ebenen haben einen Abstand von 196 mm und 254 mm über der ersten Sensorebene \cite{15341659}. Software-Gradiometer werten die Daten der 3 oberen Sensorebenen aus \cite{15341659} und nur die untere Ebene dient hier der eigentlichen MEG-Datenerfassung.
+\begin{figure}
+\begin{center}
+\includegraphics[]{BA-img/1477-044X-2-6-2-l.jpg}
+\end{center}
+\caption[Das ATB SQUID Array Argos 200 besteht aus 195 Magnetfeldsensoren, welche in vier Ebenen in orthogonalen Sensortripletts angeordnet sind.]{Diese Abbildung wurde der Referenz \cite{15341659} entnommen. Das ATB SQUID Array Argos 200 besteht aus 195 Magnetfeldsensoren, welche in vier Ebenen in orthogonalen Sensortripletts angeordnet sind. Die Messfläche jedes Sensors ist ein Quadrat mit einer Seitenlänge von 8 mm.}
+\label{seq:refIllustrationSensorArray}
+\end{figure}
+%der Schätzung der restlichen Rauschleistung in den gemessenen MEG-Kanälen
+In dieser Arbeit wurden die oberen Sensorebenen in den
 Vorwärtssimulationen einbezogen, aber nicht für die Lösung des inversen
-Problems verwendet. Das Koordinatensystem des Sensorsystems wurde zu dem Koordinatensystem der BEM-Modelle
+Problems verwendet. Die Sensorfläche, in der der magnetische Fluss gemessen wird, ist quadratisch mit einer Seitenlänge von 8 mm \cite{15341659}. Das Koordinatensystem des Sensorsystems wurde zu dem Koordinatensystem der BEM-Modelle
 so ausgerichtet, dass es wie in \figurename~\ref{seq:refIllustrationSensor} dargestellt, über dem mütterlichen Abdomen den Kopf des Fötus in der Mittelachse
 des Sensorsystems hat. Die Stärke des gemessenen magnetischen Feldes hängt stark von der Distanz zwischen Quelle und Sensor ab \cite{RevModPhys.65.413}, daher wurde dieser Abstand so gering wie möglich gewählt.
 
@@ -172,8 +174,8 @@ des Sensorsystems hat. Die Stärke des gemessenen magnetischen Feldes hängt stark
 \begin{center}
 \includegraphics[width=8.721cm,height=8.784cm]{BA-img/BA-img9.pdf}
 \end{center}
-\caption[BEM{}-Modell ausgehend von der Segmentierung des
-Fötus (hautfarben) mit virtuellem SQUID{}-Sensorsystem
+\caption[BEM-Modell ausgehend von der Segmentierung des
+Fötus (hautfarben) mit virtuellem SQUID-Sensorsystem
 (blau).]{BEM-Modell ausgehend von der Segmentierung des Fötus
 (hautfarben) mit virtuellem SQUID-Sensorsystem (blau).}
 \label{seq:refIllustrationSensor}
@@ -181,19 +183,19 @@ Fötus (hautfarben) mit virtuellem SQUID{}-Sensorsystem
 
 \section{Quellenmodell}
 %\subsection{Art der Quellen}
-Als Quellen wurden bei Vorwärtsberechnungen der resultierenden Felder,
-elektrische Dipole an festen Positionen mit fester Richtung definiert.
-Zu verschiedenen Zeitpunkten wurden verschiedene Dipolpositionen
-festgelegt, sodass bei der Vorwärtsberechnung für jeden Zeitpunkt das
+Als Quellen wurden bei Vorwärtsberechnungen der magnetischen Felder,
+elektrische Einzeldipole an festen Positionen mit fester Richtung definiert.
+Zu verschiedenen Zeitpunkten wurden, wie weiter unten beschrieben, verschiedene Dipolpositionen
+festgelegt, sodass bei der Vorwärtsrechnung für jeden Zeitpunkt das
 Feld eines statischen Dipols berechnet wurde. Für die
-Quellenrekonstruktionen in CURRY\TTra wurde ein bewegter Dipol angenommen, da sich
-die Position des Dipols mit der Zeit änderte. 
+Quellenrekonstruktionen in CURRY\TTra wurde, wie unten näher erleutert, ein bewegter Dipol angenommen, da für jeden Zeitpunkt
+in den Vorwärtsrechnungen eine andere Dipolposition verwendet wurde.
 
 %\subsection{Volume Points}
 Um die Güte der Modelle für Quellen im gesamten Gehirnvolumen des Fötus
 vergleichen zu können, wurde ein feines Gitter für Quellenpositionen in
-dieses Volumen definiert. Um die minimale Distanz der halben
-Dreiecksseitenlänge von Dipol zum nächsten Dreieck sicherzustellen,
+diesem Volumen definiert. Um die minimale Distanz der halben
+Dreiecksseitenlänge der Randelemente von Dipol zum nächsten Dreieck sicherzustellen,
 wurde die Kopfoberfläche um 5mm erodiert. In das eingeschlossenes
 Volumen wurden 1025 Quellen mit einem Abstand von 5mm verteilt. Die
 Quellen wurden so verteilt, dass jede Quelle auf der Oberfläche des
@@ -205,8 +207,9 @@ wobei die Oberfläche bei jedem Schritt wiederum um 6mm erodiert wurde,
 bis zu dem Punkt, an dem keine Erosion mehr möglich war, dadurch
 entstanden 530 innere Quellen. Insgesamt wurden 6 Quellenschichten im
 Kopfvolumen erzeugt, deren Abstand radial jeweils 6mm beträgt und auf
-deren Oberfläche Quellen mit einem Abstand von 5mm verteilt sind.
-
+deren Oberfläche Quellen mit einem Abstand von 5mm verteilt sind, wie in \figurename~\ref{seq:refIllustrationPoints} dargestellt.
+Für die Berechnung der Quellenpositionen in dem definierten Gehirnvolumen
+wurde CURRY\TTra Version 4.6 verwendet.
 
 \begin{figure}
 \begin{center}
@@ -215,6 +218,7 @@ deren Oberfläche Quellen mit einem Abstand von 5mm verteilt sind.
 \caption[Volumenpunkte (hellgrün) im Volumenleitermodell des
 Fötus (hautfarben) und Kopfes (grau).]{Volumenpunkte (hellgrün) im
 Volumenleitermodell des Fötus (hautfarben) und Kopfes (grau).}
+\label{seq:refIllustrationPoints}
 \end{figure}
 
 \section{Erstellung von zwei Segmentierungsgrundlagen: Fötus und Fötuskopf}
@@ -247,6 +251,11 @@ einzelnen Modellen.}
 \includegraphics[width=16.018cm,height=6.412cm]{BA-img/BA-img8.pdf}
 \end{center}
 \end{table}
+Der Zusammenhang von Knotenanzahl $K$ und Anzahl der Dreiecek $D$ kann für diese BEM-Modelle durch
+\begin{equation}
+D = 2 \cdot K - 12
+\end{equation}
+beschrieben werden.
 
 \section{Variation der Schichtdicke der Vernix caseosa}
 Um den Einfluss der Vernixschichtdicke zu überprüfen wurden weitere Oberfläche 
@@ -256,12 +265,12 @@ wurde entsprechend eine Schichtdicke von 3mm gewählt. Bei einer Dreiecksseitenlä
 Schichtdicke von 3mm bei der Modellierung des gesamten Fötus jedoch Überschneidungen der Oberflächen aufgrund der groben Diskretisierung. Als minimale Schichtdicke ergab sich eine Dicke von 4mm, welche bei allen verwendeten Diskretisierungen überschneidungsfreie Oberflächen lierferte. Daher beschränkte sich die Variation der Vernixschichtdicke auf die Modellierung des Fötus mit einer Dreiecksseitenlänge von 3mm. Es wurden bei diesem Modell Vernixschichtdicken von 2mm und 3mm modelliert, wie in \tablename~\ref{seq:refTable0} aufgelistet.
 
 \section{Simulation von MEG-Messdaten}
-Die MEG-Feldvektoren wurden in CURRY\TTra für die definierten Dipolpositionen mit 3
-orthogonalen Dipolorientierungen an jeder Sensorposition
+Die MEG-Feldvektoren wurden in CURRY\TTra Version 4.6 für die definierten 1025 Dipolpositionen mit 3
+orthogonalen Dipolorientierungen an jeder der 65 Sensorpositionen
 simuliert. Die Orientierungen der Dipole waren dabei cranial (nach
 oben, zum Schädel), sinistral (nach links) und dorsal (nach hinten, zum
-Rücken). Die simulierten Messdaten sind die Lösung des Vorwärtsproblems
-für gegebene Quellenparameter, \dahe die linke Seite der Gleichung \eqref{eqn:direkt}, für jede Sensorposition und Sensorrichtung. In den Simulationen hatten die Dipole eine einheitliche Stärke von $j = 1\mu Amm$.
+Rücken). Die simulierten Messdaten sind die Ergebnisse der Vorwärtsrechnung
+für gegebene Quellenparameter, \dahe die linke Seite der Gleichung \eqref{eqn:direkt}, für jede Sensorposition und Sensorrichtung. In den Simulationen hatten die Einzeldipole eine einheitliche Stärke von $j = 1\mu Amm$.
 
 \begin{figure}
 \begin{center}
@@ -269,20 +278,21 @@ für gegebene Quellenparameter, \dahe die linke Seite der Gleichung \eqref{eqn:di
 \end{center}
 \captionof{figure}[Feldbilder einer Simulation mit cranialer
 Dipolorientierung im BEM{}-Modell, in den drei Sensorausrichtungen x
-(links), y (mitte) und z (rechts) in frontaler Ansicht.]{Feldbilder
+(links), y (Mitte) und z (rechts) in frontaler Ansicht.]{Feldbilder
 einer Simulation mit cranialer Dipolorientierung im BEM-Modell, in den
-drei Sensorausrichtungen x (links), y (mitte) und z (rechts) in
+drei Sensorausrichtungen x (links), y (Mitte) und z (rechts) in
 frontaler Ansicht.}
-
+\label{seq:refIllustrationSim}
 \end{figure}
 In den Simulationen wurde für jeden Zeitpunkt ein anderer Dipolort
 verwendet, sodass eine Zeitreihe mit 1025 verschiedenen Feldbildern
-entstand. Für die Vorwärtsrechnung wurden stückweise konstante
-Dreieckspotentiale in den Unterdreiecken verwendet.
+entstand. Die Vorwärtsrechnung wurde für jedes BEM-Modell mit stückweise konstanten
+Dreieckspotentialen der Unterdreiecke durchgeführt. In \figurename~\ref{seq:refIllustrationSim} sind Feldbilder
+einer Simulation für einen Zeitpunkt \bzw einen Dipol dargestellt.
 
-\section{Rekonstruktion simulierter Messdaten}
+\section{Lösung des inversen Problems}
 Mit den simulierten Messwerten für die Felder des Referenzmodells
-BEM-Modell 0, wurden für jedes Modell Quellenrekonstruktionen
+(BEM-Modell 0), wurden für jedes Modell Quellenrekonstruktionen
 durchgeführt. Dabei wurden als a priori Information die Dipolpositionen
 als Startpositionen für den unten beschriebenen Optimierungsalgorithmus vorgegeben. Die eigentliche Rekonstruktion beschränkte sich also auf Dipolorientierung und Dipolstärke. Quellenrekonstruktionen wurden mit
 jedem Model für alle drei Dipolorientierungen (cranial, dorsal und
@@ -304,7 +314,7 @@ $\boldsubformula{B}=\left(\begin{matrix}\boldsubformula{b}(\boldsubformula{r}_{\
 ist der gemessene magnetische Flussdichtevektor, der in dieser Arbeit
 56 Elemente enthält (NB=56) und $\boldsubformula{L}$ ist die Lead-field
 Matrix. Die Rauschkomponente \textit{n} entfällt in diesem Spezialfall
-der simulierten Messdaten. Die Lead-field Matrix wird für die Lösung des inversen Problems invertiert, damit hängt die Genauigkeit der Rekonstruktion bedeutend von der Besetzung dieser Matrix ab. In Anbetracht der Vorgehensweise, dass hier die Dipolpositionen vorgegeben wurden, wird deutlich, dass es sich um ein überbestimmtes Gleichungssystem handelt. Diese Tatsache ist ungewöhnlich, in den meisten realen Fällen der Quellenrekonstruktion in der MEG ist das zu lösende Gleichungssystem stark unterbestimmt \cite{4137694}. Aus diesem Grund und dem normalerweise niedrigen SNR, ist das inverse Problem der MEG-Quellenrekonstruktion oft schlecht gestellt, \dahe es gibt keine eindeutige, stabile Lösung \cite{5512917}. Die Lösung ist sehr empfindlich gegenüber kleinen Änderungen in den Daten und im Volumenleitermodell \cite{5512917}. Für die Lösung des inversen Problems wurde CURRY\TTra verwendet. Es wurde in CURRY\TTra ein Dipol-Fit (\textit{Dipole Fit}) für Bewegte Dipole (\textit{Moving Dipoles}) angewandt, wobei die Startpositionen (\textit{Seeds}) über die \textit{Localize}-Funktion in CURRY\TTra  vorgegeben wurden. Als Optimierer für die Dipollokalisationen wurde der Simplex-Algorithmus, mit einer Anfagnsschrittweite von 1mm verwendet. Die Dipolpositionen wurden dabei mit einem nichtlinearen, erneuerten Nelder-Mead \cite{NelderMead65} Simplex-Algorithmus bestimmt, wohingegen die Dipolkomponenten Orientierung und Stärke mit linearer Algebra berechnet wurden [?CURRY REFERENCE]. Dabei musste für jede Dipolposition die Lead-field Matrix neu aufgestellt werden \cite{Fuchs20041442}.
+der simulierten Messdaten. Die Lead-field Matrix wird für die Lösung des inversen Problems invertiert, damit hängt die Genauigkeit der Rekonstruktion bedeutend von der Besetzung dieser Matrix ab. In Anbetracht der Vorgehensweise, dass hier die Dipolpositionen vorgegeben wurden, wird deutlich, dass es sich um ein überbestimmtes Gleichungssystem handelt. Diese Tatsache ist ungewöhnlich, in den meisten realen Fällen der Quellenrekonstruktion in der MEG ist das zu lösende Gleichungssystem stark unterbestimmt \cite{4137694}. Aus diesem Grund und dem normalerweise niedrigen SNR, ist das inverse Problem der MEG-Quellenrekonstruktion oft schlecht gestellt, \dahe es gibt keine eindeutige, stabile Lösung \cite{5512917}. Die Lösung ist sehr empfindlich gegenüber kleinen Änderungen in den Daten und im Volumenleitermodell \cite{5512917}. Für die Lösung des inversen Problems wurde CURRY\TTra Version 4.6 verwendet. Es wurde in CURRY\TTra ein Dipol-Fit (\textit{Dipole Fit}) für Bewegte Dipole (\textit{Moving Dipoles}) angewendet, wobei die Startpositionen (\textit{Seeds}) über die \textit{Localize}-Funktion in CURRY\TTra  vorgegeben wurden. Als Optimierer für die Dipollokalisationen wurde der Simplex-Algorithmus, mit einer Anfagnsschrittweite von 1mm verwendet. Die Dipolpositionen wurden dabei mit einem nichtlinearen, erneuerten Nelder-Mead \cite{NelderMead65} Simplex-Algorithmus bestimmt, wohingegen die Dipolkomponenten Orientierung und Stärke mit linearer Algebra berechnet wurden \cite{CurryRM}. Dabei musste für jede Dipolposition die Lead-field Matrix neu aufgestellt werden \cite{Fuchs20041442}.
 
 \section{Bewertungskriterien}
 \subsection{Vorwärtslösung}

@@ -1,6 +1,6 @@
 \chapter{Diskussion}
 Es wurden mit verschiedenen Volumenleitermodellen, ausgehend von
-vorgegebenen Dipolen im Hirnvolumen des Fötus, die resultierenden
+vorgegebenen Einzeldipolen im Hirnvolumen des Fötus, die resultierenden
 Magnetfelder simuliert. Die Magnetfeldvektoren der Modelle wurden mit
 denen von Referenzmodellen verglichen und deren Abweichungen wurden in
 \textit{RDM} und Amplitudenfaktoren (\textit{MAG}) umgerechnet. Um die
@@ -14,24 +14,25 @@ Dipolstärken bestimmt.
 
 Es wurde für die Modellierung der inneren Schichten zum einen der gesamte Fötus segmentiert
 und zum anderen nur der Fötuskopf. Beide Varianten haben Vor- und Nachteile. Die Segmentierung des Fötuskopfes ist einfacher und genauer, da der Schädel eine große und gut erkennbare Begrenzung des Kopfes im US ausmacht. In der
-fMEG befinden sich die Quellen im Gehirn des Fötus und dafür ist Segmentierung des Kopfes als Begrenzung eine gute Näherung in Anbetracht der Qualität von 3D-US-Bildern. Die kugelähnliche Form des Kopfes ermöglicht es quasisphärische Korrekturen bei der Lösung des inversen Problems sinnvoll einzusetzen, dabei werden
+fMEG befinden sich die Quellen im Gehirn des Fötus und dafür ist die Segmentierung des Kopfes als Begrenzung eine gute Näherung in Anbetracht der Qualität von 3D-US-Bildern. Die kugelähnliche Form des Kopfes ermöglicht es quasisphärische Korrekturen bei der Lösung des inversen Problems sinnvoll einzusetzen, dabei werden
 ausschließlich tangential gerichtete Dipole benutzt, da das MEG ca. 6-
 bis 10mal sensitiver gegenüber tangentialen Dipolen verglichen mit
-radialen Dipolen ist \cite{Haueisen1997}. Nach [?CURRY REFERENCE MANUAL] verbessert diese Korrektur die Berechnungen für annähernd sphärische Volumenleiter. Dise Verbesserung sollte in weiteren Arbeiten für Volumenleitermodelle des Fötus noch quantifiziert werden. Ein weiterer Vorteil der näherungsweise sphärischen Geometrie des Kopfes ist die Möglichkeit der Suche der Kopfposition im Abdomen ausgehend vom fMEG, wie es in \cite{eltit} mit einer Kugelschicht als Kopfmodell gezeigt wurde.
+radialen Dipolen ist \cite{Haueisen1997}. Nach \cite{CurryRM} verbessert diese Korrektur die Berechnungen für annähernd sphärische Volumenleiter. Dise Verbesserung sollte in weiteren Arbeiten für Volumenleitermodelle des Fötus noch quantifiziert werden. Ein weiterer Vorteil der näherungsweise sphärischen Geometrie des Kopfes ist die Möglichkeit der Suche der Kopfposition im Abdomen ausgehend vom fMEG, wie es in \cite{eltit} mit einer Kugeloberfläche als Kopfmodell gezeigt wurde.
 Problematisch ist die Modellierung der Vernix caseosa, die hier an die innerste Schicht geknüpft ist. Da die Vernix caseosa den gesamten Fötus umschließt, ist die Beschränkung auf den Fötuskopf eine starke Abweichung von der Realität bei der modellierung dieser Schicht. Die Vernix caseosa hat gegenüber den umliegenden Schichten Abdomen und Fötus, eine wesentlich kleinere spezifische elektrische Leitfähigkeit und diese kann nur dann entsprechend berücksichtigt werden, wenn der gesamte Fötus dafür erfasst wird.
 
-Im Allgemeinen ensprechen die Verläufe der Ergebnisse in Abhängigkeit
-von Diskretisierung, Segmentierung und Schichtdicke der Vernix caseosa
-den Erwartungen mit Ausnahme der Abhängigkeit der Ergebnisse bei
-Verwendung der Kopfsegmentierung von der Diskretisierung. Die
-Ergebnisse der Lösung des direkten Problems korrelieren mit denen der
-Lösung des inversen Problems.
-Die RDM- und Amplitudenfaktorergebnisse und deren Standardabweichungen
-für die Vorwärtssimulationen zeigen, dass es eine deutliche
-Qualitätseinbuße bei der Verwendung der Segmentierung des Fötuskopfes
+%Im Allgemeinen ensprechen die Verläufe der Ergebnisse in Abhängigkeit
+%von Diskretisierung, Segmentierung und Schichtdicke der Vernix caseosa
+%den Erwartungen mit Ausnahme der Abhängigkeit der Genauigkeit der Lösung des inversen Problems bei
+%Verwendung der Kopfsegmentierung von der Diskretisierung. 
+%Die Ergebnisse der Lösung des direkten Problems korrelieren positiv mit denen der
+%Lösung des inversen Problems.
+Die \textit{RDM}- und Amplitudenfaktorergebnisse und deren Standardabweichungen
+für die Vorwärtssimulationen zeigen, dass es in dieser Arbeit deutlich größere
+Abweichungen von den Optimalwerten bei der Verwendung der Segmentierung des Fötuskopfes
 anstelle der Segmentierung des gesamten Fötus gibt. Dies spiegeln auch
 die Winkelabweichungen und Amplitudenfaktoren der
-Rekonstruktionsergebnisse wieder.
+Rekonstruktionsergebnisse wieder. Eine Erklärung dafür ist das Referenzmodell, welches bis auf
+Diskretisierungsunterschiede, bei den Modellen von der Segmentierung des gesamten Fötus, dem Vergleichsmodell entspricht. 
 Beim Vergleich der verschiedenen Vernixschichtdicken fällt auf, dass
 eine Reduktion der Vernixschichtdicke um 1mm bzw. $\frac{1}{4}$ genauso
 wie eine Reduktion um 2mm bzw. $\frac{1}{2}$ , kaum messbare
@@ -42,12 +43,15 @@ Orientierungsabweichungen kleiner als 1° waren und die Dipolstärken mit
 einem maximalen mittleren Faktor von 1.003 zu den definierten Dipolen,
 sehr gut rekonstruiert wurden. Eine Veränderung der Schichtdicke der
 Vernix caseoso um wenige Millimeter ist also bei der BEM-Modellierung
-vom Fötus ohne maßgebliche Beeinträchtigung der Quellenrekonstruktion
-möglich.
+vom Fötus in dieser Arbeit ohne maßgebliche Beeinträchtigung der Quellenrekonstruktion
+möglich. Um dieses Ergebniss verallgemeinern zu können sollte der Einfluss der Schichtdicke
+der Vernix caseosa bei der Verwendung verschiedener Modelle für Vorwärtsrechnung und Lösung des
+inversen Problems untersucht werden. Als Refernzmodell könnte dabei ein FEM-Modell, welches das Abdomen,
+den Fötus und die Vernix caseosa modelliert, eingesetzt werden.
 
 Bei den BEM-Modellen, welche von der Segmentierung des Fötus erstellt
 wurden, hat die Randelementediskretisierung einen direkten Einfluss auf
-die Lösung in beiden Richtungen. Das heißt, größere
+die Lösung des direkten und inversen Problems. Das heißt, größere
 Dreiecksseitenlängen in den BEM-Schichten haben größere Abweichungen
 der RDM- und MAG-Ergebnisse von den Idealwerten in der Vorwärtslösung
 und gleichzeitig größere Fehler der rekonstruierten Dipolorientierungen
@@ -65,7 +69,7 @@ Anders ist es bei der Verwendung der Segmentierung des Fötuskopfes, hier
 bewirken größere Dreiecksseitenlängen größere Abweichungen in der
 Vorwärtslösung aber kleinere Fehler bei der Lösung des inversen
 Problems (\figurename~\ref{seq:refIllustration7}). Die BEM-Schichten,
-welche den Fötuskopf und dessen Vernix caseosa modellieren, haben eine
+welche den Fötuskopf und dessen Vernix caseosa modellieren, haben eine näherungsweise
 sphärische Geometrie, die aufgrund der begrenzten Detailerkennbarkeit
 in den Ultraschallbildern nur grob geschätzt ist. Bei dieser Geometrie
 wird eine örtliche Überabtastung bei der Diskretisierung durchgeführt,
@@ -75,14 +79,14 @@ Fehler verursacht.
 
 Wenn ein BEM-Modell, dessen innere Schicht den Fötuskopf modelliert
 (BEM-Modell 4), als Referenz für diese Gruppe von Modell verwendet
-wird, dann sind die Abweichungen der Felder von Dipolen in diesen
-Modellen in Abhängigkeit von der Randelementediskretisierung größer als
-die der Felder von Modellen, in denen die innere Schicht den gesamten
-Fötus modelliert (BEM-Modell 0 als Referenz).Dies lässt sich auf die
+wird, dann steigen die Abweichungen der Felder von Dipolen in diesen
+Modellen stärker mit der Randelementediskretisierung an als
+bei den Modellen, in denen die innere Schicht den gesamten
+Fötus modelliert (BEM-Modell 0 als Referenz). Dies lässt sich auf die
 Geometrie der BEM-Schicht des Fötus zurückführen, die aufgrund der
 begrenzten Auflösung und des schwachen Kontrastes in den
-Ultraschallbildern eher konvex und geschlossen ist. Die Kopfmodelle
-haben eine wesentlich kleinere Oberfläche und daher haben die
+Ultraschallbildern eher konvex und geschlossen ist und weniger quellennahe 
+Krümmungen aufweist. Zusätzlich haben Die Kopfmodelle eine wesentlich kleinere Oberfläche und daher haben hier die
 Dreiecksseitenlängen größere Einflüsse auf die Geometrie und damit auf
 die magnetischen Feldvektoren.
 
@@ -94,11 +98,11 @@ Dipolorientierung erkennbar. Dies ist ebenfalls auf die Geometrie des
 Fötus zurückzuführen, welche eine stärkere Anisotropie als die
 sphärische Geometrie des Fötuskopfes aufweist.
 
-Ein guter Kompromiss ist ein Modell dessen innere Schichten den gesamten
+Als guter Kompromiss zwischen Genauigkeit der Lösung des direkten und inversen Problems und Anzahl der verwendeten Randelemente, stellte sich in dieser Arbeit ein Modell heraus, dessen innere Schichten den gesamten
 Fötus modellieren und eine Auflösung von ca. 5mm haben, vgl. BEM-Modell
-1, wobei die Vernixschichtdicke wenige Millimeter von der realen
-abweichen kann. Eine Dreiecksseitenlänge von 16mm beim Abdomen und 5mm
-in den inneren Schichten ist ausreichend, um Orientierungsabweichungen
+1. Die Vernixschichtdicke kann dabei wenige Millimeter von der realen
+abweichen. Eine Dreiecksseitenlänge von 16mm beim Abdomen und 5mm
+in den inneren Schichten ist ausreichend, um Orientierungsgenauigkeiten
 von ca. 5° und Amplitudenfaktoren von ca. 0.97 zu erreichen.
 
 In einer weiteren Studie könnten die Auswirkungen von Rauschen in den
