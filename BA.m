@@ -3033,6 +3033,9 @@ barweb([phi_f_kopf_1233_cran_m phi_f_kopf_1233_dors_m phi_f_kopf_1233_sinis_m;
     phi_f_kopf_2077_cran_s phi_f_kopf_2077_dors_s phi_f_kopf_2077_sinis_s;
     phi_f_kopf_2099_cran_s phi_f_kopf_2099_dors_s phi_f_kopf_2099_sinis_s], [], [], [], [], [], summer, [], [], [], [], -0.05);
 legend('\alpha (\mu \pm \sigma), (Dipolorientierung: cranial)','\alpha (\mu \pm \sigma), (Dipolorientierung: dorsal)','\alpha (\mu \pm \sigma), (Dipolorientierung: sinistral)',-1);
+set(gcf, 'PaperPositionMode', 'auto');
+
+print -depsc graphics/leg1.eps
 
 figure
 barweb([phi_f_kopf_1233_cran_m phi_f_kopf_1233_dors_m phi_f_kopf_1233_sinis_m;
@@ -3043,7 +3046,9 @@ barweb([phi_f_kopf_1233_cran_m phi_f_kopf_1233_dors_m phi_f_kopf_1233_sinis_m;
     phi_f_kopf_2077_cran_s phi_f_kopf_2077_dors_s phi_f_kopf_2077_sinis_s;
     phi_f_kopf_2099_cran_s phi_f_kopf_2099_dors_s phi_f_kopf_2099_sinis_s], [], [], [], [], [], summer, [], [], [], [], -0.05);
 %legend('\alpha (\mu \pm \sigma), (Dipolorientierung: cranial)','\alpha (\mu \pm \sigma), (Dipolorientierung: dorsal)','\alpha (\mu \pm \sigma), (Dipolorientierung: sinistral)',-1);
+set(gcf, 'PaperPositionMode', 'auto');
 
+print -depsc graphics/leg2.eps
 hold on; 
 freezeColors;
 

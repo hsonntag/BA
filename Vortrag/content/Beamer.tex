@@ -1,61 +1,398 @@
-\title{Exaktheit der Lösung des direkten und inversen Problems in Abhängigkeit von Volumenleitermodellierung und Randelementediskretisierung in der fötalen Magnetoenzephalographie}
-\subtitle{Verteidigung der Bachelorarbeit}
-\author{Hermann Sonntag}
+\title[Exaktheit des direkten und inversen Problems in fMEG \hspace{4px} \insertframenumber\ \ von \inserttotalframenumber]{Exaktheit der Lösung des direkten und inversen Problems in Abhängigkeit von Volumenleitermodellierung und Randelementediskretisierung in der fötalen Magnetoenzephalographie}
+%\subtitle{Verteidigung der Bachelorarbeit}
 \institute{Technische Universität Ilmenau}
-\titlegraphic{}
+%\titlegraphic{pictures/Logo_schwarzgruen_RGB_04.jpg}
 \date{\today}
 % --------------------------------------------------- Slide --
 \begin{frame}[plain]
   \titlepage
 \end{frame}
+\setcounter{framenumber}{0}
+
 % --------------------------------------------------- Slide --
-% \section[Contents]{}
+%\section[Inhalt]{Inhalt}
 % ------------------------------------------------------------
-% \begin{frame}
-% 	\frametitle{Contents}
-% 	\tableofcontents[%
-% 		currentsection, % causes all sections but the current to be shown in a semi-transparent way.
-% % 		currentsubsection, % causes all subsections but the current subsection in the current section to ...
-% % 		hideallsubsections, % causes all subsections to be hidden.
-% 		hideothersubsections, % causes the subsections of sections other than the current one to be hidden.
-% % 		part=, % part number causes the table of contents of part part number to be shown
-% 		pausesections, % causes a \pause command to be issued before each section. This is useful if you
-% % 		pausesubsections, %  causes a \pause command to be issued before each subsection.
-% % 		sections={ overlay specification },
-% 	]
-% \end{frame}
+ %\begin{frame}
+ %	 	\tableofcontents[%
+ %		currentsection, % causes all sections but the current to be shown in a semi-transparent way.
+ % 		currentsubsection, % causes all subsections but the current subsection in the current section to ...
+ % 		hideallsubsections, % causes all subsections to be hidden.
+ %		hideothersubsections, % causes the subsections of sections other than the current one to be hidden.
+ % 		part=, % part number causes the table of contents of part part number to be shown
+ %		pausesections, % causes a \pause command to be issued before each section. This is useful if you
+ % 		pausesubsections, %  causes a \pause command to be issued before each subsection.
+ % 		sections={ overlay specification },
+ %	  ]
+ %\end{frame}
 % --------------------------------------------------- PART ---
-\part{Verteidigung}
-\frame{\partpage}
+\part{Verteidigung der Bachelorarbeit}
+\frame{\partpage \tableofcontents[hideallsubsections]}
 % ------------------------------------------------------------
-\begin{frame}
-	\frametitle{Inhalt}
-	\tableofcontents[%
-% 		currentsection, % causes all sections but the current to be shown in a semi-transparent way.
-% 		currentsubsection, % causes all subsections but the current subsection in the current section to ...
-% 		hideallsubsections, % causes all subsections to be hidden.
-% 		hideothersubsections, % causes the subsections of sections other than the current one to be hidden.
-% 		part=, % part number causes the table of contents of part part number to be shown
-		pausesections, % causes a \pause command to be issued before each section. This is useful if you
-% 		pausesubsections, %  causes a \pause command to be issued before each subsection.
-% 		sections={ overlay specification },
-	]
-\end{frame}
+%\begin{frame}
+%	\frametitle{Inhalt}
+%	\tableofcontents[%
+%% 		currentsection, % causes all sections but the current to be shown in a semi-transparent way.
+%% 		currentsubsection, % causes all subsections but the current subsection in the current section to ...
+%% 		hideallsubsections, % causes all subsections to be hidden.
+%% 		hideothersubsections, % causes the subsections of sections other than the current one to be hidden.
+%% 		part=, % part number causes the table of contents of part part number to be shown
+%		pausesections, % causes a \pause command to be issued before each section. This is useful if you
+%% 		pausesubsections, %  causes a \pause command to be issued before each subsection.
+%% 		sections={ overlay specification },
+%	]
+%\end{frame}
 % ------------------------------------------------------------
 \section{Motivation}
 % ------------------------------------------------------------
 % --------------------------------------------------- Slide --
-\subsection{Anwendungsgebiete}
+\begin{frame}
+\frametitle{Bedeutung von Quellenrekonstruktion und fMEG}
+\begin{itemize}
+	\item Passive Messung des Magnetischen Feldes mit SQUIDs
+	%\item Hohe zeitliche Auflösung, wesentlich höher als bei fMRI
+	%\item Nichtinvasive auditorische Stimulation des Fötus möglich
+  \item Klinisches Ziel sind Erkenntnisse über die Entwicklung des fötalen Gehirns
+  \item Die Ergebnisse der Quellenrekonstruktion hängen von der Volumenleitermodellierung ab, welche Genauigkeit lässt sich mit wieviel Aufwand erreichen?
+  %\item Rekonstruktion auditorischer Quellen	
+	%\item Bisher gibt es noch keine veröffentlichten Untersuchungen zur realistischen Volumenleitermodellierung des Fötus
+\end{itemize}
+\end{frame}
 % ------------------------------------------------------------
 % --------------------------------------------------- Slide --
 \section{Methodik}
+
+ \begin{frame}
+ 	\frametitle{Inhalt}
+ 	\begin{wrapfigure}{r}{0.5\textwidth}
+   	\includegraphics[height=6cm]{pictures/graph.png}
+	\end{wrapfigure}
+	$ $
+	
+ 	\tableofcontents[%
+ 		currentsection, % causes all sections but the current to be shown in a semi-transparent way.
+  		currentsubsection, % causes all subsections but the current subsection in the current section to ...
+ % 		hideallsubsections, % causes all subsections to be hidden.
+ 		hideothersubsections, % causes the subsections of sections other than the current one to be hidden.
+ % 		part=1, % part number causes the table of contents of part part number to be shown
+ %		pausesections, % causes a \pause command to be issued before each section. This is useful if you
+  		pausesubsections, %  causes a \pause command to be issued before each subsection.
+ % 		sections={ overlay specification },
+ 	]
+ \end{frame}
+\subsection{Volumenleitermodellierung}
+
 \begin{frame}
-  \frametitle{Sensorsystem}
-  Click bellow to start the movie:\\
-  % we can use also: mpeg wmv mpg swf
-  %\includemovie[poster]{5cm}{5cm}{animation.mpg}
-  \includemovie[poster]{}{}{animation.mpg}
+\frametitle{Randelementemethode}
+\begin{itemize}
+  \item fMEG Enthält keine anatomischen Informationen $\mapsto$ Kombination mit US bzw. MRT
+	\item Volumenleitermodellierung ist eine notwendige Bedingung für Quellenrekonstruktion.
+	\item Realistische Volumenleitermodellierung ermöglicht exaktere Ergebnisse gegenüber analytischen Modellen.
+	\item Randelementemethode (boundary element method, BEM) beschreibt Kompartimente mit definierter Leitfähigkeit
+	\item dabei werden einzelne Schalen aus Ultraschallbildern mit Randelementen diskretisiert.
+	\item Hier werden die BEM-Modelle aus 3 Schalen erstellt.
+	\item Was ist die Vernix caseosa?
+	\item Was wird variiert? 
+\end{itemize}
 \end{frame}
+	
+\begin{frame}
+\frametitle{Segmentierung}
+\begin{itemize}
+	\item Ziel der Segmentierung sind die Oberflächen des Abdomens, der Vernix caseosa und Fötus für 3-Schalen-BEM-Modelle
+	\item Segmentierung des Fötus und des Fötuskopfes aus 3D-US-Aufnahmen
+	\item Approximation des Abdomens in 3D-US-Aufnahmen mit drei Kugeloberflächen
+	\item Erstellung der Oberfläche der Vernix caseosa durch Dilatation
+	\item Niedrige Detailerkennbarkeit und geringe Auflösung in 3D-US-Bildern
+	\item Viele Störungen
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Segmentierung}
+\begin{figure}%
+\includegraphics[height=3.5cm, width=3.5cm]{pictures/BA-img1.png}
+\vspace{2pt}
+\includegraphics[height=3.5cm, width=3.5cm]{pictures/BA-img2.png}
+\vspace{2pt}
+\includegraphics[height=3.5cm, width=3.5cm]{pictures/BA-img3.png}
+\caption{Segmentierung (gelb) des Fötus in den verwendeten
+Ultraschallbildern mit Pass-Marker (grün).}%
+%\label{}%
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Randelementediskretisierung}
+\begin{figure}%
+	\includegraphics[height=4.5cm]{pictures/BA-img4.pdf}
+  \includegraphics[height=4.5cm]{pictures/BA-img5.pdf}
+\caption{Volumenleitermodell des Fötus mit feiner
+Randelementediskretisierung (links) und grober (rechts) in frontaler
+Ansicht.}%
+%\label{}%
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Modellierung}
+%\begin{definition}
+	%\begin{itemize}
+	%\item 
+	Aneinadergrenzende Kompartimente besitzen eine unterschiedliche spezifische elektrische Leitfähigkeit
+	%\end{itemize}
+%\end{definition}
+\begin{example}
+\begin{itemize}
+	\item Leitfähigkeit des Fötus $\sigma_K = 0.2 \frac{S}{m}$%
+  \item Leitfähigkeit der Vernix caseosa $\sigma_V = 0.000002 \frac{S}{m}$%
+\end{itemize}
+\end{example}
+\begin{figure}%
+%\includegraphics[height=3cm]{pictures/fetus+vernix.png}
+\includegraphics[height=2cm]{pictures/kopf+vernix.png}
+\caption{Segmentierungsergebniss für Fötuskopf mit Vernix caseosa.}
+\end{figure}
+\end{frame}
+
+\subsection{Sensorsystem und Quellenmodell}
+\begin{frame}
+  \frametitle{Virtuelles Sensorsystem}
+  \begin{figure}%
+  % we can use also: mpeg wmv mpg swf
+  %\includemovie[poster]{5cm}{5cm}{multimedia/animation.avi}
+  \includegraphics[height=5cm]{pictures/1477-044X-2-6-2-l.jpg}
+\caption{(links) BEM-Modell ausgehend von der Segmentierung des
+Fötus (hautfarben) mit virtuellem SQUID-Sensorsystem
+(blau), (rechts) Sensorsystem Argos 200}%
+%\label{}%
+\end{figure}
+\end{frame}
+
+%\subsection{Quellenmodell}
+\begin{frame}
+\frametitle{Elektrische Dipole}
+%\begin{definition}
+%    \begin{equation}
+%		\mathit{I} = \int_{S}{\vec{J} \cdot \mathit{d}\vec{A}} = \int_{V}{(\nabla \cdot \vec{J})\mathit{d}{V}}
+%		\end{equation}
+%		\begin{equation}
+%		\vec{j} = \int_{l}{I \mathit{d}\vec{l}} = \int_{V}{\vec{J}\mathit{d}{V}}
+%		\end{equation}
+%\end{definition}
+%\begin{itemize}
+%	\item[\textit{I}] Stromstärke
+%	\item[\textit{J}] Stromdichte
+%	\item[\textit{j}] Elektrisches Dipolmoment (Einheit: $\mu A mm$)
+%\end{itemize}
+%\begin{theorem}
+Als Quellen wurden elektrische Einzeldipole verwendet.
+\begin{itemize}
+	\item Es wurden über 1000 Quellenpositionen im Gehirn des Fötusmodells festgelegt.
+	\item Für die Ausrichtung der Quellen wurden die drei orthogonalen Raumesrichtungen: cranial, dorsal und sinistral gewählt
+	\item das elektrisches Dipolmoment der Quellen betrug $1 \mu A mm$ (Stärke der Quellen)
+\end{itemize}
+%Der Dipol besteht aus einer Quelle im Dendriten und einer Senke im Soma.
+%\end{theorem}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quellenpositionen}
+	%Verteilung der Quellen im Gehirnvolumen des Fötusmodells mit definiertem Abstand zur Kopfoberfläche
+	\begin{figure}%
+\includegraphics[height=4cm]{pictures/BA-img10.pdf}
+\caption{Volumenpunkte (hellgrün) im
+Volumenleitermodell des Fötus (hautfarben) und Kopfes (grau).}%
+Die Quellen befinden sich im Allgemeinen im Gehirn des Fötus.
+%\label{}%
+\end{figure}
+    %\pause
+    %\includegraphics[width=5cm,height=5cm]{pictures/1477-044X-4-5-4.jpg}
+\end{frame}
+\subsection{Variation von Parametern}
+\begin{frame}
+\frametitle{Randelementediskretisierung}
+\begin{itemize}
+	%\item Vereinfachung der Oberflächen mit Dreiecksnetzen
+	%\pause
+	\item Variation der Dreiecksseitenlänge
+	\pause
+	\item Dreiecksseitenlängen beim Abdomen: 12 mm, 16 mm, 20mm (4-mm-Schritte)
+  \pause
+	\item Dreiecksseitenlängen bei der Vernix caseosa: 3 mm, 5 mm, 7mm, 9mm (2-mm-Schritte)
+  \pause
+	\item Dreiecksseitenlängen bei der innersten Schicht: 3 mm, 5 mm, 7mm, 9mm (2-mm-Schritte)
+	\end{itemize}
+\end{frame}
+frame
+
+\begin{frame}
+\frametitle{Segmentierung und Schichtdicke der Vernix caseosa}
+\begin{itemize}
+	%\item Vereinfachung der Oberflächen mit Dreiecksnetzen
+	%\pause
+	\item Modellierung des gesamten Fötus im Vergleich mit der Modellierung des Fötuskopfes
+	\pause
+	\item Variation der Schichtdicke der Vernix caseosa von 2 mm bis 4 mm (1-mm-Schritte)
+\end{itemize}
+\end{frame}
+
+\subsection{Vorwärtsrechnung und Lösung des inversen Problems}
+\begin{frame}
+  \frametitle{Vorwärtslösung}
+  %\begin{itemize}
+			%\item 
+			Lösung des direkten Problems für definierte Quellenparameter
+	%\end{itemize}
+	\begin{figure}%
+	\includegraphics[height=3.5cm, width=3.5cm]{pictures/BA-img11.png}
+  \includegraphics[height=3.5cm, width=3.5cm]{pictures/BA-img12.png}
+  \includegraphics[height=3.5cm, width=3.5cm]{pictures/BA-img13.png}
+\caption{Feldbilder einer Simulation mit cranialer
+Dipolorientierung im BEM{}-Modell, in den drei Sensorausrichtungen x
+(links), y (Mitte) und z (rechts) in frontaler Ansicht.}%
+\label{A10}%
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Quellenrekonstruktion}
+\begin{itemize}
+	%\item Vereinfachung der Oberflächen mit Dreiecksnetzen
+	%\pause
+	\item Vorgabe der bekannten Startpositionen für den Simplex-Algorithmus
+	\pause
+	\item Berechnung der Orientierung und der Amplitude (lineares Problem)
+	\end{itemize}
+\end{frame}
+
+%\subsubsection{Bewertungskriterien}
+
+\begin{frame}
+\frametitle{Bewertung der Vorwärtsrechnung}
+\begin{equation}
+\mathit{RDM}=\sqrt{\sum
+_{i=1}^{n}\left(\frac{\mathit{meas}_{i}}{\sum
+_{j=1}^{n}{\mathit{meas}_{j}^{2}}}-\frac{\mathit{ref}_{i}}{\sum
+_{j=1}^{n}{\mathit{ref}_{j}^{2}}}\right)^{2}}
+\end{equation}
+\begin{equation}
+\mathit{MAG}=\sqrt{\frac{\sum
+_{i=1}^{n}{\mathit{meas}_{i}^{2}}}{\sum
+_{i=1}^{n}{\mathit{ref}_{i}^{2}}}}
+\end{equation}
+\begin{itemize}
+	\item[meas] Messwerte des magnetischen Feldes im Sensorarray
+	\item[ref] Werte des Referenzfeldes im Sensorarray
+	\item[\textit{RDM}] Relative difference measure, Kenngröße für den Topologiefehler (minimaler Fehler: \textit{RDM}=0)
+	\item[\textit{MAG}] Amplitudenfaktor, Größe für die Amplitudenabweichung (minimaler Fehler: \textit{MAG}=1)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bewertung der Lösung des inversen Problems}
+\begin{equation}
+\alpha =\arccos \left(\frac{\vec{r}\cdot
+\vec{s}}{\left|{\vec{r}}\right|\cdot \left|{\vec{s}}\right|}\right)
+\end{equation}
+\begin{equation}
+a=\frac{\left|{\vec{r}}\right|}{\left|{\vec{s}}\right|}
+\end{equation}
+\begin{itemize}
+	\item[$\vec{r}$] Rekonstruiertes Dipolmoment
+	\item[$\vec{s}$] Dipolmoment der entsprechenden Simulation
+	\item[$\alpha$] Winkelabweichung, Güte der Quellenlokalisation (minimaler Fehler: \textit{RDM}=0°)
+	\item[\textit{a}] Amplitudenfaktor, Größe für die Amplitudenabweichung (minimaler Fehler: \textit{MAG}=1)
+\end{itemize}
+\end{frame}  
 \section{Ergebnisse}
+\subsection{Einfluss der Segmentierung und Randelementediskretisierung}
+
+\begin{frame}
+\begin{itemize}
+	\item Anzahl der Dreiecke konvergiert für verschiedene Segmentierungen mit steigender Seitenlänge
+\end{itemize}
+\begin{figure}
+\includegraphics[height=6cm]{pictures/Diagram-img1.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+	\item Bei der Vorwärtsrechnung entstehen größere Topologieabweichungen bei größeren Randelementen
+	\item Ergebnisse hängen bei der Kopfmodellierung stark von der Dipolorientierung ab
+	\item RDMs bei Modellen der Kopfsegmentierung 10 mal größer als bei Modellen der Fötussegmentierung
+	\item Rekonstruierte Dipolorientierung weicht bei der Kopfmodellierung stark von der Referenz ab (über 60°)
+	\item Bei der Kopfmodellierung verbessern sich die Ergebnisse der Quellenrekonstrukion mit größeren Randelementen
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{figure}%
+\includegraphics[height=5.5cm]{pictures/BA-img24.png}%
+%\caption{}%
+%\label{}%
+\end{figure}
+\begin{center}
+\includegraphics[height=1.5cm]{pictures/legend.pdf}
+\end{center}
+\end{frame}
+
+\subsection{Einfluss der Vernix caseosa}
+\begin{frame}
+%\frametitle{Variation der Schichtdicke der Vernix caseosa}
+\begin{table}%
+\caption{\textit{RDM}-Ergebnisse für die Dipolorientierungen cranial,
+dorsal und sinistral in Abhängigkeit von der Schichtdicke der Vernix
+caseosa.}%
+\includegraphics[height=1.7cm]{pictures/BA-img21.pdf}%
+%\label{}%
+\end{table}
+%\begin{figure}%
+%\includegraphics[height=2cm]{pictures/BA-img20.pdf}%
+%%\caption{}%
+%%\label{}%
+%\end{figure}
+\begin{table}%
+\caption{Winkelabweichungen für die Dipolorientierungen
+cranial, dorsal und sinistral in Abhängigkeit von
+der Schichtdicke der Vernix caseosa.}%
+\includegraphics[height=1.7cm]{pictures/BA-img22.pdf}%
+%\label{}%
+\end{table}
+%\begin{figure}
+%\includegraphics[height=2cm]{pictures/BA-img23.pdf}
+%\end{figure}
+\end{frame}
+
 \section{Diskussion}
-\section{Ausblick}
+\begin{frame}
+\frametitle{Schlussfolgerungen}
+\begin{itemize}
+	\item Der Einfluss der Schichtdicke Vernix caseosa ist hier zu vernachlässigen
+	\item Segmentierung hat großen Einfluss auf die Ergebnisse, die Rekonstruktionsergebnisse der Kopfmodellierung sind hier unbrauchbar
+	\item Überabtastung der Kopfsegmentierung
+	\item Richtungsabhängigkeiten aufgrund der Lage des Fötus im Abdomen
+	\item Ergebnisse sind auf die verwendete Referenz zurückzuführen
+	\item Sind die Ergebnisse auf die Qualität der US-Bilder zurückzuführen?
+	\item Dreiecksseitenlänge von 5mm ist ein guter Kompromiss
+\end{itemize}
+\end{frame}
+
+%\section{Ausblick}
+\begin{frame}
+\frametitle{zukünftige Untersuchungen}
+\begin{itemize}
+	\item Einsatz von FEM-Modellen als Referenz
+	\item Segmentierung/Modellierung aus MRT-Aufnahmen
+	\item Lokalisierung des Fötusmodells im Abdomen
+	\item Einfluss von quasisphärischen Korrekturen
+	\item Einfluss von Translation und Rotation des Fötusmodells
+	\item Verzicht auf Vernix caseosa
+	\item Modellierung des Schädelknochens
+\end{itemize}
+\end{frame}
+
+\tiny
+\def\newblock{}
+\bibliography{Literatur}
+\nocite{*} % alle Quellen aufführen
