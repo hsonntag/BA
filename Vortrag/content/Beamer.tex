@@ -25,8 +25,8 @@
  %	  ]
  %\end{frame}
 % --------------------------------------------------- PART ---
-\part{Verteidigung der Bachelorarbeit}
-\frame{\partpage \tableofcontents[hideallsubsections]}
+%\part{Verteidigung der Bachelorarbeit}
+\frame{\frametitle{Inhalt} \tableofcontents[hideallsubsections]}
 % ------------------------------------------------------------
 %\begin{frame}
 %	\frametitle{Inhalt}
@@ -46,13 +46,15 @@
 % ------------------------------------------------------------
 % --------------------------------------------------- Slide --
 \begin{frame}
-\frametitle{Bedeutung von Quellenrekonstruktion und fMEG}
+\frametitle{Motivation}
 \begin{itemize}
-	\item Passive Messung des Magnetischen Feldes mit SQUIDs
+	\item Passive Messung des Magnetischen Feldes von neuronaler Aktivität des Fötus
 	%\item Hohe zeitliche Auflösung, wesentlich höher als bei fMRI
 	%\item Nichtinvasive auditorische Stimulation des Fötus möglich
+	\item Quellen im Kind werden anhand der gemessenen Felder rekonstruiert
   \item Klinisches Ziel sind Erkenntnisse über die Entwicklung des fötalen Gehirns
-  \item Die Ergebnisse der Quellenrekonstruktion hängen von der Volumenleitermodellierung ab, welche Genauigkeit lässt sich mit wieviel Aufwand erreichen?
+  \item Die Ergebnisse der Quellenrekonstruktion hängen von der Volumenleitermodellierung ab.
+  \item Ziel: Wie beeinflussen Modellierung und Randelementediskretisierung die Genauigkeit des inversen und direkten Problems?
   %\item Rekonstruktion auditorischer Quellen	
 	%\item Bisher gibt es noch keine veröffentlichten Untersuchungen zur realistischen Volumenleitermodellierung des Fötus
 \end{itemize}
@@ -62,7 +64,7 @@
 \section{Methodik}
 
  \begin{frame}
- 	\frametitle{Inhalt}
+ 	\frametitle{Struktur}
  	\begin{wrapfigure}{r}{0.5\textwidth}
    	\includegraphics[height=6cm]{pictures/graph.png}
 	\end{wrapfigure}
@@ -84,14 +86,12 @@
 \begin{frame}
 \frametitle{Randelementemethode}
 \begin{itemize}
-  \item fMEG Enthält keine anatomischen Informationen $\mapsto$ Kombination mit US bzw. MRT
+  %\item fMEG Enthält keine anatomischen Informationen $\mapsto$ Kombination mit US bzw. MRT
 	\item Volumenleitermodellierung ist eine notwendige Bedingung für Quellenrekonstruktion.
-	\item Realistische Volumenleitermodellierung ermöglicht exaktere Ergebnisse gegenüber analytischen Modellen.
+	\item Realistische Volumenleitermodellierung ermöglicht exaktere Ergebnisse gegenüber analytischen Modellen \cite{Haueisen1997}.
 	\item Randelementemethode (boundary element method, BEM) beschreibt Kompartimente mit definierter Leitfähigkeit
 	\item dabei werden einzelne Schalen aus Ultraschallbildern mit Randelementen diskretisiert.
-	\item Hier werden die BEM-Modelle aus 3 Schalen erstellt.
-	\item Was ist die Vernix caseosa?
-	\item Was wird variiert? 
+	\item Hier werden die BEM-Modelle aus 3 Schalen erstellt: Abdomen, Vernix caseosa und Fötus.
 \end{itemize}
 \end{frame}
 	
@@ -126,15 +126,15 @@ Ultraschallbildern mit Pass-Marker (grün).}%
 \begin{figure}%
 	\includegraphics[height=4.5cm]{pictures/BA-img4.pdf}
   \includegraphics[height=4.5cm]{pictures/BA-img5.pdf}
-\caption{Volumenleitermodell des Fötus mit feiner
-Randelementediskretisierung (links) und grober (rechts) in frontaler
+\caption{Volumenleitermodell des Fötus mit feiner (3mm)
+Randelementediskretisierung (links) und grober (9mm, rechts) in frontaler
 Ansicht.}%
 %\label{}%
 \end{figure}
 \end{frame}
 
 \begin{frame}
-\frametitle{Modellierung}
+\frametitle{Leitfähigkeit}
 %\begin{definition}
 	%\begin{itemize}
 	%\item 
@@ -143,8 +143,8 @@ Ansicht.}%
 %\end{definition}
 \begin{example}
 \begin{itemize}
-	\item Leitfähigkeit des Fötus $\sigma_K = 0.2 \frac{S}{m}$%
-  \item Leitfähigkeit der Vernix caseosa $\sigma_V = 0.000002 \frac{S}{m}$%
+	\item Leitfähigkeit des Fötus $\sigma_K = 0.2 \frac{S}{m}$ \cite{a3}
+  \item Leitfähigkeit der Vernix caseosa $\sigma_V = 0.000002 \frac{S}{m}$ \cite{a3}%
 \end{itemize}
 \end{example}
 \begin{figure}%
@@ -159,11 +159,11 @@ Ansicht.}%
   \frametitle{Virtuelles Sensorsystem}
   \begin{figure}%
   % we can use also: mpeg wmv mpg swf
-  %\includemovie[poster]{5cm}{5cm}{multimedia/animation.avi}
-  \includegraphics[height=5cm]{pictures/1477-044X-2-6-2-l.jpg}
+  \includemovie[poster]{4.5cm}{4.5cm}{multimedia/animation.avi}
+  \includegraphics[height=4.5cm]{pictures/1477-044X-2-6-2-l.jpg}
 \caption{(links) BEM-Modell ausgehend von der Segmentierung des
 Fötus (hautfarben) mit virtuellem SQUID-Sensorsystem
-(blau), (rechts) Sensorsystem Argos 200}%
+(blau), (rechts) Sensorsystem Argos 200 \cite{15341659}}%
 %\label{}%
 \end{figure}
 \end{frame}
@@ -187,7 +187,7 @@ Fötus (hautfarben) mit virtuellem SQUID-Sensorsystem
 %\begin{theorem}
 Als Quellen wurden elektrische Einzeldipole verwendet.
 \begin{itemize}
-	\item Es wurden über 1000 Quellenpositionen im Gehirn des Fötusmodells festgelegt.
+	\item Es wurden über 1000 Quellenpositionen im Gehirn des Fötusmodells gleichmäßig verteilt.
 	\item Für die Ausrichtung der Quellen wurden die drei orthogonalen Raumesrichtungen: cranial, dorsal und sinistral gewählt
 	\item das elektrisches Dipolmoment der Quellen betrug $1 \mu A mm$ (Stärke der Quellen)
 \end{itemize}
@@ -202,7 +202,6 @@ Als Quellen wurden elektrische Einzeldipole verwendet.
 \includegraphics[height=4cm]{pictures/BA-img10.pdf}
 \caption{Volumenpunkte (hellgrün) im
 Volumenleitermodell des Fötus (hautfarben) und Kopfes (grau).}%
-Die Quellen befinden sich im Allgemeinen im Gehirn des Fötus.
 %\label{}%
 \end{figure}
     %\pause
@@ -216,14 +215,15 @@ Die Quellen befinden sich im Allgemeinen im Gehirn des Fötus.
 	%\pause
 	\item Variation der Dreiecksseitenlänge
 	\pause
-	\item Dreiecksseitenlängen beim Abdomen: 12 mm, 16 mm, 20mm (4-mm-Schritte)
+	\item Dreiecksseitenlängen beim Abdomen: \textcolor{red}{12 mm}, \textcolor{green}{16 mm}, \textcolor{blue}{20mm} (4-mm-Schritte)
   \pause
-	\item Dreiecksseitenlängen bei der Vernix caseosa: 3 mm, 5 mm, 7mm, 9mm (2-mm-Schritte)
+	\item Dreiecksseitenlängen bei der Vernix caseosa: \textcolor{red}{3 mm}, \textcolor{green}{5 mm}, \textcolor{blue}{7mm, 9mm} (2-mm-Schritte)
   \pause
-	\item Dreiecksseitenlängen bei der innersten Schicht: 3 mm, 5 mm, 7mm, 9mm (2-mm-Schritte)
+	\item Dreiecksseitenlängen bei der innersten Schicht: \textcolor{red}{3 mm}, \textcolor{green}{5 mm}, \textcolor{blue}{7mm, 9mm} (2-mm-Schritte)
+	\pause
+	\item Als Referenz wurde das Modell von der Fötussegmentierung mit der feinsten Randelementediskretisierung verwendet.
 	\end{itemize}
 \end{frame}
-frame
 
 \begin{frame}
 \frametitle{Segmentierung und Schichtdicke der Vernix caseosa}
@@ -286,6 +286,7 @@ _{i=1}^{n}{\mathit{ref}_{i}^{2}}}}
 	\item[\textit{RDM}] Relative difference measure, Kenngröße für den Topologiefehler (minimaler Fehler: \textit{RDM}=0)
 	\item[\textit{MAG}] Amplitudenfaktor, Größe für die Amplitudenabweichung (minimaler Fehler: \textit{MAG}=1)
 \end{itemize}
+\cite{Guellmar2010145}
 \end{frame}
 
 \begin{frame}
@@ -303,6 +304,7 @@ a=\frac{\left|{\vec{r}}\right|}{\left|{\vec{s}}\right|}
 	\item[$\alpha$] Winkelabweichung, Güte der Quellenlokalisation (minimaler Fehler: \textit{RDM}=0°)
 	\item[\textit{a}] Amplitudenfaktor, Größe für die Amplitudenabweichung (minimaler Fehler: \textit{MAG}=1)
 \end{itemize}
+\cite{Guellmar2010145}
 \end{frame}  
 \section{Ergebnisse}
 \subsection{Einfluss der Segmentierung und Randelementediskretisierung}
@@ -320,8 +322,11 @@ a=\frac{\left|{\vec{r}}\right|}{\left|{\vec{s}}\right|}
 \begin{itemize}
 	\item Bei der Vorwärtsrechnung entstehen größere Topologieabweichungen bei größeren Randelementen
 	\item Ergebnisse hängen bei der Kopfmodellierung stark von der Dipolorientierung ab
+	\pause
 	\item RDMs bei Modellen der Kopfsegmentierung 10 mal größer als bei Modellen der Fötussegmentierung
+	\pause
 	\item Rekonstruierte Dipolorientierung weicht bei der Kopfmodellierung stark von der Referenz ab (über 60°)
+	\pause
 	\item Bei der Kopfmodellierung verbessern sich die Ergebnisse der Quellenrekonstrukion mit größeren Randelementen
 \end{itemize}
 \end{frame}
@@ -364,34 +369,49 @@ der Schichtdicke der Vernix caseosa.}%
 %\end{figure}
 \end{frame}
 
-\section{Diskussion}
+\section{Schlussfolgerung und Ausblick}
 \begin{frame}
 \frametitle{Schlussfolgerungen}
 \begin{itemize}
-	\item Der Einfluss der Schichtdicke Vernix caseosa ist hier zu vernachlässigen
+	\item Der Einfluss der Schichtdicke Vernix caseosa ist hier vernachlässbar
+	\pause
 	\item Segmentierung hat großen Einfluss auf die Ergebnisse, die Rekonstruktionsergebnisse der Kopfmodellierung sind hier unbrauchbar
-	\item Überabtastung der Kopfsegmentierung
-	\item Richtungsabhängigkeiten aufgrund der Lage des Fötus im Abdomen
-	\item Ergebnisse sind auf die verwendete Referenz zurückzuführen
-	\item Sind die Ergebnisse auf die Qualität der US-Bilder zurückzuführen?
+	\pause
+	%\item Überabtastung der Kopfsegmentierung
+	%\item Richtungsabhängigkeiten aufgrund der Lage des Fötus im Abdomen
+	%\item Ergebnisse sind auf die verwendete Referenz zurückzuführen
+	%\pause
 	\item Dreiecksseitenlänge von 5mm ist ein guter Kompromiss
 \end{itemize}
 \end{frame}
 
 %\section{Ausblick}
 \begin{frame}
-\frametitle{zukünftige Untersuchungen}
+\frametitle{Ausblick}
 \begin{itemize}
-	\item Einsatz von FEM-Modellen als Referenz
+	\item Einsatz von exakteren Modellen (FEM-Modellen) als Referenz
+	\pause
+	\item Sind die Ergebnisse auf die Qualität der US-Bilder zurückzuführen?
+	\pause
 	\item Segmentierung/Modellierung aus MRT-Aufnahmen
-	\item Lokalisierung des Fötusmodells im Abdomen
-	\item Einfluss von quasisphärischen Korrekturen
-	\item Einfluss von Translation und Rotation des Fötusmodells
-	\item Verzicht auf Vernix caseosa
+	\pause
+	%\item Lokalisierung des Fötusmodells im Abdomen \cite{0031-9155-52-3-016}
+	%\pause
+	\item Einfluss von quasisphärischen Korrekturen \cite{Haueisen1997}
+	\pause
+	\item Einfluss der Lage des Fötusmodells
+	\pause
+	\item Untersuchung mit/ohne Vernix caseosa
+	\pause
 	\item Modellierung des Schädelknochens
 \end{itemize}
 \end{frame}
-
+\huge
+\begin{frame}
+\begin{center}
+Vielen Dank für ihre Aufmerksamkeit!
+\end{center}
+\end{frame}
 \tiny
 \def\newblock{}
 \bibliography{Literatur}
